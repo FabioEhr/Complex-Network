@@ -1,3 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 C:/Users/alemi/OneDrive/Desktop/network/project/Z_matrix_nc.csv filter=lfs diff=lfs merge=lfs -text
+Z_matrix_nc.csv filter=lfs diff=lfs merge=lfs -text
