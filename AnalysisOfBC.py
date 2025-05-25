@@ -16,8 +16,10 @@ def main():
         numeric_cols = df_bc.select_dtypes(include='number').columns.tolist()
         if 'betweenness' in numeric_cols:
             central_col = 'betweenness'
+            print(f"Using 'betweenness' column as centrality measure for {pq}.")
         elif len(numeric_cols) == 1:
             central_col = numeric_cols[0]
+            print(f"Using single numeric column '{central_col}' as centrality measure.")
         else:
             # Skip files that are not centrality outputs
             print(f"Skipping {pq}: multiple numeric columns found ({len(numeric_cols)}), not a centrality file.")
