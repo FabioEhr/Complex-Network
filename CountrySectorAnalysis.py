@@ -513,13 +513,16 @@ def write_text_report_all(countries, net_trillions, output_filename="all_countri
 
                     # Compute baseline ranking for this sector across countries
                     sorted_base = base_series.loc[sector_nodes].sort_values(ascending=False).index.tolist()
+                    average_base = base_series.loc[sector_nodes].mean()
                     base_rank = sorted_base.index(node) + 1
 
                     # Compute policy rankings
                     policy_ranks = {}
+                    policy_av = {}
                     for pol, series in policy_map.items():
                         sorted_pol = series.loc[sector_nodes].sort_values(ascending=False).index.tolist()
                         policy_ranks[pol] = sorted_pol.index(node) + 1
+                        policy_av[pol] = series.loc[sector_nodes].mean()
 
                     # Compute percentage changes
                     vals_pol = {pol: series.get(node, np.nan) for pol, series in policy_map.items()}
@@ -529,7 +532,8 @@ def write_text_report_all(countries, net_trillions, output_filename="all_countri
                     f.write(f"Baseline={val:.4g}")
                     for pol in ["BC","EU","GL"]:
                         shift = base_rank - policy_ranks[pol]
-                        f.write(f", {pol}={color_pct(pct_changes[pol])} ({shift:+d})")
+                        average_change = (policy_av[pol] - average_base) / average_base * 100 if average_base else np.nan
+                        f.write(f", {pol}={color_pct(pct_changes[pol])} ({shift:+d}, {average_change:+.2f}%)")
                     f.write(f"    {sector} (Rank: Baseline={base_rank})")
 
                     f.write("\n")
