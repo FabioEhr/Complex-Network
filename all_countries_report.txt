@@ -5,33 +5,40 @@ Country: CHN
   Authority Score:         Baseline=0.0933, BC=0.1002, EU=0.1043, GL=0.02357
 
   Top 5 sectors by Clustering Coefficient:
-    CNS+: Baseline=0.001618, BC=0.001664, EU=0.001645, GL=0.001539
-    FD+: Baseline=0.00125, BC=0.001252, EU=0.001254, GL=0.001135
-    FINser: Baseline=0.001144, BC=0.001146, EU=0.001148, GL=0.001041
-    ENRele: Baseline=0.001026, BC=0.001028, EU=0.001029, GL=0.0008908
-    MANfoo: Baseline=0.0007293, BC=0.0007311, EU=0.0007317, GL=0.0006773
+    CNS+: Baseline=0.001618, BC=2.79%, EU=1.65%, GL=-4.89%
+    FD+: Baseline=0.00125, BC=0.19%, EU=0.33%, GL=-9.21%
+    FINser: Baseline=0.001144, BC=0.20%, EU=0.33%, GL=-9.03%
+    ENRele: Baseline=0.001026, BC=0.20%, EU=0.35%, GL=-13.16%
+    MANfoo: Baseline=0.0007293, BC=0.25%, EU=0.33%, GL=-7.13%
+    Combined top5 share of baseline Clustering Coefficient: 37.61%
+    Combined variation for these sectors: BC 0.93%, EU 0.70%, GL -8.40%
+
   Top 5 sectors by Betweenness Centrality:
-    MANcom: Baseline=0.2263, BC=0.2268, EU=0.2236, GL=0.2125
-    MANele: Baseline=0.206, BC=0.08524, EU=0.2077, GL=0.2396
-    MANmac: Baseline=0.1524, BC=0.001501, EU=0.1535, GL=0.02815
-    MANmet: Baseline=0.05133, BC=0.05165, EU=0.05159, GL=0.2132
-    MANpha: Baseline=0.01692, BC=0.01795, EU=0.0173, GL=0.007967
+    MANcom: Baseline=0.2263, BC=0.22%, EU=-1.16%, GL=-6.09%
+    MANele: Baseline=0.206, BC=-58.62%, EU=0.81%, GL=16.33%
+    MANmac: Baseline=0.1524, BC=-99.02%, EU=0.71%, GL=-81.53%
+    MANmet: Baseline=0.05133, BC=0.62%, EU=0.51%, GL=315.35%
+    MANpha: Baseline=0.01692, BC=6.06%, EU=2.26%, GL=-52.92%
+    Combined top5 share of baseline Betweenness Centrality: 85.32%
+    Combined variation for these sectors: BC -41.33%, EU 0.12%, GL 7.43%
+
   Top 5 sectors by Hub Score:
-    MANmin: Baseline=0.01649, BC=0.0178, EU=0.01859, GL=0.002997
-    MANmet: Baseline=0.0159, BC=0.01719, EU=0.01794, GL=0.002873
-    AGRagr: Baseline=0.008125, BC=0.008728, EU=0.009105, GL=0.001821
-    MANcom: Baseline=0.007515, BC=0.007784, EU=0.007944, GL=0.004368
-    TRDmot: Baseline=0.006274, BC=0.006702, EU=0.006957, GL=0.001856
+    MANmin: Baseline=0.01649, BC=7.95%, EU=12.74%, GL=-81.83%
+    MANmet: Baseline=0.0159, BC=8.16%, EU=12.88%, GL=-81.93%
+    AGRagr: Baseline=0.008125, BC=7.42%, EU=12.06%, GL=-77.59%
+    MANcom: Baseline=0.007515, BC=3.59%, EU=5.71%, GL=-41.88%
+    TRDmot: Baseline=0.006274, BC=6.82%, EU=10.88%, GL=-70.42%
+    Combined top5 share of baseline Hub Score: 46.32%
+    Combined variation for these sectors: BC 7.20%, EU 11.49%, GL -74.38%
+
   Top 5 sectors by Authority Score:
-    CNS+: Baseline=0.01879, BC=0.02033, EU=0.02125, GL=0.003409
-
-    MANmet: Baseline=0.007168, BC=0.007789, EU=0.008135, GL=0.001232
-
-    MANcom: Baseline=0.006918, BC=0.007266, EU=0.007475, GL=0.003057
-
-    MANfoo: Baseline=0.006671, BC=0.007178, EU=0.007495, GL=0.001504
-
-    MANtex: Baseline=0.00581, BC=0.006189, EU=0.00643, GL=0.001726
+    CNS+: Baseline=0.01879, BC=8.17%, EU=13.09%, GL=-81.86%
+    MANmet: Baseline=0.007168, BC=8.65%, EU=13.49%, GL=-82.81%
+    MANcom: Baseline=0.006918, BC=5.04%, EU=8.05%, GL=-55.81%
+    MANfoo: Baseline=0.006671, BC=7.60%, EU=12.35%, GL=-77.45%
+    MANtex: Baseline=0.00581, BC=6.52%, EU=10.67%, GL=-70.29%
+    Combined top5 share of baseline Authority Score: 48.62%
+    Combined variation for these sectors: BC 7.47%, EU 11.97%, GL -75.91%
 
 Country: USA
   Clustering Coefficient: Baseline=0.007494, BC=0.007491, EU=0.007441, GL=0.007418
@@ -40,33 +47,40 @@ Country: USA
   Authority Score:         Baseline=0.8466, BC=0.8398, EU=0.8357, GL=0.9166
 
   Top 5 sectors by Clustering Coefficient:
-    RES+: Baseline=0.001483, BC=0.001484, EU=0.001484, GL=0.001461
-    CNS+: Baseline=0.0009493, BC=0.0009401, EU=0.0009409, GL=0.0009497
-    FD+: Baseline=0.0005976, BC=0.0005978, EU=0.0005979, GL=0.0005943
-    ENRele: Baseline=0.0005393, BC=0.000545, EU=0.0005398, GL=0.0005277
-    EXT+: Baseline=0.0002971, BC=0.0002949, EU=0.000295, GL=0.0002953
+    RES+: Baseline=0.001483, BC=0.03%, EU=0.04%, GL=-1.46%
+    CNS+: Baseline=0.0009493, BC=-0.97%, EU=-0.88%, GL=0.04%
+    FD+: Baseline=0.0005976, BC=0.03%, EU=0.04%, GL=-0.56%
+    ENRele: Baseline=0.0005393, BC=1.06%, EU=0.09%, GL=-2.15%
+    EXT+: Baseline=0.0002971, BC=-0.72%, EU=-0.71%, GL=-0.58%
+    Combined top5 share of baseline Clustering Coefficient: 51.59%
+    Combined variation for these sectors: BC -0.13%, EU -0.24%, GL -0.98%
+
   Top 5 sectors by Betweenness Centrality:
-    RES+: Baseline=0.1873, BC=0.2066, EU=0.1917, GL=0.1732
-    TRDmot: Baseline=0.1434, BC=0.1545, EU=0.1413, GL=0.121
-    FINser: Baseline=0.1396, BC=0.1567, EU=0.1425, GL=0.1309
-    MANmot: Baseline=0.1198, BC=0.1308, EU=0.1177, GL=0.09799
-    CNS+: Baseline=0.1194, BC=0.1308, EU=0.1219, GL=0.1111
+    RES+: Baseline=0.1873, BC=10.30%, EU=2.38%, GL=-7.53%
+    TRDmot: Baseline=0.1434, BC=7.77%, EU=-1.46%, GL=-15.64%
+    FINser: Baseline=0.1396, BC=12.24%, EU=2.11%, GL=-6.24%
+    MANmot: Baseline=0.1198, BC=9.20%, EU=-1.74%, GL=-18.18%
+    CNS+: Baseline=0.1194, BC=9.60%, EU=2.10%, GL=-6.88%
+    Combined top5 share of baseline Betweenness Centrality: 65.28%
+    Combined variation for these sectors: BC 9.87%, EU 0.81%, GL -10.60%
+
   Top 5 sectors by Hub Score:
-    FINser: Baseline=0.2099, BC=0.2076, EU=0.2063, GL=0.2332
-    PROleg: Baseline=0.1157, BC=0.1145, EU=0.1138, GL=0.1284
-    RES+: Baseline=0.1038, BC=0.1028, EU=0.1021, GL=0.1153
-    ADM+: Baseline=0.06625, BC=0.06558, EU=0.06517, GL=0.07347
-    TRDmot: Baseline=0.05807, BC=0.05752, EU=0.05717, GL=0.06413
+    FINser: Baseline=0.2099, BC=-1.06%, EU=-1.69%, GL=11.12%
+    PROleg: Baseline=0.1157, BC=-1.02%, EU=-1.64%, GL=10.98%
+    RES+: Baseline=0.1038, BC=-1.02%, EU=-1.64%, GL=11.01%
+    ADM+: Baseline=0.06625, BC=-1.02%, EU=-1.64%, GL=10.89%
+    TRDmot: Baseline=0.05807, BC=-0.96%, EU=-1.56%, GL=10.43%
+    Combined top5 share of baseline Hub Score: 66.84%
+    Combined variation for these sectors: BC -1.03%, EU -1.65%, GL 10.97%
+
   Top 5 sectors by Authority Score:
-    FINser: Baseline=0.1772, BC=0.1757, EU=0.1748, GL=0.1926
-
-    TRDmot: Baseline=0.09511, BC=0.09436, EU=0.09388, GL=0.1032
-
-    RES+: Baseline=0.07297, BC=0.07235, EU=0.07199, GL=0.07927
-
-    HEA+: Baseline=0.0673, BC=0.06675, EU=0.06642, GL=0.07306
-
-    PROleg: Baseline=0.06285, BC=0.06233, EU=0.06202, GL=0.06834
+    FINser: Baseline=0.1772, BC=-0.87%, EU=-1.37%, GL=8.70%
+    TRDmot: Baseline=0.09511, BC=-0.79%, EU=-1.29%, GL=8.52%
+    RES+: Baseline=0.07297, BC=-0.84%, EU=-1.33%, GL=8.64%
+    HEA+: Baseline=0.0673, BC=-0.83%, EU=-1.31%, GL=8.55%
+    PROleg: Baseline=0.06285, BC=-0.82%, EU=-1.32%, GL=8.75%
+    Combined top5 share of baseline Authority Score: 56.16%
+    Combined variation for these sectors: BC -0.84%, EU -1.33%, GL 8.64%
 
 Country: RoW
   Clustering Coefficient: Baseline=0.002623, BC=0.002622, EU=0.002589, GL=0.002567
@@ -75,33 +89,40 @@ Country: RoW
   Authority Score:         Baseline=0.01655, BC=0.01667, EU=0.01677, GL=0.01501
 
   Top 5 sectors by Clustering Coefficient:
-    FD+: Baseline=0.0002991, BC=0.0002968, EU=0.0002998, GL=0.0002876
-    CNS+: Baseline=0.0002862, BC=0.000278, EU=0.0002787, GL=0.0002735
-    ENRele: Baseline=0.0002439, BC=0.0002406, EU=0.0002413, GL=0.0002188
-    EXT+: Baseline=0.0001583, BC=0.0001592, EU=0.0001587, GL=0.0001538
-    PUB+: Baseline=0.0001529, BC=0.0001489, EU=0.0001501, GL=0.0001492
+    FD+: Baseline=0.0002991, BC=-0.76%, EU=0.23%, GL=-3.83%
+    CNS+: Baseline=0.0002862, BC=-2.85%, EU=-2.62%, GL=-4.44%
+    ENRele: Baseline=0.0002439, BC=-1.36%, EU=-1.06%, GL=-10.29%
+    EXT+: Baseline=0.0001583, BC=0.54%, EU=0.23%, GL=-2.84%
+    PUB+: Baseline=0.0001529, BC=-2.62%, EU=-1.85%, GL=-2.44%
+    Combined top5 share of baseline Clustering Coefficient: 43.47%
+    Combined variation for these sectors: BC -1.48%, EU -1.04%, GL -5.04%
+
   Top 5 sectors by Betweenness Centrality:
-    TRDmot: Baseline=0.4871, BC=0.4769, EU=0.4832, GL=0.5114
-    ENRoil: Baseline=0.2364, BC=0.2462, EU=0.2413, GL=0.2396
-    FINser: Baseline=0.1617, BC=0.1696, EU=0.1611, GL=0.1704
-    MANcom: Baseline=0.07443, BC=0.07213, EU=0.06971, GL=0.06817
-    ENRgas: Baseline=0.07318, BC=0.06227, EU=0.07422, GL=0.07508
+    TRDmot: Baseline=0.4871, BC=-2.10%, EU=-0.79%, GL=4.98%
+    ENRoil: Baseline=0.2364, BC=4.16%, EU=2.09%, GL=1.35%
+    FINser: Baseline=0.1617, BC=4.83%, EU=-0.37%, GL=5.36%
+    MANcom: Baseline=0.07443, BC=-3.09%, EU=-6.35%, GL=-8.41%
+    ENRgas: Baseline=0.07318, BC=-14.91%, EU=1.42%, GL=2.59%
+    Combined top5 share of baseline Betweenness Centrality: 89.18%
+    Combined variation for these sectors: BC -0.56%, EU -0.31%, GL 3.07%
+
   Top 5 sectors by Hub Score:
-    FINser: Baseline=0.003835, BC=0.003801, EU=0.003782, GL=0.004164
-    TRDmot: Baseline=0.001453, BC=0.001467, EU=0.00148, GL=0.001242
-    ENRoil: Baseline=0.001432, BC=0.001439, EU=0.001444, GL=0.001328
-    MANcom: Baseline=0.001376, BC=0.001409, EU=0.001429, GL=0.0009811
-    PROleg: Baseline=0.0008486, BC=0.0008462, EU=0.0008455, GL=0.0008678
+    FINser: Baseline=0.003835, BC=-0.90%, EU=-1.38%, GL=8.58%
+    TRDmot: Baseline=0.001453, BC=0.99%, EU=1.90%, GL=-14.49%
+    ENRoil: Baseline=0.001432, BC=0.46%, EU=0.81%, GL=-7.24%
+    MANcom: Baseline=0.001376, BC=2.39%, EU=3.87%, GL=-28.70%
+    PROleg: Baseline=0.0008486, BC=-0.28%, EU=-0.36%, GL=2.26%
+    Combined top5 share of baseline Hub Score: 54.91%
+    Combined variation for these sectors: BC 0.19%, EU 0.41%, GL -4.03%
+
   Top 5 sectors by Authority Score:
-    FINser: Baseline=0.002339, BC=0.002323, EU=0.002315, GL=0.00246
-
-    TRDmot: Baseline=0.00198, BC=0.001993, EU=0.002004, GL=0.001784
-
-    MANcom: Baseline=0.001349, BC=0.001366, EU=0.001376, GL=0.001139
-
-    CNS+: Baseline=0.00106, BC=0.001082, EU=0.001098, GL=0.0008213
-
-    MANfoo: Baseline=0.0008506, BC=0.0008564, EU=0.0008638, GL=0.0007539
+    FINser: Baseline=0.002339, BC=-0.71%, EU=-1.05%, GL=5.19%
+    TRDmot: Baseline=0.00198, BC=0.67%, EU=1.23%, GL=-9.88%
+    MANcom: Baseline=0.001349, BC=1.26%, EU=2.01%, GL=-15.57%
+    CNS+: Baseline=0.00106, BC=2.02%, EU=3.50%, GL=-22.56%
+    MANfoo: Baseline=0.0008506, BC=0.67%, EU=1.55%, GL=-11.37%
+    Combined top5 share of baseline Authority Score: 45.79%
+    Combined variation for these sectors: BC 0.54%, EU 1.02%, GL -8.18%
 
 Country: JPN
   Clustering Coefficient: Baseline=0.007776, BC=0.007789, EU=0.007783, GL=0.007753
@@ -110,33 +131,40 @@ Country: JPN
   Authority Score:         Baseline=0.003552, BC=0.003586, EU=0.003598, GL=0.003376
 
   Top 5 sectors by Clustering Coefficient:
-    PROleg: Baseline=0.0005968, BC=0.0005985, EU=0.0005984, GL=0.0006035
-    TRDmot: Baseline=0.0004847, BC=0.0004862, EU=0.0004861, GL=0.0004839
-    ENRele: Baseline=0.0004661, BC=0.0004676, EU=0.0004676, GL=0.0004657
-    FINser: Baseline=0.0004522, BC=0.0004535, EU=0.0004534, GL=0.0004575
-    FD+: Baseline=0.000405, BC=0.000401, EU=0.0004009, GL=0.0004082
+    PROleg: Baseline=0.0005968, BC=0.29%, EU=0.28%, GL=1.12%
+    TRDmot: Baseline=0.0004847, BC=0.31%, EU=0.31%, GL=-0.16%
+    ENRele: Baseline=0.0004661, BC=0.31%, EU=0.30%, GL=-0.10%
+    FINser: Baseline=0.0004522, BC=0.28%, EU=0.27%, GL=1.16%
+    FD+: Baseline=0.000405, BC=-0.99%, EU=-1.00%, GL=0.79%
+    Combined top5 share of baseline Clustering Coefficient: 30.93%
+    Combined variation for these sectors: BC 0.08%, EU 0.07%, GL 0.58%
+
   Top 5 sectors by Betweenness Centrality:
-    TRDmot: Baseline=0.07519, BC=0.1363, EU=0.07496, GL=0.074
-    MANcom: Baseline=0.04228, BC=0.103, EU=0.04288, GL=0.03918
-    ENRele: Baseline=0.03799, BC=0.0368, EU=0.03754, GL=0.03736
-    MANmot: Baseline=0.02629, BC=0.08875, EU=0.02543, GL=0.02807
-    ENRoil: Baseline=0.01065, BC=0.01066, EU=0.01069, GL=0.01074
+    TRDmot: Baseline=0.07519, BC=81.31%, EU=-0.30%, GL=-1.58%
+    MANcom: Baseline=0.04228, BC=143.74%, EU=1.43%, GL=-7.31%
+    ENRele: Baseline=0.03799, BC=-3.13%, EU=-1.17%, GL=-1.64%
+    MANmot: Baseline=0.02629, BC=237.61%, EU=-3.26%, GL=6.80%
+    ENRoil: Baseline=0.01065, BC=0.13%, EU=0.39%, GL=0.83%
+    Combined top5 share of baseline Betweenness Centrality: 90.18%
+    Combined variation for these sectors: BC 95.22%, EU -0.46%, GL -1.57%
+
   Top 5 sectors by Hub Score:
-    MANmot: Baseline=0.000426, BC=0.0004278, EU=0.0004279, GL=0.0004226
-    TRDmot: Baseline=0.0003611, BC=0.00037, EU=0.0003749, GL=0.0002762
-    MANcom: Baseline=0.0003335, BC=0.0003426, EU=0.0003479, GL=0.0002351
-    FINser: Baseline=0.0003097, BC=0.0003067, EU=0.0003049, GL=0.0003429
-    MANmac: Baseline=0.0002689, BC=0.0002763, EU=0.00028, GL=0.0002051
+    MANmot: Baseline=0.000426, BC=0.40%, EU=0.43%, GL=-0.80%
+    TRDmot: Baseline=0.0003611, BC=2.47%, EU=3.83%, GL=-23.51%
+    MANcom: Baseline=0.0003335, BC=2.75%, EU=4.33%, GL=-29.50%
+    FINser: Baseline=0.0003097, BC=-0.98%, EU=-1.57%, GL=10.71%
+    MANmac: Baseline=0.0002689, BC=2.73%, EU=4.12%, GL=-23.74%
+    Combined top5 share of baseline Hub Score: 52.49%
+    Combined variation for these sectors: BC 1.42%, EU 2.14%, GL -12.79%
+
   Top 5 sectors by Authority Score:
-    TRDmot: Baseline=0.0004586, BC=0.0004602, EU=0.0004603, GL=0.0004622
-
-    CNS+: Baseline=0.0003178, BC=0.0003228, EU=0.0003252, GL=0.0002816
-
-    MANmot: Baseline=0.0001971, BC=0.000202, EU=0.0002041, GL=0.0001585
-
-    PUB+: Baseline=0.0001861, BC=0.0001858, EU=0.0001853, GL=0.0001974
-
-    FINser: Baseline=0.0001801, BC=0.0001794, EU=0.0001787, GL=0.0001951
+    TRDmot: Baseline=0.0004586, BC=0.34%, EU=0.36%, GL=0.79%
+    CNS+: Baseline=0.0003178, BC=1.57%, EU=2.34%, GL=-11.40%
+    MANmot: Baseline=0.0001971, BC=2.48%, EU=3.56%, GL=-19.57%
+    PUB+: Baseline=0.0001861, BC=-0.16%, EU=-0.42%, GL=6.05%
+    FINser: Baseline=0.0001801, BC=-0.39%, EU=-0.78%, GL=8.31%
+    Combined top5 share of baseline Authority Score: 37.72%
+    Combined variation for these sectors: BC 0.78%, EU 1.04%, GL -3.36%
 
 Country: DEU
   Clustering Coefficient: Baseline=0.001302, BC=0.001276, EU=0.001273, GL=0.001318
@@ -145,33 +173,40 @@ Country: DEU
   Authority Score:         Baseline=0.003015, BC=0.002976, EU=0.002968, GL=0.003113
 
   Top 5 sectors by Clustering Coefficient:
-    PUB+: Baseline=0.0002162, BC=0.0002128, EU=0.0002117, GL=0.0002216
-    RES+: Baseline=0.0002097, BC=0.0002046, EU=0.0002054, GL=0.000211
-    EDU+: Baseline=8.787e-05, BC=8.664e-05, EU=8.619e-05, GL=9.01e-05
-    COMvid: Baseline=8.427e-05, BC=8.299e-05, EU=8.258e-05, GL=8.553e-05
-    MANrep: Baseline=8.305e-05, BC=8.083e-05, EU=8.184e-05, GL=8.54e-05
+    PUB+: Baseline=0.0002162, BC=-1.60%, EU=-2.12%, GL=2.49%
+    RES+: Baseline=0.0002097, BC=-2.42%, EU=-2.06%, GL=0.64%
+    EDU+: Baseline=8.787e-05, BC=-1.40%, EU=-1.91%, GL=2.54%
+    COMvid: Baseline=8.427e-05, BC=-1.52%, EU=-2.01%, GL=1.50%
+    MANrep: Baseline=8.305e-05, BC=-2.67%, EU=-1.45%, GL=2.84%
+    Combined top5 share of baseline Clustering Coefficient: 52.33%
+    Combined variation for these sectors: BC -1.95%, EU -1.98%, GL 1.85%
+
   Top 5 sectors by Betweenness Centrality:
-    MANmot: Baseline=0.2523, BC=0.3554, EU=0.2522, GL=0.3594
-    MANmac: Baseline=0.1701, BC=0.04604, EU=0.171, GL=0.04995
-    TRDmot: Baseline=0.1311, BC=0.1426, EU=0.1327, GL=0.1615
-    RES+: Baseline=0.0751, BC=0.08231, EU=0.07082, GL=0.09062
-    FINser: Baseline=0.06557, BC=0.06979, EU=0.06132, GL=0.07995
+    MANmot: Baseline=0.2523, BC=40.86%, EU=-0.05%, GL=42.43%
+    MANmac: Baseline=0.1701, BC=-72.93%, EU=0.56%, GL=-70.63%
+    TRDmot: Baseline=0.1311, BC=8.79%, EU=1.24%, GL=23.22%
+    RES+: Baseline=0.0751, BC=9.59%, EU=-5.71%, GL=20.66%
+    FINser: Baseline=0.06557, BC=6.44%, EU=-6.48%, GL=21.93%
+    Combined top5 share of baseline Betweenness Centrality: 69.93%
+    Combined variation for these sectors: BC 0.29%, EU -0.88%, GL 6.81%
+
   Top 5 sectors by Hub Score:
-    PROleg: Baseline=0.0004013, BC=0.0003967, EU=0.0003942, GL=0.0004394
-    FINser: Baseline=0.0003784, BC=0.0003728, EU=0.0003696, GL=0.0004239
-    MANmot: Baseline=0.0003279, BC=0.0003244, EU=0.0003271, GL=0.0003116
-    MANmac: Baseline=0.0002744, BC=0.000276, EU=0.0002805, GL=0.0002212
-    MANcom: Baseline=0.0001826, BC=0.0001838, EU=0.000186, GL=0.0001517
+    PROleg: Baseline=0.0004013, BC=-1.14%, EU=-1.76%, GL=9.52%
+    FINser: Baseline=0.0003784, BC=-1.50%, EU=-2.35%, GL=12.02%
+    MANmot: Baseline=0.0003279, BC=-1.06%, EU=-0.24%, GL=-4.97%
+    MANmac: Baseline=0.0002744, BC=0.60%, EU=2.23%, GL=-19.40%
+    MANcom: Baseline=0.0001826, BC=0.68%, EU=1.87%, GL=-16.92%
+    Combined top5 share of baseline Hub Score: 49.31%
+    Combined variation for these sectors: BC -0.69%, EU -0.46%, GL -1.07%
+
   Top 5 sectors by Authority Score:
-    FINser: Baseline=0.0009767, BC=0.0009581, EU=0.0009478, GL=0.001087
-
-    PROleg: Baseline=0.00019, BC=0.0001864, EU=0.0001847, GL=0.0002078
-
-    MANmot: Baseline=0.0001624, BC=0.0001632, EU=0.0001645, GL=0.0001538
-
-    MANmac: Baseline=0.000129, BC=0.0001302, EU=0.0001316, GL=0.000115
-
-    CNS+: Baseline=0.0001187, BC=0.0001183, EU=0.0001185, GL=0.0001066
+    FINser: Baseline=0.0009767, BC=-1.90%, EU=-2.95%, GL=11.33%
+    PROleg: Baseline=0.00019, BC=-1.85%, EU=-2.76%, GL=9.40%
+    MANmot: Baseline=0.0001624, BC=0.49%, EU=1.30%, GL=-5.32%
+    MANmac: Baseline=0.000129, BC=0.94%, EU=2.03%, GL=-10.80%
+    CNS+: Baseline=0.0001187, BC=-0.26%, EU=-0.10%, GL=-10.19%
+    Combined top5 share of baseline Authority Score: 52.29%
+    Combined variation for these sectors: BC -1.29%, EU -1.87%, GL 5.96%
 
 Country: FRA
   Clustering Coefficient: Baseline=0.001226, BC=0.001215, EU=0.00121, GL=0.001242
@@ -180,33 +215,40 @@ Country: FRA
   Authority Score:         Baseline=0.001821, BC=0.001806, EU=0.001796, GL=0.001894
 
   Top 5 sectors by Clustering Coefficient:
-    MANrep: Baseline=0.0001053, BC=0.0001074, EU=0.0001067, GL=0.0001117
-    CNS+: Baseline=8.361e-05, BC=8.342e-05, EU=8.301e-05, GL=8.549e-05
-    FD+: Baseline=7.083e-05, BC=7.033e-05, EU=7e-05, GL=7.205e-05
-    PROleg: Baseline=7.041e-05, BC=6.955e-05, EU=6.947e-05, GL=7.051e-05
-    TRDmot: Baseline=6.92e-05, BC=6.83e-05, EU=6.797e-05, GL=6.86e-05
+    MANrep: Baseline=0.0001053, BC=1.97%, EU=1.36%, GL=6.04%
+    CNS+: Baseline=8.361e-05, BC=-0.23%, EU=-0.72%, GL=2.24%
+    FD+: Baseline=7.083e-05, BC=-0.70%, EU=-1.18%, GL=1.72%
+    PROleg: Baseline=7.041e-05, BC=-1.22%, EU=-1.35%, GL=0.14%
+    TRDmot: Baseline=6.92e-05, BC=-1.29%, EU=-1.78%, GL=-0.87%
+    Combined top5 share of baseline Clustering Coefficient: 32.57%
+    Combined variation for these sectors: BC -0.09%, EU -0.54%, GL 2.24%
+
   Top 5 sectors by Betweenness Centrality:
-    TRDmot: Baseline=0.03376, BC=0.03461, EU=0.03453, GL=0.03427
-    MANmot: Baseline=0.0189, BC=0.01824, EU=0.01818, GL=0.02005
-    FINser: Baseline=0.01399, BC=0.01653, EU=0.01404, GL=0.01104
-    PROleg: Baseline=0.00974, BC=0.01011, EU=0.01002, GL=0.008968
-    ADM+: Baseline=0.004205, BC=0.004296, EU=0.004301, GL=0.004161
+    TRDmot: Baseline=0.03376, BC=2.54%, EU=2.31%, GL=1.52%
+    MANmot: Baseline=0.0189, BC=-3.49%, EU=-3.80%, GL=6.07%
+    FINser: Baseline=0.01399, BC=18.20%, EU=0.39%, GL=-21.04%
+    PROleg: Baseline=0.00974, BC=3.80%, EU=2.86%, GL=-7.92%
+    ADM+: Baseline=0.004205, BC=2.16%, EU=2.28%, GL=-1.05%
+    Combined top5 share of baseline Betweenness Centrality: 81.24%
+    Combined variation for these sectors: BC 3.98%, EU 0.61%, GL -2.60%
+
   Top 5 sectors by Hub Score:
-    FINser: Baseline=0.0001809, BC=0.0001784, EU=0.0001767, GL=0.0002024
-    PROleg: Baseline=0.000172, BC=0.000171, EU=0.0001701, GL=0.00018
-    MANtra: Baseline=0.0001295, BC=0.0001285, EU=0.0001281, GL=0.0001377
-    TRDmot: Baseline=0.0001116, BC=0.0001117, EU=0.000112, GL=0.0001062
-    MANpha: Baseline=7.906e-05, BC=7.828e-05, EU=7.867e-05, GL=7.601e-05
+    FINser: Baseline=0.0001809, BC=-1.34%, EU=-2.27%, GL=11.92%
+    PROleg: Baseline=0.000172, BC=-0.62%, EU=-1.09%, GL=4.64%
+    MANtra: Baseline=0.0001295, BC=-0.78%, EU=-1.09%, GL=6.30%
+    TRDmot: Baseline=0.0001116, BC=0.11%, EU=0.32%, GL=-4.86%
+    MANpha: Baseline=7.906e-05, BC=-0.99%, EU=-0.49%, GL=-3.86%
+    Combined top5 share of baseline Hub Score: 53.81%
+    Combined variation for these sectors: BC -0.77%, EU -1.10%, GL 4.34%
+
   Top 5 sectors by Authority Score:
-    FINser: Baseline=0.0004429, BC=0.0004369, EU=0.0004322, GL=0.0004893
-
-    PROleg: Baseline=0.0002553, BC=0.0002523, EU=0.0002499, GL=0.0002769
-
-    TRDmot: Baseline=0.0001388, BC=0.0001375, EU=0.0001366, GL=0.0001445
-
-    CNS+: Baseline=0.0001162, BC=0.0001161, EU=0.0001158, GL=0.0001116
-
-    ADM+: Baseline=8.46e-05, BC=8.368e-05, EU=8.294e-05, GL=9.085e-05
+    FINser: Baseline=0.0004429, BC=-1.34%, EU=-2.41%, GL=10.49%
+    PROleg: Baseline=0.0002553, BC=-1.19%, EU=-2.13%, GL=8.44%
+    TRDmot: Baseline=0.0001388, BC=-0.90%, EU=-1.56%, GL=4.13%
+    CNS+: Baseline=0.0001162, BC=-0.06%, EU=-0.35%, GL=-3.90%
+    ADM+: Baseline=8.46e-05, BC=-1.08%, EU=-1.96%, GL=7.40%
+    Combined top5 share of baseline Authority Score: 56.99%
+    Combined variation for these sectors: BC -1.08%, EU -1.96%, GL 7.27%
 
 Country: IND
   Clustering Coefficient: Baseline=0.002049, BC=0.002067, EU=0.002046, GL=0.001822
@@ -215,33 +257,40 @@ Country: IND
   Authority Score:         Baseline=0.001294, BC=0.001303, EU=0.001314, GL=0.001088
 
   Top 5 sectors by Clustering Coefficient:
-    TRDmot: Baseline=0.0002435, BC=0.0002405, EU=0.0002412, GL=0.0002222
-    CNS+: Baseline=0.0002204, BC=0.0002199, EU=0.0002206, GL=0.0001946
-    ENRele: Baseline=0.0001577, BC=0.0001574, EU=0.0001579, GL=0.0001358
-    TRAinl: Baseline=0.0001432, BC=0.0001578, EU=0.0001435, GL=0.000146
-    FINser: Baseline=0.0001065, BC=0.0001053, EU=0.0001066, GL=9.898e-05
+    TRDmot: Baseline=0.0002435, BC=-1.25%, EU=-0.94%, GL=-8.75%
+    CNS+: Baseline=0.0002204, BC=-0.20%, EU=0.12%, GL=-11.69%
+    ENRele: Baseline=0.0001577, BC=-0.17%, EU=0.14%, GL=-13.93%
+    TRAinl: Baseline=0.0001432, BC=10.15%, EU=0.17%, GL=1.92%
+    FINser: Baseline=0.0001065, BC=-1.19%, EU=0.08%, GL=-7.08%
+    Combined top5 share of baseline Clustering Coefficient: 42.52%
+    Combined variation for these sectors: BC 1.09%, EU -0.17%, GL -8.47%
+
   Top 5 sectors by Betweenness Centrality:
-    COMcom: Baseline=0.02116, BC=0.02115, EU=0.02133, GL=0.02136
-    ENRoil: Baseline=0.02035, BC=0.02054, EU=0.02035, GL=0.0198
-    FINser: Baseline=0.01555, BC=0.01554, EU=0.01571, GL=0.01527
-    ENRele: Baseline=0.01029, BC=0.01028, EU=0.01045, GL=0.01003
-    TRAinl: Baseline=0.00733, BC=0.007327, EU=0.007499, GL=0.00746
+    COMcom: Baseline=0.02116, BC=-0.05%, EU=0.78%, GL=0.94%
+    ENRoil: Baseline=0.02035, BC=0.97%, EU=0.04%, GL=-2.66%
+    FINser: Baseline=0.01555, BC=-0.07%, EU=1.06%, GL=-1.76%
+    ENRele: Baseline=0.01029, BC=-0.09%, EU=1.61%, GL=-2.50%
+    TRAinl: Baseline=0.00733, BC=-0.04%, EU=2.30%, GL=1.77%
+    Combined top5 share of baseline Betweenness Centrality: 67.62%
+    Combined variation for these sectors: BC 0.22%, EU 0.90%, GL -1.00%
+
   Top 5 sectors by Hub Score:
-    COMcom: Baseline=0.0009727, BC=0.0009635, EU=0.0009579, GL=0.001072
-    FINser: Baseline=0.0002527, BC=0.0002501, EU=0.0002487, GL=0.0002774
-    PROleg: Baseline=0.0001987, BC=0.0001969, EU=0.0001958, GL=0.0002173
-    MANfur: Baseline=0.0001952, BC=0.0001937, EU=0.0001928, GL=0.000209
-    ENRoil: Baseline=0.0001128, BC=0.0001123, EU=0.0001122, GL=0.0001143
+    COMcom: Baseline=0.0009727, BC=-0.95%, EU=-1.52%, GL=10.17%
+    FINser: Baseline=0.0002527, BC=-1.02%, EU=-1.58%, GL=9.81%
+    PROleg: Baseline=0.0001987, BC=-0.92%, EU=-1.47%, GL=9.38%
+    MANfur: Baseline=0.0001952, BC=-0.78%, EU=-1.23%, GL=7.06%
+    ENRoil: Baseline=0.0001128, BC=-0.44%, EU=-0.60%, GL=1.28%
+    Combined top5 share of baseline Hub Score: 66.69%
+    Combined variation for these sectors: BC -0.90%, EU -1.43%, GL 9.10%
+
   Top 5 sectors by Authority Score:
-    CNS+: Baseline=0.000141, BC=0.0001455, EU=0.0001488, GL=8.392e-05
-
-    FINser: Baseline=8.184e-05, BC=8.101e-05, EU=8.084e-05, GL=8.212e-05
-
-    COMcom: Baseline=7.415e-05, BC=7.342e-05, EU=7.304e-05, GL=7.903e-05
-
-    ENRoil: Baseline=7.095e-05, BC=7.13e-05, EU=7.18e-05, GL=6.093e-05
-
-    MANrep: Baseline=6.911e-05, BC=6.856e-05, EU=6.852e-05, GL=6.814e-05
+    CNS+: Baseline=0.000141, BC=3.17%, EU=5.56%, GL=-40.48%
+    FINser: Baseline=8.184e-05, BC=-1.00%, EU=-1.21%, GL=0.35%
+    COMcom: Baseline=7.415e-05, BC=-0.98%, EU=-1.49%, GL=6.58%
+    ENRoil: Baseline=7.095e-05, BC=0.49%, EU=1.19%, GL=-14.12%
+    MANrep: Baseline=6.911e-05, BC=-0.79%, EU=-0.85%, GL=-1.41%
+    Combined top5 share of baseline Authority Score: 33.78%
+    Combined variation for these sectors: BC 0.62%, EU 1.37%, GL -14.39%
 
 Country: GBR
   Clustering Coefficient: Baseline=0.001022, BC=0.0009977, EU=0.0009954, GL=0.001021
@@ -250,33 +299,40 @@ Country: GBR
   Authority Score:         Baseline=0.004022, BC=0.003996, EU=0.003969, GL=0.004367
 
   Top 5 sectors by Clustering Coefficient:
-    CNS+: Baseline=0.000123, BC=0.0001219, EU=0.0001226, GL=0.0001261
-    PUB+: Baseline=9.341e-05, BC=9.335e-05, EU=9.312e-05, GL=9.584e-05
-    TRDmot: Baseline=9.2e-05, BC=8.982e-05, EU=8.958e-05, GL=9.157e-05
-    FD+: Baseline=7.659e-05, BC=7.652e-05, EU=7.633e-05, GL=7.795e-05
-    ENRele: Baseline=7.4e-05, BC=6.393e-05, EU=6.327e-05, GL=6.978e-05
+    CNS+: Baseline=0.000123, BC=-0.86%, EU=-0.30%, GL=2.57%
+    PUB+: Baseline=9.341e-05, BC=-0.06%, EU=-0.32%, GL=2.59%
+    TRDmot: Baseline=9.2e-05, BC=-2.37%, EU=-2.63%, GL=-0.47%
+    FD+: Baseline=7.659e-05, BC=-0.08%, EU=-0.34%, GL=1.78%
+    ENRele: Baseline=7.4e-05, BC=-13.61%, EU=-14.50%, GL=-5.70%
+    Combined top5 share of baseline Clustering Coefficient: 44.91%
+    Combined variation for these sectors: BC -2.93%, EU -3.07%, GL 0.50%
+
   Top 5 sectors by Betweenness Centrality:
-    FINser: Baseline=0.08466, BC=0.08632, EU=0.08487, GL=0.08623
-    TRDmot: Baseline=0.02778, BC=0.02809, EU=0.02769, GL=0.02604
-    CNS+: Baseline=0.02404, BC=0.02404, EU=0.02405, GL=0.0247
-    ADM+: Baseline=0.01284, BC=0.01297, EU=0.01291, GL=0.01258
-    PROleg: Baseline=0.008221, BC=0.008219, EU=0.008218, GL=0.008267
+    FINser: Baseline=0.08466, BC=1.97%, EU=0.25%, GL=1.86%
+    TRDmot: Baseline=0.02778, BC=1.13%, EU=-0.33%, GL=-6.25%
+    CNS+: Baseline=0.02404, BC=0.02%, EU=0.05%, GL=2.75%
+    ADM+: Baseline=0.01284, BC=1.01%, EU=0.54%, GL=-2.02%
+    PROleg: Baseline=0.008221, BC=-0.02%, EU=-0.03%, GL=0.56%
+    Combined top5 share of baseline Betweenness Centrality: 85.69%
+    Combined variation for these sectors: BC 1.34%, EU 0.13%, GL 0.18%
+
   Top 5 sectors by Hub Score:
-    FINser: Baseline=0.002062, BC=0.002039, EU=0.002026, GL=0.00229
-    PROleg: Baseline=0.001044, BC=0.001034, EU=0.001027, GL=0.001156
-    ENRoil: Baseline=0.0001583, BC=0.0001568, EU=0.0001558, GL=0.0001775
-    TRDmot: Baseline=0.0001453, BC=0.0001449, EU=0.0001446, GL=0.0001498
-    COMcom: Baseline=0.0001004, BC=9.953e-05, EU=9.889e-05, GL=0.0001103
+    FINser: Baseline=0.002062, BC=-1.08%, EU=-1.71%, GL=11.08%
+    PROleg: Baseline=0.001044, BC=-1.00%, EU=-1.63%, GL=10.74%
+    ENRoil: Baseline=0.0001583, BC=-0.98%, EU=-1.57%, GL=12.15%
+    TRDmot: Baseline=0.0001453, BC=-0.25%, EU=-0.48%, GL=3.10%
+    COMcom: Baseline=0.0001004, BC=-0.91%, EU=-1.55%, GL=9.78%
+    Combined top5 share of baseline Hub Score: 79.21%
+    Combined variation for these sectors: BC -1.01%, EU -1.63%, GL 10.66%
+
   Top 5 sectors by Authority Score:
-    FINser: Baseline=0.0009533, BC=0.0009437, EU=0.0009366, GL=0.001051
-
-    PROleg: Baseline=0.0004434, BC=0.0004391, EU=0.0004358, GL=0.0004884
-
-    TRDmot: Baseline=0.0003309, BC=0.0003284, EU=0.000326, GL=0.0003612
-
-    RES+: Baseline=0.0002794, BC=0.0002768, EU=0.0002746, GL=0.0003098
-
-    CNS+: Baseline=0.0002029, BC=0.0002026, EU=0.0002019, GL=0.000209
+    FINser: Baseline=0.0009533, BC=-1.01%, EU=-1.75%, GL=10.29%
+    PROleg: Baseline=0.0004434, BC=-0.96%, EU=-1.72%, GL=10.15%
+    TRDmot: Baseline=0.0003309, BC=-0.75%, EU=-1.46%, GL=9.18%
+    RES+: Baseline=0.0002794, BC=-0.93%, EU=-1.73%, GL=10.89%
+    CNS+: Baseline=0.0002029, BC=-0.16%, EU=-0.52%, GL=2.99%
+    Combined top5 share of baseline Authority Score: 54.94%
+    Combined variation for these sectors: BC -0.87%, EU -1.59%, GL 9.50%
 
 Country: ITA
   Clustering Coefficient: Baseline=0.001955, BC=0.001929, EU=0.001911, GL=0.001993
@@ -285,33 +341,40 @@ Country: ITA
   Authority Score:         Baseline=0.0007417, BC=0.0007379, EU=0.0007372, GL=0.000744
 
   Top 5 sectors by Clustering Coefficient:
-    RES+: Baseline=0.0002711, BC=0.0002683, EU=0.0002664, GL=0.0002787
-    PROleg: Baseline=0.0001951, BC=0.0001911, EU=0.0001898, GL=0.0001985
-    MANrep: Baseline=0.0001568, BC=0.0001578, EU=0.0001513, GL=0.000164
-    FINser: Baseline=0.000129, BC=0.0001264, EU=0.0001255, GL=0.0001338
-    ADM+: Baseline=0.000124, BC=0.0001226, EU=0.0001218, GL=0.0001273
+    RES+: Baseline=0.0002711, BC=-1.01%, EU=-1.72%, GL=2.83%
+    PROleg: Baseline=0.0001951, BC=-2.01%, EU=-2.70%, GL=1.75%
+    MANrep: Baseline=0.0001568, BC=0.62%, EU=-3.51%, GL=4.59%
+    FINser: Baseline=0.000129, BC=-1.98%, EU=-2.66%, GL=3.76%
+    ADM+: Baseline=0.000124, BC=-1.17%, EU=-1.84%, GL=2.62%
+    Combined top5 share of baseline Clustering Coefficient: 44.80%
+    Combined variation for these sectors: BC -1.11%, EU -2.41%, GL 3.01%
+
   Top 5 sectors by Betweenness Centrality:
-    TRDmot: Baseline=0.03657, BC=0.03747, EU=0.03683, GL=0.03699
-    MANmac: Baseline=0.02253, BC=0.0226, EU=0.02376, GL=0.02132
-    ENRoil: Baseline=0.02245, BC=0.0212, EU=0.02257, GL=0.01811
-    MANmet: Baseline=0.01516, BC=0.01592, EU=0.01523, GL=0.02113
-    TRAinl: Baseline=0.01482, BC=0.0141, EU=0.01499, GL=0.01581
+    TRDmot: Baseline=0.03657, BC=2.47%, EU=0.72%, GL=1.16%
+    MANmac: Baseline=0.02253, BC=0.34%, EU=5.49%, GL=-5.37%
+    ENRoil: Baseline=0.02245, BC=-5.59%, EU=0.52%, GL=-19.35%
+    MANmet: Baseline=0.01516, BC=5.03%, EU=0.50%, GL=39.37%
+    TRAinl: Baseline=0.01482, BC=-4.84%, EU=1.18%, GL=6.67%
+    Combined top5 share of baseline Betweenness Centrality: 77.01%
+    Combined variation for these sectors: BC -0.21%, EU 1.67%, GL 1.64%
+
   Top 5 sectors by Hub Score:
-    TRDmot: Baseline=9.815e-05, BC=9.785e-05, EU=9.805e-05, GL=9.627e-05
-    MANmac: Baseline=8.417e-05, BC=8.389e-05, EU=8.478e-05, GL=7.579e-05
-    FINser: Baseline=5.043e-05, BC=4.971e-05, EU=4.925e-05, GL=5.651e-05
-    MANmot: Baseline=4.708e-05, BC=4.633e-05, EU=4.644e-05, GL=4.878e-05
-    PROleg: Baseline=4.135e-05, BC=4.09e-05, EU=4.065e-05, GL=4.514e-05
+    TRDmot: Baseline=9.815e-05, BC=-0.31%, EU=-0.10%, GL=-1.92%
+    MANmac: Baseline=8.417e-05, BC=-0.33%, EU=0.73%, GL=-9.95%
+    FINser: Baseline=5.043e-05, BC=-1.43%, EU=-2.34%, GL=12.06%
+    MANmot: Baseline=4.708e-05, BC=-1.58%, EU=-1.35%, GL=3.63%
+    PROleg: Baseline=4.135e-05, BC=-1.09%, EU=-1.70%, GL=9.17%
+    Combined top5 share of baseline Hub Score: 41.90%
+    Combined variation for these sectors: BC -0.78%, EU -0.63%, GL 0.41%
+
   Top 5 sectors by Authority Score:
-    FINser: Baseline=0.0001994, BC=0.0001963, EU=0.0001938, GL=0.0002229
-
-    TRDmot: Baseline=5.131e-05, BC=5.056e-05, EU=5.015e-05, GL=5.47e-05
-
-    PROleg: Baseline=3.551e-05, BC=3.507e-05, EU=3.474e-05, GL=3.794e-05
-
-    CNS+: Baseline=3.383e-05, BC=3.373e-05, EU=3.363e-05, GL=3.227e-05
-
-    MANtex: Baseline=2.982e-05, BC=3.048e-05, EU=3.08e-05, GL=2.317e-05
+    FINser: Baseline=0.0001994, BC=-1.57%, EU=-2.78%, GL=11.81%
+    TRDmot: Baseline=5.131e-05, BC=-1.45%, EU=-2.26%, GL=6.61%
+    PROleg: Baseline=3.551e-05, BC=-1.22%, EU=-2.15%, GL=6.87%
+    CNS+: Baseline=3.383e-05, BC=-0.29%, EU=-0.59%, GL=-4.60%
+    MANtex: Baseline=2.982e-05, BC=2.20%, EU=3.29%, GL=-22.30%
+    Combined top5 share of baseline Authority Score: 47.17%
+    Combined variation for these sectors: BC -1.07%, EU -1.91%, GL 6.05%
 
 Country: KOR
   Clustering Coefficient: Baseline=0.003237, BC=0.003239, EU=0.003243, GL=0.003129
@@ -320,33 +383,40 @@ Country: KOR
   Authority Score:         Baseline=0.001876, BC=0.001912, EU=0.001929, GL=0.001568
 
   Top 5 sectors by Clustering Coefficient:
-    TRDmot: Baseline=0.0002464, BC=0.0002472, EU=0.0002473, GL=0.0002414
-    FD+: Baseline=0.0002103, BC=0.000211, EU=0.000211, GL=0.0002067
-    PROleg: Baseline=0.0001932, BC=0.0001939, EU=0.0001939, GL=0.0001905
-    FINser: Baseline=0.0001678, BC=0.0001683, EU=0.0001684, GL=0.0001654
-    MANfmp: Baseline=0.000138, BC=0.0001386, EU=0.0001386, GL=0.0001282
+    TRDmot: Baseline=0.0002464, BC=0.34%, EU=0.36%, GL=-2.03%
+    FD+: Baseline=0.0002103, BC=0.33%, EU=0.35%, GL=-1.71%
+    PROleg: Baseline=0.0001932, BC=0.34%, EU=0.35%, GL=-1.39%
+    FINser: Baseline=0.0001678, BC=0.34%, EU=0.35%, GL=-1.38%
+    MANfmp: Baseline=0.000138, BC=0.39%, EU=0.41%, GL=-7.08%
+    Combined top5 share of baseline Clustering Coefficient: 29.52%
+    Combined variation for these sectors: BC 0.35%, EU 0.36%, GL -2.45%
+
   Top 5 sectors by Betweenness Centrality:
-    MANcom: Baseline=0.02407, BC=0.02396, EU=0.02407, GL=0.02514
-    ENRoil: Baseline=0.02105, BC=0.02217, EU=0.02142, GL=0.01245
-    TRDmot: Baseline=0.01557, BC=0.01558, EU=0.01557, GL=0.01599
-    MANche: Baseline=0.01204, BC=0.01306, EU=0.01241, GL=0.003359
-    TRAinl: Baseline=0.008242, BC=0.008248, EU=0.008243, GL=0.007943
+    MANcom: Baseline=0.02407, BC=-0.47%, EU=0.01%, GL=4.45%
+    ENRoil: Baseline=0.02105, BC=5.28%, EU=1.74%, GL=-40.84%
+    TRDmot: Baseline=0.01557, BC=0.04%, EU=0.01%, GL=2.71%
+    MANche: Baseline=0.01204, BC=8.41%, EU=3.04%, GL=-72.11%
+    TRAinl: Baseline=0.008242, BC=0.07%, EU=0.02%, GL=-3.63%
+    Combined top5 share of baseline Betweenness Centrality: 79.19%
+    Combined variation for these sectors: BC 2.50%, EU 0.91%, GL -19.87%
+
   Top 5 sectors by Hub Score:
-    MANcom: Baseline=0.000848, BC=0.0008815, EU=0.0009012, GL=0.0004765
-    MANmot: Baseline=0.0001535, BC=0.0001533, EU=0.000153, GL=0.0001554
-    MANche: Baseline=0.0001389, BC=0.0001462, EU=0.0001506, GL=6.508e-05
-    TRDmot: Baseline=0.0001076, BC=0.0001113, EU=0.0001134, GL=6.826e-05
-    PROleg: Baseline=0.0001006, BC=0.0001002, EU=9.988e-05, GL=0.0001061
+    MANcom: Baseline=0.000848, BC=3.95%, EU=6.28%, GL=-43.81%
+    MANmot: Baseline=0.0001535, BC=-0.11%, EU=-0.29%, GL=1.27%
+    MANche: Baseline=0.0001389, BC=5.29%, EU=8.41%, GL=-53.14%
+    TRDmot: Baseline=0.0001076, BC=3.40%, EU=5.38%, GL=-36.59%
+    PROleg: Baseline=0.0001006, BC=-0.45%, EU=-0.76%, GL=5.45%
+    Combined top5 share of baseline Hub Score: 63.57%
+    Combined variation for these sectors: BC 3.26%, EU 5.15%, GL -35.39%
+
   Top 5 sectors by Authority Score:
-    MANcom: Baseline=0.0002709, BC=0.0002782, EU=0.0002823, GL=0.0001921
-
-    CNS+: Baseline=0.0001422, BC=0.0001472, EU=0.0001499, GL=9.603e-05
-
-    MANmet: Baseline=0.0001113, BC=0.0001178, EU=0.0001206, GL=6.014e-05
-
-    MANmot: Baseline=9.059e-05, BC=9.319e-05, EU=9.441e-05, GL=6.773e-05
-
-    MANmac: Baseline=7.905e-05, BC=8.147e-05, EU=8.264e-05, GL=5.767e-05
+    MANcom: Baseline=0.0002709, BC=2.69%, EU=4.21%, GL=-29.10%
+    CNS+: Baseline=0.0001422, BC=3.49%, EU=5.42%, GL=-32.47%
+    MANmet: Baseline=0.0001113, BC=5.85%, EU=8.39%, GL=-45.95%
+    MANmot: Baseline=9.059e-05, BC=2.87%, EU=4.22%, GL=-25.23%
+    MANmac: Baseline=7.905e-05, BC=3.06%, EU=4.54%, GL=-27.05%
+    Combined top5 share of baseline Authority Score: 36.99%
+    Combined variation for these sectors: BC 3.43%, EU 5.16%, GL -31.75%
 
 Country: BRA
   Clustering Coefficient: Baseline=0.002913, BC=0.002925, EU=0.002924, GL=0.002889
@@ -355,33 +425,40 @@ Country: BRA
   Authority Score:         Baseline=0.001167, BC=0.00117, EU=0.00117, GL=0.001194
 
   Top 5 sectors by Clustering Coefficient:
-    TRDmot: Baseline=0.0002764, BC=0.0002772, EU=0.0002775, GL=0.0002783
-    ADM+: Baseline=0.0001636, BC=0.0001641, EU=0.0001643, GL=0.000165
-    PROleg: Baseline=0.0001626, BC=0.000163, EU=0.0001632, GL=0.0001641
-    EXT+: Baseline=0.0001262, BC=0.0001266, EU=0.0001267, GL=0.000127
-    FINser: Baseline=0.0001229, BC=0.0001232, EU=0.0001233, GL=0.0001241
+    TRDmot: Baseline=0.0002764, BC=0.30%, EU=0.41%, GL=0.69%
+    ADM+: Baseline=0.0001636, BC=0.28%, EU=0.40%, GL=0.86%
+    PROleg: Baseline=0.0001626, BC=0.29%, EU=0.39%, GL=0.92%
+    EXT+: Baseline=0.0001262, BC=0.27%, EU=0.40%, GL=0.63%
+    FINser: Baseline=0.0001229, BC=0.28%, EU=0.40%, GL=1.01%
+    Combined top5 share of baseline Clustering Coefficient: 29.24%
+    Combined variation for these sectors: BC 0.29%, EU 0.40%, GL 0.80%
+
   Top 5 sectors by Betweenness Centrality:
-    ENRoil: Baseline=0.03949, BC=0.0393, EU=0.03948, GL=0.03988
-    TRDmot: Baseline=0.02941, BC=0.02923, EU=0.0294, GL=0.02976
-    MIN+: Baseline=0.01936, BC=0.01936, EU=0.01936, GL=0.01943
-    TRAinl: Baseline=0.01725, BC=0.01706, EU=0.01724, GL=0.01758
-    MANche: Baseline=0.003766, BC=0.003766, EU=0.003766, GL=0.003824
+    ENRoil: Baseline=0.03949, BC=-0.47%, EU=-0.02%, GL=1.01%
+    TRDmot: Baseline=0.02941, BC=-0.63%, EU=-0.03%, GL=1.18%
+    MIN+: Baseline=0.01936, BC=0.00%, EU=-0.01%, GL=0.33%
+    TRAinl: Baseline=0.01725, BC=-1.07%, EU=-0.04%, GL=1.94%
+    MANche: Baseline=0.003766, BC=0.00%, EU=0.00%, GL=1.54%
+    Combined top5 share of baseline Betweenness Centrality: 82.65%
+    Combined variation for these sectors: BC -0.51%, EU -0.03%, GL 1.10%
+
   Top 5 sectors by Hub Score:
-    PROleg: Baseline=0.000194, BC=0.0001922, EU=0.0001911, GL=0.0002143
-    ENRoil: Baseline=0.0001386, BC=0.0001375, EU=0.0001369, GL=0.0001523
-    MIN+: Baseline=0.0001293, BC=0.0001403, EU=0.0001463, GL=2.911e-05
-    AGRagr: Baseline=0.0001187, BC=0.0001262, EU=0.000131, GL=3.863e-05
-    FINser: Baseline=8.9e-05, BC=8.809e-05, EU=8.756e-05, GL=9.888e-05
+    PROleg: Baseline=0.000194, BC=-0.95%, EU=-1.53%, GL=10.46%
+    ENRoil: Baseline=0.0001386, BC=-0.77%, EU=-1.22%, GL=9.93%
+    MIN+: Baseline=0.0001293, BC=8.46%, EU=13.10%, GL=-77.50%
+    AGRagr: Baseline=0.0001187, BC=6.34%, EU=10.41%, GL=-67.44%
+    FINser: Baseline=8.9e-05, BC=-1.02%, EU=-1.61%, GL=11.11%
+    Combined top5 share of baseline Hub Score: 57.44%
+    Combined variation for these sectors: BC 2.19%, EU 3.46%, GL -20.36%
+
   Top 5 sectors by Authority Score:
-    ENRoil: Baseline=0.0001095, BC=0.0001094, EU=0.0001091, GL=0.0001171
-
-    TRDmot: Baseline=8.727e-05, BC=8.691e-05, EU=8.666e-05, GL=9.455e-05
-
-    FINser: Baseline=8.292e-05, BC=8.244e-05, EU=8.213e-05, GL=9.143e-05
-
-    PUB+: Baseline=7.998e-05, BC=7.952e-05, EU=7.925e-05, GL=8.814e-05
-
-    MANche: Baseline=6.462e-05, BC=6.501e-05, EU=6.498e-05, GL=6.76e-05
+    ENRoil: Baseline=0.0001095, BC=-0.03%, EU=-0.34%, GL=6.93%
+    TRDmot: Baseline=8.727e-05, BC=-0.41%, EU=-0.70%, GL=8.34%
+    FINser: Baseline=8.292e-05, BC=-0.59%, EU=-0.95%, GL=10.27%
+    PUB+: Baseline=7.998e-05, BC=-0.57%, EU=-0.92%, GL=10.20%
+    MANche: Baseline=6.462e-05, BC=0.60%, EU=0.54%, GL=4.60%
+    Combined top5 share of baseline Authority Score: 36.35%
+    Combined variation for these sectors: BC -0.22%, EU -0.51%, GL 8.14%
 
 Country: RUS
   Clustering Coefficient: Baseline=0.001308, BC=0.001294, EU=0.001285, GL=0.001182
@@ -390,33 +467,40 @@ Country: RUS
   Authority Score:         Baseline=0.0006188, BC=0.0006048, EU=0.0006278, GL=0.0004967
 
   Top 5 sectors by Clustering Coefficient:
-    PUB+: Baseline=0.0001003, BC=9.688e-05, EU=0.0001001, GL=8.718e-05
-    RES+: Baseline=9.739e-05, BC=9.409e-05, EU=9.727e-05, GL=8.421e-05
-    CNS+: Baseline=9.201e-05, BC=8.602e-05, EU=8.828e-05, GL=8.806e-05
-    FINser: Baseline=7.649e-05, BC=7.325e-05, EU=7.566e-05, GL=6.571e-05
-    ENRele: Baseline=7.239e-05, BC=8.036e-05, EU=6.576e-05, GL=8.754e-05
+    PUB+: Baseline=0.0001003, BC=-3.38%, EU=-0.14%, GL=-13.05%
+    RES+: Baseline=9.739e-05, BC=-3.39%, EU=-0.13%, GL=-13.53%
+    CNS+: Baseline=9.201e-05, BC=-6.51%, EU=-4.06%, GL=-4.30%
+    FINser: Baseline=7.649e-05, BC=-4.23%, EU=-1.08%, GL=-14.08%
+    ENRele: Baseline=7.239e-05, BC=11.02%, EU=-9.15%, GL=20.92%
+    Combined top5 share of baseline Clustering Coefficient: 33.53%
+    Combined variation for these sectors: BC -1.81%, EU -2.61%, GL -5.89%
+
   Top 5 sectors by Betweenness Centrality:
-    TRDmot: Baseline=0.1509, BC=0.14, EU=0.1481, GL=0.1389
-    PROleg: Baseline=0.1338, BC=0.1223, EU=0.1307, GL=0.1215
-    ENRoil: Baseline=0.1244, BC=0.1231, EU=0.1239, GL=0.1295
-    ENRgas: Baseline=0.05134, BC=0.04946, EU=0.05125, GL=0.05987
-    MANmet: Baseline=0.01838, BC=0.01878, EU=0.01893, GL=0.005581
+    TRDmot: Baseline=0.1509, BC=-7.22%, EU=-1.81%, GL=-7.97%
+    PROleg: Baseline=0.1338, BC=-8.64%, EU=-2.33%, GL=-9.19%
+    ENRoil: Baseline=0.1244, BC=-0.99%, EU=-0.39%, GL=4.11%
+    ENRgas: Baseline=0.05134, BC=-3.66%, EU=-0.18%, GL=16.60%
+    MANmet: Baseline=0.01838, BC=2.13%, EU=2.97%, GL=-69.64%
+    Combined top5 share of baseline Betweenness Centrality: 88.71%
+    Combined variation for these sectors: BC -5.26%, EU -1.23%, GL -4.91%
+
   Top 5 sectors by Hub Score:
-    ENRoil: Baseline=0.0001677, BC=0.000167, EU=0.0001671, GL=0.0001635
-    TRDmot: Baseline=6.854e-05, BC=6.963e-05, EU=7.065e-05, GL=5.299e-05
-    MANmet: Baseline=6.416e-05, BC=6.605e-05, EU=6.711e-05, GL=3.676e-05
-    PROleg: Baseline=6.273e-05, BC=6.212e-05, EU=6.197e-05, GL=6.711e-05
-    MANwoo: Baseline=2.608e-05, BC=2.788e-05, EU=2.899e-05, GL=7.352e-06
+    ENRoil: Baseline=0.0001677, BC=-0.37%, EU=-0.36%, GL=-2.49%
+    TRDmot: Baseline=6.854e-05, BC=1.58%, EU=3.07%, GL=-22.69%
+    MANmet: Baseline=6.416e-05, BC=2.95%, EU=4.59%, GL=-42.71%
+    PROleg: Baseline=6.273e-05, BC=-0.97%, EU=-1.22%, GL=6.97%
+    MANwoo: Baseline=2.608e-05, BC=6.88%, EU=11.14%, GL=-71.81%
+    Combined top5 share of baseline Hub Score: 68.58%
+    Combined variation for these sectors: BC 0.91%, EU 1.69%, GL -15.80%
+
   Top 5 sectors by Authority Score:
-    FINser: Baseline=0.0001123, BC=0.0001077, EU=0.0001107, GL=0.000108
-
-    TRDmot: Baseline=5.556e-05, BC=5.372e-05, EU=5.514e-05, GL=5.045e-05
-
-    PROleg: Baseline=5.041e-05, BC=4.899e-05, EU=5.059e-05, GL=4.253e-05
-
-    CNS+: Baseline=4.946e-05, BC=4.919e-05, EU=5.18e-05, GL=2.98e-05
-
-    TRAinl: Baseline=2.295e-05, BC=2.213e-05, EU=2.285e-05, GL=1.977e-05
+    FINser: Baseline=0.0001123, BC=-4.12%, EU=-1.47%, GL=-3.87%
+    TRDmot: Baseline=5.556e-05, BC=-3.32%, EU=-0.77%, GL=-9.19%
+    PROleg: Baseline=5.041e-05, BC=-2.80%, EU=0.37%, GL=-15.63%
+    CNS+: Baseline=4.946e-05, BC=-0.56%, EU=4.73%, GL=-39.76%
+    TRAinl: Baseline=2.295e-05, BC=-3.59%, EU=-0.43%, GL=-13.87%
+    Combined top5 share of baseline Authority Score: 46.98%
+    Combined variation for these sectors: BC -3.09%, EU 0.12%, GL -13.82%
 
 Country: AUS
   Clustering Coefficient: Baseline=0.003824, BC=0.003849, EU=0.003839, GL=0.004143
@@ -425,33 +509,40 @@ Country: AUS
   Authority Score:         Baseline=0.000861, BC=0.0008712, EU=0.0008737, GL=0.0009026
 
   Top 5 sectors by Clustering Coefficient:
-    FINser: Baseline=0.0003028, BC=0.0002999, EU=0.0003, GL=0.0003281
-    PROleg: Baseline=0.0003006, BC=0.0003025, EU=0.0003025, GL=0.0003303
-    ADM+: Baseline=0.000292, BC=0.0002938, EU=0.0002938, GL=0.0003203
-    TRDmot: Baseline=0.0002575, BC=0.0002591, EU=0.0002591, GL=0.0002805
-    RES+: Baseline=0.0002155, BC=0.0002169, EU=0.0002169, GL=0.0002338
+    FINser: Baseline=0.0003028, BC=-0.93%, EU=-0.93%, GL=8.37%
+    PROleg: Baseline=0.0003006, BC=0.63%, EU=0.64%, GL=9.88%
+    ADM+: Baseline=0.000292, BC=0.62%, EU=0.63%, GL=9.69%
+    TRDmot: Baseline=0.0002575, BC=0.60%, EU=0.62%, GL=8.94%
+    RES+: Baseline=0.0002155, BC=0.63%, EU=0.64%, GL=8.51%
+    Combined top5 share of baseline Clustering Coefficient: 35.78%
+    Combined variation for these sectors: BC 0.28%, EU 0.29%, GL 9.11%
+
   Top 5 sectors by Betweenness Centrality:
-    CNS+: Baseline=0.03679, BC=0.03661, EU=0.03672, GL=0.03675
-    MIN+: Baseline=0.02078, BC=0.02055, EU=0.02066, GL=0.02069
-    RES+: Baseline=0.01488, BC=0.01488, EU=0.01488, GL=0.01489
-    TRDmot: Baseline=0.01245, BC=0.01239, EU=0.01239, GL=0.01217
-    ADM+: Baseline=0.005844, BC=0.005846, EU=0.005844, GL=0.005859
+    CNS+: Baseline=0.03679, BC=-0.49%, EU=-0.19%, GL=-0.12%
+    MIN+: Baseline=0.02078, BC=-1.10%, EU=-0.58%, GL=-0.45%
+    RES+: Baseline=0.01488, BC=0.00%, EU=0.00%, GL=0.04%
+    TRDmot: Baseline=0.01245, BC=-0.49%, EU=-0.47%, GL=-2.27%
+    ADM+: Baseline=0.005844, BC=0.03%, EU=-0.00%, GL=0.25%
+    Combined top5 share of baseline Betweenness Centrality: 87.40%
+    Combined variation for these sectors: BC -0.51%, EU -0.28%, GL -0.44%
+
   Top 5 sectors by Hub Score:
-    MIN+: Baseline=0.0005336, BC=0.0005803, EU=0.0006057, GL=0.000112
-    MANmet: Baseline=0.0001055, BC=0.0001136, EU=0.000118, GL=3.021e-05
-    TRDmot: Baseline=6.341e-05, BC=6.547e-05, EU=6.666e-05, GL=4.382e-05
-    FINser: Baseline=5.459e-05, BC=5.415e-05, EU=5.385e-05, GL=6.141e-05
-    PROleg: Baseline=3.741e-05, BC=3.725e-05, EU=3.711e-05, GL=4.128e-05
+    MIN+: Baseline=0.0005336, BC=8.76%, EU=13.51%, GL=-79.02%
+    MANmet: Baseline=0.0001055, BC=7.72%, EU=11.86%, GL=-71.35%
+    TRDmot: Baseline=6.341e-05, BC=3.25%, EU=5.12%, GL=-30.90%
+    FINser: Baseline=5.459e-05, BC=-0.81%, EU=-1.36%, GL=12.49%
+    PROleg: Baseline=3.741e-05, BC=-0.43%, EU=-0.81%, GL=10.34%
+    Combined top5 share of baseline Hub Score: 77.00%
+    Combined variation for these sectors: BC 7.09%, EU 10.93%, GL -63.66%
+
   Top 5 sectors by Authority Score:
-    CNS+: Baseline=0.0001182, BC=0.0001211, EU=0.0001224, GL=0.0001084
-
-    PROleg: Baseline=6.011e-05, BC=6.01e-05, EU=5.987e-05, GL=7.09e-05
-
-    TRDmot: Baseline=5.59e-05, BC=5.63e-05, EU=5.636e-05, GL=6.015e-05
-
-    FINser: Baseline=5.322e-05, BC=5.316e-05, EU=5.293e-05, GL=6.357e-05
-
-    MIN+: Baseline=4.739e-05, BC=4.826e-05, EU=4.853e-05, GL=4.892e-05
+    CNS+: Baseline=0.0001182, BC=2.42%, EU=3.48%, GL=-8.30%
+    PROleg: Baseline=6.011e-05, BC=-0.03%, EU=-0.41%, GL=17.94%
+    TRDmot: Baseline=5.59e-05, BC=0.72%, EU=0.82%, GL=7.61%
+    FINser: Baseline=5.322e-05, BC=-0.11%, EU=-0.55%, GL=19.45%
+    MIN+: Baseline=4.739e-05, BC=1.84%, EU=2.41%, GL=3.24%
+    Combined top5 share of baseline Authority Score: 38.89%
+    Combined variation for these sectors: BC 1.21%, EU 1.55%, GL 5.11%
 
 Country: CAN
   Clustering Coefficient: Baseline=0.003168, BC=0.003182, EU=0.003174, GL=0.003117
@@ -460,33 +551,40 @@ Country: CAN
   Authority Score:         Baseline=0.004039, BC=0.004025, EU=0.004015, GL=0.004204
 
   Top 5 sectors by Clustering Coefficient:
-    TRDmot: Baseline=0.0002744, BC=0.0002746, EU=0.0002747, GL=0.0002718
-    FINser: Baseline=0.0002599, BC=0.00026, EU=0.0002602, GL=0.0002579
-    CNS+: Baseline=0.0002131, BC=0.000211, EU=0.0002112, GL=0.0002104
-    PROleg: Baseline=0.0001886, BC=0.0001887, EU=0.0001888, GL=0.0001872
-    RES+: Baseline=0.0001326, BC=0.0001326, EU=0.0001327, GL=0.0001318
+    TRDmot: Baseline=0.0002744, BC=0.06%, EU=0.11%, GL=-0.93%
+    FINser: Baseline=0.0002599, BC=0.06%, EU=0.11%, GL=-0.77%
+    CNS+: Baseline=0.0002131, BC=-0.98%, EU=-0.87%, GL=-1.24%
+    PROleg: Baseline=0.0001886, BC=0.06%, EU=0.12%, GL=-0.75%
+    RES+: Baseline=0.0001326, BC=0.04%, EU=0.10%, GL=-0.57%
+    Combined top5 share of baseline Clustering Coefficient: 33.73%
+    Combined variation for these sectors: BC -0.15%, EU -0.08%, GL -0.88%
+
   Top 5 sectors by Betweenness Centrality:
-    TRDmot: Baseline=0.02291, BC=0.0229, EU=0.0229, GL=0.02296
-    CNS+: Baseline=0.01708, BC=0.01707, EU=0.01707, GL=0.01712
-    RES+: Baseline=0.01515, BC=0.01514, EU=0.01514, GL=0.0152
-    MANmot: Baseline=0.01423, BC=0.01423, EU=0.01423, GL=0.01422
-    ENRoil: Baseline=0.006396, BC=0.006406, EU=0.006407, GL=0.0054
+    TRDmot: Baseline=0.02291, BC=-0.05%, EU=-0.05%, GL=0.20%
+    CNS+: Baseline=0.01708, BC=-0.06%, EU=-0.06%, GL=0.26%
+    RES+: Baseline=0.01515, BC=-0.06%, EU=-0.07%, GL=0.30%
+    MANmot: Baseline=0.01423, BC=-0.00%, EU=-0.01%, GL=-0.04%
+    ENRoil: Baseline=0.006396, BC=0.17%, EU=0.17%, GL=-15.57%
+    Combined top5 share of baseline Betweenness Centrality: 84.20%
+    Combined variation for these sectors: BC -0.03%, EU -0.03%, GL -1.14%
+
   Top 5 sectors by Hub Score:
-    ENRoil: Baseline=0.001008, BC=0.0009994, EU=0.0009934, GL=0.001087
-    FINser: Baseline=0.0004022, BC=0.000398, EU=0.0003956, GL=0.0004457
-    MANmot: Baseline=0.0003868, BC=0.0003835, EU=0.0003812, GL=0.0004219
-    TRDmot: Baseline=0.0003284, BC=0.0003263, EU=0.000325, GL=0.0003519
-    PROleg: Baseline=0.0002353, BC=0.000233, EU=0.0002317, GL=0.0002596
+    ENRoil: Baseline=0.001008, BC=-0.86%, EU=-1.45%, GL=7.83%
+    FINser: Baseline=0.0004022, BC=-1.03%, EU=-1.64%, GL=10.81%
+    MANmot: Baseline=0.0003868, BC=-0.85%, EU=-1.45%, GL=9.08%
+    TRDmot: Baseline=0.0003284, BC=-0.63%, EU=-1.04%, GL=7.18%
+    PROleg: Baseline=0.0002353, BC=-0.96%, EU=-1.53%, GL=10.36%
+    Combined top5 share of baseline Hub Score: 48.08%
+    Combined variation for these sectors: BC -0.87%, EU -1.43%, GL 8.70%
+
   Top 5 sectors by Authority Score:
-    CNS+: Baseline=0.0005261, BC=0.0005257, EU=0.0005256, GL=0.000531
-
-    TRDmot: Baseline=0.0003877, BC=0.0003848, EU=0.0003832, GL=0.0004178
-
-    FINser: Baseline=0.0003387, BC=0.000336, EU=0.0003345, GL=0.000367
-
-    MANmot: Baseline=0.0002915, BC=0.0002912, EU=0.0002904, GL=0.0003016
-
-    PUB+: Baseline=0.0002058, BC=0.0002045, EU=0.0002038, GL=0.0002191
+    CNS+: Baseline=0.0005261, BC=-0.09%, EU=-0.10%, GL=0.93%
+    TRDmot: Baseline=0.0003877, BC=-0.74%, EU=-1.17%, GL=7.77%
+    FINser: Baseline=0.0003387, BC=-0.80%, EU=-1.24%, GL=8.36%
+    MANmot: Baseline=0.0002915, BC=-0.12%, EU=-0.40%, GL=3.44%
+    PUB+: Baseline=0.0002058, BC=-0.63%, EU=-0.97%, GL=6.46%
+    Combined top5 share of baseline Authority Score: 43.33%
+    Combined variation for these sectors: BC -0.44%, EU -0.71%, GL 4.95%
 
 Country: ESP
   Clustering Coefficient: Baseline=0.001361, BC=0.001337, EU=0.001326, GL=0.00138
@@ -495,33 +593,40 @@ Country: ESP
   Authority Score:         Baseline=0.000596, BC=0.0005899, EU=0.0005891, GL=0.0005965
 
   Top 5 sectors by Clustering Coefficient:
-    RES+: Baseline=0.0001481, BC=0.0001459, EU=0.0001449, GL=0.0001514
-    TRDmot: Baseline=0.0001079, BC=0.0001059, EU=0.0001053, GL=0.00011
-    FINser: Baseline=0.0001059, BC=0.0001042, EU=0.0001035, GL=0.0001081
-    PROleg: Baseline=0.0001037, BC=0.000102, EU=0.0001013, GL=0.0001058
-    CNS+: Baseline=8.879e-05, BC=8.724e-05, EU=8.668e-05, GL=8.968e-05
+    RES+: Baseline=0.0001481, BC=-1.46%, EU=-2.18%, GL=2.21%
+    TRDmot: Baseline=0.0001079, BC=-1.80%, EU=-2.42%, GL=1.94%
+    FINser: Baseline=0.0001059, BC=-1.59%, EU=-2.30%, GL=2.11%
+    PROleg: Baseline=0.0001037, BC=-1.64%, EU=-2.28%, GL=1.99%
+    CNS+: Baseline=8.879e-05, BC=-1.75%, EU=-2.37%, GL=1.01%
+    Combined top5 share of baseline Clustering Coefficient: 40.74%
+    Combined variation for these sectors: BC -1.63%, EU -2.30%, GL 1.91%
+
   Top 5 sectors by Betweenness Centrality:
-    TRDmot: Baseline=0.03665, BC=0.03663, EU=0.03663, GL=0.03674
-    MANmot: Baseline=0.02737, BC=0.03074, EU=0.02739, GL=0.02438
-    ENRele: Baseline=0.01956, BC=0.01616, EU=0.01906, GL=0.0227
-    ADM+: Baseline=0.009391, BC=0.009368, EU=0.009375, GL=0.009403
-    MANfoo: Baseline=0.008122, BC=0.008102, EU=0.008107, GL=0.008057
+    TRDmot: Baseline=0.03665, BC=-0.07%, EU=-0.06%, GL=0.23%
+    MANmot: Baseline=0.02737, BC=12.29%, EU=0.08%, GL=-10.93%
+    ENRele: Baseline=0.01956, BC=-17.36%, EU=-2.53%, GL=16.06%
+    ADM+: Baseline=0.009391, BC=-0.25%, EU=-0.17%, GL=0.13%
+    MANfoo: Baseline=0.008122, BC=-0.25%, EU=-0.19%, GL=-0.80%
+    Combined top5 share of baseline Betweenness Centrality: 79.85%
+    Combined variation for these sectors: BC -0.10%, EU -0.52%, GL 0.18%
+
   Top 5 sectors by Hub Score:
-    PROleg: Baseline=8.332e-05, BC=8.257e-05, EU=8.214e-05, GL=9.056e-05
-    FINser: Baseline=5.211e-05, BC=5.149e-05, EU=5.113e-05, GL=5.787e-05
-    TRDmot: Baseline=4.497e-05, BC=4.476e-05, EU=4.481e-05, GL=4.473e-05
-    ENRoil: Baseline=3.542e-05, BC=3.486e-05, EU=3.47e-05, GL=3.86e-05
-    COMcom: Baseline=3.043e-05, BC=3.013e-05, EU=2.996e-05, GL=3.346e-05
+    PROleg: Baseline=8.332e-05, BC=-0.91%, EU=-1.41%, GL=8.69%
+    FINser: Baseline=5.211e-05, BC=-1.19%, EU=-1.90%, GL=11.04%
+    TRDmot: Baseline=4.497e-05, BC=-0.47%, EU=-0.35%, GL=-0.53%
+    ENRoil: Baseline=3.542e-05, BC=-1.58%, EU=-2.04%, GL=8.99%
+    COMcom: Baseline=3.043e-05, BC=-0.98%, EU=-1.55%, GL=9.95%
+    Combined top5 share of baseline Hub Score: 51.18%
+    Combined variation for these sectors: BC -0.99%, EU -1.43%, GL 7.70%
+
   Top 5 sectors by Authority Score:
-    FINser: Baseline=0.0001529, BC=0.0001501, EU=0.0001483, GL=0.0001701
-
-    TRDmot: Baseline=5.127e-05, BC=5.037e-05, EU=4.993e-05, GL=5.473e-05
-
-    CNS+: Baseline=3.371e-05, BC=3.376e-05, EU=3.385e-05, GL=2.87e-05
-
-    PROleg: Baseline=3.116e-05, BC=3.07e-05, EU=3.042e-05, GL=3.318e-05
-
-    MANfoo: Baseline=2.645e-05, BC=2.651e-05, EU=2.672e-05, GL=2.497e-05
+    FINser: Baseline=0.0001529, BC=-1.86%, EU=-3.07%, GL=11.20%
+    TRDmot: Baseline=5.127e-05, BC=-1.76%, EU=-2.62%, GL=6.75%
+    CNS+: Baseline=3.371e-05, BC=0.16%, EU=0.43%, GL=-14.85%
+    PROleg: Baseline=3.116e-05, BC=-1.49%, EU=-2.39%, GL=6.46%
+    MANfoo: Baseline=2.645e-05, BC=0.20%, EU=1.02%, GL=-5.61%
+    Combined top5 share of baseline Authority Score: 49.59%
+    Combined variation for these sectors: BC -1.39%, EU -2.15%, GL 5.45%
 
 Country: TUR
   Clustering Coefficient: Baseline=0.001008, BC=0.001009, EU=0.001002, GL=0.0009985
@@ -530,33 +635,40 @@ Country: TUR
   Authority Score:         Baseline=0.0004129, BC=0.0004174, EU=0.0004197, GL=0.0003803
 
   Top 5 sectors by Clustering Coefficient:
-    TRDmot: Baseline=8.614e-05, BC=8.619e-05, EU=8.645e-05, GL=8.444e-05
-    RES+: Baseline=6.778e-05, BC=6.779e-05, EU=6.728e-05, GL=6.81e-05
-    ENRele: Baseline=6.01e-05, BC=5.992e-05, EU=5.866e-05, GL=5.748e-05
-    PROleg: Baseline=5.605e-05, BC=5.61e-05, EU=5.624e-05, GL=5.508e-05
-    ADM+: Baseline=5.564e-05, BC=5.569e-05, EU=5.583e-05, GL=5.477e-05
+    TRDmot: Baseline=8.614e-05, BC=0.05%, EU=0.36%, GL=-1.98%
+    RES+: Baseline=6.778e-05, BC=0.00%, EU=-0.74%, GL=0.46%
+    ENRele: Baseline=6.01e-05, BC=-0.31%, EU=-2.40%, GL=-4.36%
+    PROleg: Baseline=5.605e-05, BC=0.09%, EU=0.34%, GL=-1.73%
+    ADM+: Baseline=5.564e-05, BC=0.09%, EU=0.35%, GL=-1.55%
+    Combined top5 share of baseline Clustering Coefficient: 32.30%
+    Combined variation for these sectors: BC -0.01%, EU -0.38%, GL -1.79%
+
   Top 5 sectors by Betweenness Centrality:
-    MANmet: Baseline=0.02482, BC=0.01203, EU=0.0145, GL=0.02618
-    TRDmot: Baseline=0.01754, BC=0.02083, EU=0.02062, GL=0.018
-    ENRele: Baseline=0.01177, BC=0.02457, EU=0.02209, GL=0.01221
-    CNS+: Baseline=0.007872, BC=0.006605, EU=0.0068, GL=0.007424
-    WATwst: Baseline=0.006648, BC=0.003372, EU=0.00358, GL=0.006649
+    MANmet: Baseline=0.02482, BC=-51.54%, EU=-41.56%, GL=5.47%
+    TRDmot: Baseline=0.01754, BC=18.75%, EU=17.57%, GL=2.65%
+    ENRele: Baseline=0.01177, BC=108.84%, EU=87.74%, GL=3.74%
+    CNS+: Baseline=0.007872, BC=-16.09%, EU=-13.62%, GL=-5.69%
+    WATwst: Baseline=0.006648, BC=-49.27%, EU=-46.15%, GL=0.00%
+    Combined top5 share of baseline Betweenness Centrality: 74.28%
+    Combined variation for these sectors: BC -1.81%, EU -1.53%, GL 2.64%
+
   Top 5 sectors by Hub Score:
-    FINser: Baseline=2.361e-05, BC=2.336e-05, EU=2.322e-05, GL=2.606e-05
-    MANtex: Baseline=2.217e-05, BC=2.222e-05, EU=2.227e-05, GL=2.123e-05
-    TRDmot: Baseline=2.132e-05, BC=2.132e-05, EU=2.134e-05, GL=2.106e-05
-    MANmin: Baseline=1.887e-05, BC=1.883e-05, EU=1.883e-05, GL=1.78e-05
-    MANmet: Baseline=1.72e-05, BC=1.735e-05, EU=1.743e-05, GL=1.653e-05
+    FINser: Baseline=2.361e-05, BC=-1.04%, EU=-1.64%, GL=10.42%
+    MANtex: Baseline=2.217e-05, BC=0.20%, EU=0.45%, GL=-4.25%
+    TRDmot: Baseline=2.132e-05, BC=0.00%, EU=0.08%, GL=-1.22%
+    MANmin: Baseline=1.887e-05, BC=-0.23%, EU=-0.20%, GL=-5.68%
+    MANmet: Baseline=1.72e-05, BC=0.87%, EU=1.34%, GL=-3.88%
+    Combined top5 share of baseline Hub Score: 45.45%
+    Combined variation for these sectors: BC -0.09%, EU -0.08%, GL -0.47%
+
   Top 5 sectors by Authority Score:
-    FINser: Baseline=8.015e-05, BC=7.956e-05, EU=7.934e-05, GL=8.625e-05
-
-    CNS+: Baseline=3.952e-05, BC=4.057e-05, EU=4.131e-05, GL=2.842e-05
-
-    TRDmot: Baseline=3.291e-05, BC=3.278e-05, EU=3.278e-05, GL=3.379e-05
-
-    TRAinl: Baseline=2.159e-05, BC=2.149e-05, EU=2.153e-05, GL=2.192e-05
-
-    MANele: Baseline=2.011e-05, BC=2.042e-05, EU=2.055e-05, GL=1.758e-05
+    FINser: Baseline=8.015e-05, BC=-0.74%, EU=-1.02%, GL=7.60%
+    CNS+: Baseline=3.952e-05, BC=2.63%, EU=4.52%, GL=-28.09%
+    TRDmot: Baseline=3.291e-05, BC=-0.40%, EU=-0.41%, GL=2.68%
+    TRAinl: Baseline=2.159e-05, BC=-0.45%, EU=-0.27%, GL=1.54%
+    MANele: Baseline=2.011e-05, BC=1.52%, EU=2.18%, GL=-12.58%
+    Combined top5 share of baseline Authority Score: 47.05%
+    Combined variation for these sectors: BC 0.27%, EU 0.63%, GL -3.26%
 
 Country: MEX
   Clustering Coefficient: Baseline=0.001463, BC=0.001473, EU=0.001471, GL=0.001421
@@ -565,33 +677,40 @@ Country: MEX
   Authority Score:         Baseline=0.002494, BC=0.002499, EU=0.002495, GL=0.00251
 
   Top 5 sectors by Clustering Coefficient:
-    TRDmot: Baseline=0.0001143, BC=0.0001146, EU=0.0001146, GL=0.0001122
-    TRAinl: Baseline=7.314e-05, BC=7.334e-05, EU=7.335e-05, GL=7.075e-05
-    MANfoo: Baseline=6.513e-05, BC=6.586e-05, EU=6.586e-05, GL=6.1e-05
-    MANmot: Baseline=6.484e-05, BC=6.499e-05, EU=6.464e-05, GL=6.219e-05
-    ADM+: Baseline=6.435e-05, BC=6.452e-05, EU=6.45e-05, GL=6.392e-05
+    TRDmot: Baseline=0.0001143, BC=0.25%, EU=0.23%, GL=-1.84%
+    TRAinl: Baseline=7.314e-05, BC=0.27%, EU=0.29%, GL=-3.26%
+    MANfoo: Baseline=6.513e-05, BC=1.12%, EU=1.12%, GL=-6.33%
+    MANmot: Baseline=6.484e-05, BC=0.23%, EU=-0.31%, GL=-4.08%
+    ADM+: Baseline=6.435e-05, BC=0.25%, EU=0.23%, GL=-0.67%
+    Combined top5 share of baseline Clustering Coefficient: 26.09%
+    Combined variation for these sectors: BC 0.40%, EU 0.30%, GL -3.06%
+
   Top 5 sectors by Betweenness Centrality:
-    TRDmot: Baseline=0.0198, BC=0.01964, EU=0.0198, GL=0.02005
-    MANmot: Baseline=0.0186, BC=0.0186, EU=0.0186, GL=0.0186
-    TRAinl: Baseline=0.0127, BC=0.01251, EU=0.0127, GL=0.01273
-    ADM+: Baseline=0.002426, BC=0.002426, EU=0.002426, GL=0.002426
-    ENRele: Baseline=0.002413, BC=0.002413, EU=0.002413, GL=0.002413
+    TRDmot: Baseline=0.0198, BC=-0.80%, EU=0.00%, GL=1.27%
+    MANmot: Baseline=0.0186, BC=0.00%, EU=0.00%, GL=-0.01%
+    TRAinl: Baseline=0.0127, BC=-1.50%, EU=0.01%, GL=0.25%
+    ADM+: Baseline=0.002426, BC=0.00%, EU=0.00%, GL=0.01%
+    ENRele: Baseline=0.002413, BC=0.00%, EU=0.00%, GL=-0.01%
+    Combined top5 share of baseline Betweenness Centrality: 78.82%
+    Combined variation for these sectors: BC -0.62%, EU 0.00%, GL 0.50%
+
   Top 5 sectors by Hub Score:
-    MANmot: Baseline=0.0008528, BC=0.0008457, EU=0.0008407, GL=0.0009268
-    MANcom: Baseline=0.0006304, BC=0.0006256, EU=0.0006227, GL=0.0006774
-    ENRoil: Baseline=0.0004859, BC=0.0004818, EU=0.0004789, GL=0.0005488
-    TRDmot: Baseline=0.0003418, BC=0.0003393, EU=0.0003376, GL=0.0003708
-    MANele: Baseline=0.0001835, BC=0.0001821, EU=0.0001813, GL=0.000196
+    MANmot: Baseline=0.0008528, BC=-0.83%, EU=-1.42%, GL=8.68%
+    MANcom: Baseline=0.0006304, BC=-0.75%, EU=-1.21%, GL=7.45%
+    ENRoil: Baseline=0.0004859, BC=-0.84%, EU=-1.45%, GL=12.95%
+    TRDmot: Baseline=0.0003418, BC=-0.73%, EU=-1.23%, GL=8.50%
+    MANele: Baseline=0.0001835, BC=-0.75%, EU=-1.21%, GL=6.84%
+    Combined top5 share of baseline Hub Score: 68.67%
+    Combined variation for these sectors: BC -0.79%, EU -1.33%, GL 9.04%
+
   Top 5 sectors by Authority Score:
-    MANmot: Baseline=0.0003871, BC=0.0003885, EU=0.000388, GL=0.0003869
-
-    MANcom: Baseline=0.0002621, BC=0.0002666, EU=0.000269, GL=0.0002142
-
-    TRAinl: Baseline=0.0001829, BC=0.000182, EU=0.0001813, GL=0.0001951
-
-    MANfoo: Baseline=0.0001514, BC=0.000151, EU=0.0001504, GL=0.0001599
-
-    CNS+: Baseline=0.0001392, BC=0.0001398, EU=0.0001399, GL=0.0001379
+    MANmot: Baseline=0.0003871, BC=0.36%, EU=0.22%, GL=-0.06%
+    MANcom: Baseline=0.0002621, BC=1.71%, EU=2.61%, GL=-18.29%
+    TRAinl: Baseline=0.0001829, BC=-0.48%, EU=-0.88%, GL=6.69%
+    MANfoo: Baseline=0.0001514, BC=-0.26%, EU=-0.64%, GL=5.62%
+    CNS+: Baseline=0.0001392, BC=0.45%, EU=0.53%, GL=-0.95%
+    Combined top5 share of baseline Authority Score: 45.02%
+    Combined variation for these sectors: BC 0.46%, EU 0.52%, GL -2.56%
 
 Country: IDN
   Clustering Coefficient: Baseline=0.0009738, BC=0.0009771, EU=0.0009778, GL=0.0009293
@@ -600,33 +719,40 @@ Country: IDN
   Authority Score:         Baseline=0.0003166, BC=0.0003231, EU=0.0003276, GL=0.0002519
 
   Top 5 sectors by Clustering Coefficient:
-    TRDmot: Baseline=0.000113, BC=0.000113, EU=0.0001132, GL=0.0001117
-    CNS+: Baseline=7.842e-05, BC=7.834e-05, EU=7.854e-05, GL=7.743e-05
-    MANfmp: Baseline=4.466e-05, BC=4.466e-05, EU=4.474e-05, GL=4.172e-05
-    MANfoo: Baseline=3.684e-05, BC=3.721e-05, EU=3.69e-05, GL=3.339e-05
-    TRAinl: Baseline=3.315e-05, BC=3.313e-05, EU=3.32e-05, GL=3.197e-05
+    TRDmot: Baseline=0.000113, BC=-0.04%, EU=0.15%, GL=-1.17%
+    CNS+: Baseline=7.842e-05, BC=-0.11%, EU=0.15%, GL=-1.27%
+    MANfmp: Baseline=4.466e-05, BC=0.02%, EU=0.20%, GL=-6.58%
+    MANfoo: Baseline=3.684e-05, BC=0.99%, EU=0.16%, GL=-9.37%
+    TRAinl: Baseline=3.315e-05, BC=-0.06%, EU=0.16%, GL=-3.56%
+    Combined top5 share of baseline Clustering Coefficient: 31.43%
+    Combined variation for these sectors: BC 0.07%, EU 0.16%, GL -3.23%
+
   Top 5 sectors by Betweenness Centrality:
-    TRDmot: Baseline=0.05042, BC=0.04971, EU=0.05047, GL=0.05008
-    ENRoil: Baseline=0.04538, BC=0.04466, EU=0.04543, GL=0.04457
-    ENRcoa: Baseline=0.04477, BC=0.04388, EU=0.04478, GL=0.04397
-    CNS+: Baseline=0.009149, BC=0.009149, EU=0.009149, GL=0.009154
-    MANpla: Baseline=0.003375, BC=0.003375, EU=0.003375, GL=0.003375
+    TRDmot: Baseline=0.05042, BC=-1.42%, EU=0.10%, GL=-0.67%
+    ENRoil: Baseline=0.04538, BC=-1.57%, EU=0.11%, GL=-1.78%
+    ENRcoa: Baseline=0.04477, BC=-2.00%, EU=0.01%, GL=-1.79%
+    CNS+: Baseline=0.009149, BC=0.00%, EU=0.00%, GL=0.05%
+    MANpla: Baseline=0.003375, BC=0.00%, EU=0.00%, GL=0.01%
+    Combined top5 share of baseline Betweenness Centrality: 92.00%
+    Combined variation for these sectors: BC -1.52%, EU 0.07%, GL -1.27%
+
   Top 5 sectors by Hub Score:
-    MANfoo: Baseline=2.969e-05, BC=3.047e-05, EU=3.097e-05, GL=2.163e-05
-    MANpla: Baseline=2.557e-05, BC=2.545e-05, EU=2.538e-05, GL=2.647e-05
-    TRDmot: Baseline=2.416e-05, BC=2.456e-05, EU=2.481e-05, GL=1.993e-05
-    FINser: Baseline=2.328e-05, BC=2.305e-05, EU=2.291e-05, GL=2.571e-05
-    ENRcoa: Baseline=2.017e-05, BC=2.132e-05, EU=2.196e-05, GL=9.1e-06
+    MANfoo: Baseline=2.969e-05, BC=2.62%, EU=4.29%, GL=-27.16%
+    MANpla: Baseline=2.557e-05, BC=-0.47%, EU=-0.77%, GL=3.52%
+    TRDmot: Baseline=2.416e-05, BC=1.66%, EU=2.71%, GL=-17.50%
+    FINser: Baseline=2.328e-05, BC=-1.01%, EU=-1.58%, GL=10.42%
+    ENRcoa: Baseline=2.017e-05, BC=5.70%, EU=8.91%, GL=-54.87%
+    Combined top5 share of baseline Hub Score: 38.60%
+    Combined variation for these sectors: BC 1.61%, EU 2.57%, GL -16.30%
+
   Top 5 sectors by Authority Score:
-    CNS+: Baseline=5.543e-05, BC=5.8e-05, EU=5.968e-05, GL=2.919e-05
-
-    TRDmot: Baseline=3.183e-05, BC=3.177e-05, EU=3.182e-05, GL=3.236e-05
-
-    MANfoo: Baseline=2.43e-05, BC=2.455e-05, EU=2.477e-05, GL=2.158e-05
-
-    MANfmp: Baseline=2.033e-05, BC=2.165e-05, EU=2.244e-05, GL=7.744e-06
-
-    EXT+: Baseline=1.832e-05, BC=1.827e-05, EU=1.829e-05, GL=1.877e-05
+    CNS+: Baseline=5.543e-05, BC=4.63%, EU=7.65%, GL=-47.35%
+    TRDmot: Baseline=3.183e-05, BC=-0.18%, EU=-0.04%, GL=1.66%
+    MANfoo: Baseline=2.43e-05, BC=1.01%, EU=1.94%, GL=-11.20%
+    MANfmp: Baseline=2.033e-05, BC=6.51%, EU=10.40%, GL=-61.90%
+    EXT+: Baseline=1.832e-05, BC=-0.26%, EU=-0.14%, GL=2.46%
+    Combined top5 share of baseline Authority Score: 47.45%
+    Combined variation for these sectors: BC 2.68%, EU 4.52%, GL -27.01%
 
 Country: NLD
   Clustering Coefficient: Baseline=0.0003742, BC=0.0003675, EU=0.0003665, GL=0.0003789
@@ -635,33 +761,40 @@ Country: NLD
   Authority Score:         Baseline=0.00268, BC=0.002639, EU=0.002617, GL=0.002902
 
   Top 5 sectors by Clustering Coefficient:
-    MANrep: Baseline=3.286e-05, BC=3.132e-05, EU=3.151e-05, GL=3.252e-05
-    TRDmot: Baseline=2.973e-05, BC=2.935e-05, EU=2.923e-05, GL=3.042e-05
-    CNS+: Baseline=2.838e-05, BC=2.776e-05, EU=2.763e-05, GL=2.82e-05
-    FINser: Baseline=2.568e-05, BC=2.538e-05, EU=2.524e-05, GL=2.626e-05
-    RES+: Baseline=2.511e-05, BC=2.482e-05, EU=2.468e-05, GL=2.554e-05
+    MANrep: Baseline=3.286e-05, BC=-4.69%, EU=-4.10%, GL=-1.03%
+    TRDmot: Baseline=2.973e-05, BC=-1.28%, EU=-1.67%, GL=2.35%
+    CNS+: Baseline=2.838e-05, BC=-2.20%, EU=-2.65%, GL=-0.63%
+    FINser: Baseline=2.568e-05, BC=-1.15%, EU=-1.69%, GL=2.27%
+    RES+: Baseline=2.511e-05, BC=-1.14%, EU=-1.68%, GL=1.74%
+    Combined top5 share of baseline Clustering Coefficient: 37.88%
+    Combined variation for these sectors: BC -2.21%, EU -2.43%, GL 0.85%
+
   Top 5 sectors by Betweenness Centrality:
-    PROleg: Baseline=0.02501, BC=0.02575, EU=0.02551, GL=0.02342
-    TRDmot: Baseline=0.01549, BC=0.01642, EU=0.01564, GL=0.01532
-    ADM+: Baseline=0.01209, BC=0.0127, EU=0.01247, GL=0.01088
-    RES+: Baseline=0.005272, BC=0.006197, EU=0.005313, GL=0.005677
-    MANfoo: Baseline=0.00523, BC=0.00486, EU=0.005508, GL=0.005433
+    PROleg: Baseline=0.02501, BC=2.94%, EU=2.01%, GL=-6.35%
+    TRDmot: Baseline=0.01549, BC=6.00%, EU=0.97%, GL=-1.14%
+    ADM+: Baseline=0.01209, BC=5.01%, EU=3.15%, GL=-10.05%
+    RES+: Baseline=0.005272, BC=17.56%, EU=0.79%, GL=7.69%
+    MANfoo: Baseline=0.00523, BC=-7.09%, EU=5.31%, GL=3.86%
+    Combined top5 share of baseline Betweenness Centrality: 78.43%
+    Combined variation for these sectors: BC 4.48%, EU 2.15%, GL -3.76%
+
   Top 5 sectors by Hub Score:
-    PROleg: Baseline=0.0003595, BC=0.0003558, EU=0.0003536, GL=0.0003951
-    FINser: Baseline=0.000172, BC=0.00017, EU=0.0001689, GL=0.0001909
-    TRDmot: Baseline=0.000107, BC=0.0001063, EU=0.0001062, GL=0.0001087
-    ADM+: Baseline=8.335e-05, BC=8.236e-05, EU=8.183e-05, GL=9.064e-05
-    MANche: Baseline=5.318e-05, BC=5.186e-05, EU=5.225e-05, GL=5.064e-05
+    PROleg: Baseline=0.0003595, BC=-1.03%, EU=-1.62%, GL=9.92%
+    FINser: Baseline=0.000172, BC=-1.14%, EU=-1.82%, GL=11.01%
+    TRDmot: Baseline=0.000107, BC=-0.61%, EU=-0.74%, GL=1.54%
+    ADM+: Baseline=8.335e-05, BC=-1.19%, EU=-1.82%, GL=8.74%
+    MANche: Baseline=5.318e-05, BC=-2.48%, EU=-1.74%, GL=-4.77%
+    Combined top5 share of baseline Hub Score: 65.28%
+    Combined variation for these sectors: BC -1.11%, EU -1.57%, GL 7.87%
+
   Top 5 sectors by Authority Score:
-    PROleg: Baseline=0.000398, BC=0.0003916, EU=0.0003881, GL=0.0004386
-
-    TRDmot: Baseline=0.0003215, BC=0.0003158, EU=0.000313, GL=0.000354
-
-    MANcom: Baseline=0.0002508, BC=0.0002481, EU=0.000246, GL=0.0002737
-
-    ADM+: Baseline=0.0002021, BC=0.0001989, EU=0.0001972, GL=0.0002233
-
-    RES+: Baseline=0.0001899, BC=0.000187, EU=0.0001847, GL=0.0002118
+    PROleg: Baseline=0.000398, BC=-1.61%, EU=-2.50%, GL=10.20%
+    TRDmot: Baseline=0.0003215, BC=-1.77%, EU=-2.63%, GL=10.11%
+    MANcom: Baseline=0.0002508, BC=-1.09%, EU=-1.91%, GL=9.14%
+    ADM+: Baseline=0.0002021, BC=-1.57%, EU=-2.44%, GL=10.48%
+    RES+: Baseline=0.0001899, BC=-1.51%, EU=-2.74%, GL=11.55%
+    Combined top5 share of baseline Authority Score: 50.84%
+    Combined variation for these sectors: BC -1.53%, EU -2.45%, GL 10.21%
 
 Country: CHE
   Clustering Coefficient: Baseline=0.0004247, BC=0.0004219, EU=0.0004221, GL=0.0004336
@@ -670,33 +803,40 @@ Country: CHE
   Authority Score:         Baseline=0.001025, BC=0.001019, EU=0.001013, GL=0.001097
 
   Top 5 sectors by Clustering Coefficient:
-    TRDmot: Baseline=4e-05, BC=3.985e-05, EU=3.975e-05, GL=4.113e-05
-    CNS+: Baseline=2.688e-05, BC=2.678e-05, EU=2.672e-05, GL=2.735e-05
-    PROleg: Baseline=2.512e-05, BC=2.505e-05, EU=2.498e-05, GL=2.567e-05
-    ADM+: Baseline=2.008e-05, BC=1.994e-05, EU=1.997e-05, GL=2.032e-05
-    TRAinl: Baseline=1.842e-05, BC=1.836e-05, EU=1.833e-05, GL=1.887e-05
+    TRDmot: Baseline=4e-05, BC=-0.38%, EU=-0.64%, GL=2.82%
+    CNS+: Baseline=2.688e-05, BC=-0.37%, EU=-0.59%, GL=1.75%
+    PROleg: Baseline=2.512e-05, BC=-0.29%, EU=-0.57%, GL=2.18%
+    ADM+: Baseline=2.008e-05, BC=-0.72%, EU=-0.56%, GL=1.19%
+    TRAinl: Baseline=1.842e-05, BC=-0.30%, EU=-0.51%, GL=2.43%
+    Combined top5 share of baseline Clustering Coefficient: 30.73%
+    Combined variation for these sectors: BC -0.40%, EU -0.59%, GL 2.17%
+
   Top 5 sectors by Betweenness Centrality:
-    TRDmot: Baseline=0.02793, BC=0.02774, EU=0.02794, GL=0.02825
-    MANpha: Baseline=0.01524, BC=0.01523, EU=0.01523, GL=0.01482
-    ENRoil: Baseline=0.01407, BC=0.0139, EU=0.0141, GL=0.01472
-    PROleg: Baseline=0.005219, BC=0.005259, EU=0.005219, GL=0.005353
-    ENRele: Baseline=0.003901, BC=0.003938, EU=0.003937, GL=0.004044
+    TRDmot: Baseline=0.02793, BC=-0.68%, EU=0.02%, GL=1.13%
+    MANpha: Baseline=0.01524, BC=-0.04%, EU=-0.04%, GL=-2.75%
+    ENRoil: Baseline=0.01407, BC=-1.17%, EU=0.25%, GL=4.61%
+    PROleg: Baseline=0.005219, BC=0.77%, EU=0.00%, GL=2.57%
+    ENRele: Baseline=0.003901, BC=0.95%, EU=0.93%, GL=3.66%
+    Combined top5 share of baseline Betweenness Centrality: 83.55%
+    Combined variation for these sectors: BC -0.43%, EU 0.10%, GL 1.24%
+
   Top 5 sectors by Hub Score:
-    FINser: Baseline=0.0004948, BC=0.0004897, EU=0.0004867, GL=0.0005473
-    MANpha: Baseline=0.0002028, BC=0.0002009, EU=0.0001998, GL=0.0002218
-    TRDmot: Baseline=0.000152, BC=0.0001519, EU=0.000152, GL=0.0001509
-    PROleg: Baseline=0.0001363, BC=0.0001349, EU=0.0001341, GL=0.0001502
-    MANcom: Baseline=0.0001343, BC=0.0001349, EU=0.0001356, GL=0.0001224
+    FINser: Baseline=0.0004948, BC=-1.04%, EU=-1.65%, GL=10.61%
+    MANpha: Baseline=0.0002028, BC=-0.95%, EU=-1.47%, GL=9.36%
+    TRDmot: Baseline=0.000152, BC=-0.06%, EU=-0.01%, GL=-0.73%
+    PROleg: Baseline=0.0001363, BC=-0.99%, EU=-1.59%, GL=10.27%
+    MANcom: Baseline=0.0001343, BC=0.47%, EU=1.02%, GL=-8.86%
+    Combined top5 share of baseline Hub Score: 78.08%
+    Combined variation for these sectors: BC -0.70%, EU -1.07%, GL 6.47%
+
   Top 5 sectors by Authority Score:
-    FINser: Baseline=0.0002565, BC=0.0002535, EU=0.0002515, GL=0.0002829
-
-    PROleg: Baseline=0.0001588, BC=0.000157, EU=0.0001558, GL=0.0001755
-
-    TRDmot: Baseline=8.123e-05, BC=8.05e-05, EU=8.002e-05, GL=8.751e-05
-
-    MANpha: Baseline=6.827e-05, BC=6.828e-05, EU=6.774e-05, GL=7.317e-05
-
-    MANcom: Baseline=5.178e-05, BC=5.243e-05, EU=5.257e-05, GL=4.628e-05
+    FINser: Baseline=0.0002565, BC=-1.18%, EU=-1.94%, GL=10.28%
+    PROleg: Baseline=0.0001588, BC=-1.15%, EU=-1.91%, GL=10.53%
+    TRDmot: Baseline=8.123e-05, BC=-0.89%, EU=-1.49%, GL=7.73%
+    MANpha: Baseline=6.827e-05, BC=0.01%, EU=-0.78%, GL=7.17%
+    MANcom: Baseline=5.178e-05, BC=1.25%, EU=1.51%, GL=-10.62%
+    Combined top5 share of baseline Authority Score: 60.14%
+    Combined variation for these sectors: BC -0.80%, EU -1.45%, GL 7.91%
 
 Country: POL
   Clustering Coefficient: Baseline=0.0004493, BC=0.000433, EU=0.0004294, GL=0.0004509
@@ -705,33 +845,40 @@ Country: POL
   Authority Score:         Baseline=0.0002807, BC=0.0002754, EU=0.0002779, GL=0.0002448
 
   Top 5 sectors by Clustering Coefficient:
-    MANrep: Baseline=4.484e-05, BC=4.198e-05, EU=4.049e-05, GL=4.624e-05
-    ADM+: Baseline=2.968e-05, BC=2.893e-05, EU=2.876e-05, GL=3.005e-05
-    ENRele: Baseline=2.91e-05, BC=2.772e-05, EU=2.78e-05, GL=2.893e-05
-    FINser: Baseline=2.562e-05, BC=2.444e-05, EU=2.429e-05, GL=2.541e-05
-    TRDmot: Baseline=2.534e-05, BC=2.429e-05, EU=2.417e-05, GL=2.515e-05
+    MANrep: Baseline=4.484e-05, BC=-6.36%, EU=-9.69%, GL=3.13%
+    ADM+: Baseline=2.968e-05, BC=-2.53%, EU=-3.09%, GL=1.26%
+    ENRele: Baseline=2.91e-05, BC=-4.73%, EU=-4.47%, GL=-0.56%
+    FINser: Baseline=2.562e-05, BC=-4.59%, EU=-5.20%, GL=-0.80%
+    TRDmot: Baseline=2.534e-05, BC=-4.17%, EU=-4.61%, GL=-0.74%
+    Combined top5 share of baseline Clustering Coefficient: 34.40%
+    Combined variation for these sectors: BC -4.66%, EU -5.86%, GL 0.79%
+
   Top 5 sectors by Betweenness Centrality:
-    TRDmot: Baseline=0.02959, BC=0.02974, EU=0.02956, GL=0.02926
-    MANmot: Baseline=0.02596, BC=0.02671, EU=0.02581, GL=0.02579
-    CNS+: Baseline=0.01362, BC=0.01338, EU=0.0135, GL=0.0135
-    MANfoo: Baseline=0.01358, BC=0.01377, EU=0.01312, GL=0.01322
-    TRAinl: Baseline=0.005748, BC=0.004329, EU=0.004034, GL=0.003954
+    TRDmot: Baseline=0.02959, BC=0.52%, EU=-0.07%, GL=-1.09%
+    MANmot: Baseline=0.02596, BC=2.88%, EU=-0.56%, GL=-0.66%
+    CNS+: Baseline=0.01362, BC=-1.77%, EU=-0.86%, GL=-0.86%
+    MANfoo: Baseline=0.01358, BC=1.43%, EU=-3.37%, GL=-2.61%
+    TRAinl: Baseline=0.005748, BC=-24.67%, EU=-29.82%, GL=-31.21%
+    Combined top5 share of baseline Betweenness Centrality: 83.51%
+    Combined variation for these sectors: BC -0.64%, EU -2.78%, GL -3.12%
+
   Top 5 sectors by Hub Score:
-    PROleg: Baseline=5.852e-05, BC=5.786e-05, EU=5.753e-05, GL=6.436e-05
-    TRDmot: Baseline=2.632e-05, BC=2.616e-05, EU=2.628e-05, GL=2.472e-05
-    MANfur: Baseline=1.335e-05, BC=1.321e-05, EU=1.317e-05, GL=1.408e-05
-    FINser: Baseline=1.275e-05, BC=1.259e-05, EU=1.251e-05, GL=1.407e-05
-    COMcom: Baseline=1.088e-05, BC=1.076e-05, EU=1.069e-05, GL=1.205e-05
+    PROleg: Baseline=5.852e-05, BC=-1.12%, EU=-1.69%, GL=9.99%
+    TRDmot: Baseline=2.632e-05, BC=-0.62%, EU=-0.17%, GL=-6.11%
+    MANfur: Baseline=1.335e-05, BC=-1.02%, EU=-1.29%, GL=5.51%
+    FINser: Baseline=1.275e-05, BC=-1.23%, EU=-1.82%, GL=10.37%
+    COMcom: Baseline=1.088e-05, BC=-1.17%, EU=-1.78%, GL=10.73%
+    Combined top5 share of baseline Hub Score: 52.60%
+    Combined variation for these sectors: BC -1.01%, EU -1.34%, GL 6.13%
+
   Top 5 sectors by Authority Score:
-    TRDmot: Baseline=3.152e-05, BC=3.045e-05, EU=3.03e-05, GL=3.111e-05
-
-    PROleg: Baseline=2.049e-05, BC=1.974e-05, EU=1.956e-05, GL=2.169e-05
-
-    CNS+: Baseline=1.964e-05, BC=1.924e-05, EU=1.942e-05, GL=1.376e-05
-
-    FINser: Baseline=1.667e-05, BC=1.6e-05, EU=1.581e-05, GL=1.795e-05
-
-    MANcom: Baseline=1.511e-05, BC=1.548e-05, EU=1.577e-05, GL=9.206e-06
+    TRDmot: Baseline=3.152e-05, BC=-3.39%, EU=-3.85%, GL=-1.28%
+    PROleg: Baseline=2.049e-05, BC=-3.67%, EU=-4.56%, GL=5.84%
+    CNS+: Baseline=1.964e-05, BC=-2.01%, EU=-1.09%, GL=-29.91%
+    FINser: Baseline=1.667e-05, BC=-4.02%, EU=-5.14%, GL=7.68%
+    MANcom: Baseline=1.511e-05, BC=2.49%, EU=4.36%, GL=-39.07%
+    Combined top5 share of baseline Authority Score: 36.85%
+    Combined variation for these sectors: BC -2.43%, EU -2.48%, GL -9.38%
 
 Country: BEL
   Clustering Coefficient: Baseline=0.0003398, BC=0.0003355, EU=0.0003343, GL=0.0003455
@@ -740,33 +887,40 @@ Country: BEL
   Authority Score:         Baseline=0.001107, BC=0.001092, EU=0.001083, GL=0.001208
 
   Top 5 sectors by Clustering Coefficient:
-    TRDmot: Baseline=3.11e-05, BC=3.072e-05, EU=3.057e-05, GL=3.172e-05
-    ADM+: Baseline=1.974e-05, BC=1.953e-05, EU=1.943e-05, GL=2.018e-05
-    FINser: Baseline=1.855e-05, BC=1.838e-05, EU=1.828e-05, GL=1.898e-05
-    RES+: Baseline=1.75e-05, BC=1.735e-05, EU=1.726e-05, GL=1.768e-05
-    CNS+: Baseline=1.57e-05, BC=1.564e-05, EU=1.552e-05, GL=1.6e-05
+    TRDmot: Baseline=3.11e-05, BC=-1.22%, EU=-1.69%, GL=1.98%
+    ADM+: Baseline=1.974e-05, BC=-1.06%, EU=-1.55%, GL=2.25%
+    FINser: Baseline=1.855e-05, BC=-0.90%, EU=-1.44%, GL=2.29%
+    RES+: Baseline=1.75e-05, BC=-0.84%, EU=-1.41%, GL=1.02%
+    CNS+: Baseline=1.57e-05, BC=-0.39%, EU=-1.18%, GL=1.89%
+    Combined top5 share of baseline Clustering Coefficient: 30.19%
+    Combined variation for these sectors: BC -0.94%, EU -1.49%, GL 1.91%
+
   Top 5 sectors by Betweenness Centrality:
-    PROleg: Baseline=0.01945, BC=0.01979, EU=0.01965, GL=0.02014
-    TRDmot: Baseline=0.009502, BC=0.009585, EU=0.009695, GL=0.009422
-    TRAwar: Baseline=0.004642, BC=0.004628, EU=0.004628, GL=0.003521
-    CNS+: Baseline=0.004433, BC=0.004451, EU=0.004447, GL=0.00441
-    RES+: Baseline=0.003956, BC=0.003968, EU=0.003966, GL=0.00393
+    PROleg: Baseline=0.01945, BC=1.78%, EU=1.03%, GL=3.59%
+    TRDmot: Baseline=0.009502, BC=0.88%, EU=2.04%, GL=-0.84%
+    TRAwar: Baseline=0.004642, BC=-0.30%, EU=-0.30%, GL=-24.15%
+    CNS+: Baseline=0.004433, BC=0.41%, EU=0.32%, GL=-0.50%
+    RES+: Baseline=0.003956, BC=0.32%, EU=0.27%, GL=-0.66%
+    Combined top5 share of baseline Betweenness Centrality: 68.25%
+    Combined variation for these sectors: BC 1.07%, EU 0.96%, GL -1.31%
+
   Top 5 sectors by Hub Score:
-    PROleg: Baseline=0.0004654, BC=0.0004606, EU=0.0004577, GL=0.0005151
-    FINser: Baseline=0.0001394, BC=0.0001378, EU=0.0001368, GL=0.0001551
-    TRDmot: Baseline=5.521e-05, BC=5.485e-05, EU=5.475e-05, GL=5.737e-05
-    MANpha: Baseline=4.587e-05, BC=4.547e-05, EU=4.539e-05, GL=4.78e-05
-    ENRoil: Baseline=3.795e-05, BC=3.75e-05, EU=3.741e-05, GL=4.043e-05
+    PROleg: Baseline=0.0004654, BC=-1.04%, EU=-1.65%, GL=10.68%
+    FINser: Baseline=0.0001394, BC=-1.17%, EU=-1.87%, GL=11.25%
+    TRDmot: Baseline=5.521e-05, BC=-0.65%, EU=-0.84%, GL=3.90%
+    MANpha: Baseline=4.587e-05, BC=-0.86%, EU=-1.05%, GL=4.20%
+    ENRoil: Baseline=3.795e-05, BC=-1.19%, EU=-1.42%, GL=6.54%
+    Combined top5 share of baseline Hub Score: 77.33%
+    Combined variation for these sectors: BC -1.03%, EU -1.58%, GL 9.68%
+
   Top 5 sectors by Authority Score:
-    PROleg: Baseline=0.0002548, BC=0.000251, EU=0.0002485, GL=0.0002821
-
-    FINser: Baseline=0.0001636, BC=0.0001613, EU=0.0001596, GL=0.0001814
-
-    TRDmot: Baseline=0.0001079, BC=0.0001062, EU=0.0001052, GL=0.0001187
-
-    CNS+: Baseline=4.907e-05, BC=4.868e-05, EU=4.833e-05, GL=5.111e-05
-
-    ADM+: Baseline=4.814e-05, BC=4.746e-05, EU=4.696e-05, GL=5.327e-05
+    PROleg: Baseline=0.0002548, BC=-1.50%, EU=-2.46%, GL=10.73%
+    FINser: Baseline=0.0001636, BC=-1.45%, EU=-2.45%, GL=10.87%
+    TRDmot: Baseline=0.0001079, BC=-1.58%, EU=-2.53%, GL=10.01%
+    CNS+: Baseline=4.907e-05, BC=-0.79%, EU=-1.50%, GL=4.15%
+    ADM+: Baseline=4.814e-05, BC=-1.40%, EU=-2.45%, GL=10.66%
+    Combined top5 share of baseline Authority Score: 56.33%
+    Combined variation for these sectors: BC -1.44%, EU -2.39%, GL 10.12%
 
 Country: SWE
   Clustering Coefficient: Baseline=0.0003113, BC=0.0003083, EU=0.0003059, GL=0.0003214
@@ -775,33 +929,40 @@ Country: SWE
   Authority Score:         Baseline=0.0004941, BC=0.0004902, EU=0.0004855, GL=0.0005442
 
   Top 5 sectors by Clustering Coefficient:
-    RES+: Baseline=3.761e-05, BC=3.748e-05, EU=3.718e-05, GL=3.928e-05
-    TRDmot: Baseline=2.211e-05, BC=2.204e-05, EU=2.186e-05, GL=2.287e-05
-    CNS+: Baseline=2.111e-05, BC=2.086e-05, EU=2.069e-05, GL=2.15e-05
-    PROleg: Baseline=1.637e-05, BC=1.622e-05, EU=1.617e-05, GL=1.681e-05
-    ADM+: Baseline=1.418e-05, BC=1.413e-05, EU=1.402e-05, GL=1.471e-05
+    RES+: Baseline=3.761e-05, BC=-0.35%, EU=-1.16%, GL=4.44%
+    TRDmot: Baseline=2.211e-05, BC=-0.34%, EU=-1.13%, GL=3.40%
+    CNS+: Baseline=2.111e-05, BC=-1.17%, EU=-1.98%, GL=1.89%
+    PROleg: Baseline=1.637e-05, BC=-0.94%, EU=-1.23%, GL=2.68%
+    ADM+: Baseline=1.418e-05, BC=-0.41%, EU=-1.16%, GL=3.71%
+    Combined top5 share of baseline Clustering Coefficient: 35.78%
+    Combined variation for these sectors: BC -0.60%, EU -1.32%, GL 3.40%
+
   Top 5 sectors by Betweenness Centrality:
-    TRAwar: Baseline=0.01855, BC=0.01844, EU=0.01837, GL=0.01722
-    TRDmot: Baseline=0.01429, BC=0.01403, EU=0.01416, GL=0.01519
-    RES+: Baseline=0.01321, BC=0.0135, EU=0.01317, GL=0.01261
-    PROleg: Baseline=0.006411, BC=0.00659, EU=0.006422, GL=0.006133
-    CNS+: Baseline=0.005545, BC=0.005558, EU=0.005541, GL=0.004995
+    TRAwar: Baseline=0.01855, BC=-0.58%, EU=-0.96%, GL=-7.18%
+    TRDmot: Baseline=0.01429, BC=-1.81%, EU=-0.89%, GL=6.29%
+    RES+: Baseline=0.01321, BC=2.19%, EU=-0.30%, GL=-4.58%
+    PROleg: Baseline=0.006411, BC=2.79%, EU=0.16%, GL=-4.35%
+    CNS+: Baseline=0.005545, BC=0.24%, EU=-0.06%, GL=-9.92%
+    Combined top5 share of baseline Betweenness Centrality: 74.90%
+    Combined variation for these sectors: BC 0.20%, EU -0.58%, GL -3.22%
+
   Top 5 sectors by Hub Score:
-    PROleg: Baseline=4.649e-05, BC=4.616e-05, EU=4.596e-05, GL=4.995e-05
-    MANmot: Baseline=3.492e-05, BC=3.467e-05, EU=3.481e-05, GL=3.471e-05
-    TRDmot: Baseline=3.181e-05, BC=3.213e-05, EU=3.234e-05, GL=2.834e-05
-    MANmac: Baseline=2.182e-05, BC=2.195e-05, EU=2.217e-05, GL=1.922e-05
-    MANmet: Baseline=1.863e-05, BC=1.83e-05, EU=1.896e-05, GL=1.224e-05
+    PROleg: Baseline=4.649e-05, BC=-0.70%, EU=-1.14%, GL=7.45%
+    MANmot: Baseline=3.492e-05, BC=-0.72%, EU=-0.30%, GL=-0.61%
+    TRDmot: Baseline=3.181e-05, BC=0.98%, EU=1.67%, GL=-10.92%
+    MANmac: Baseline=2.182e-05, BC=0.59%, EU=1.60%, GL=-11.92%
+    MANmet: Baseline=1.863e-05, BC=-1.72%, EU=1.77%, GL=-34.31%
+    Combined top5 share of baseline Hub Score: 48.89%
+    Combined variation for these sectors: BC -0.30%, EU 0.37%, GL -5.99%
+
   Top 5 sectors by Authority Score:
-    PROleg: Baseline=6.545e-05, BC=6.477e-05, EU=6.399e-05, GL=7.358e-05
-
-    TRDmot: Baseline=5.78e-05, BC=5.722e-05, EU=5.656e-05, GL=6.464e-05
-
-    CNS+: Baseline=4.3e-05, BC=4.281e-05, EU=4.236e-05, GL=4.631e-05
-
-    RES+: Baseline=3.839e-05, BC=3.804e-05, EU=3.752e-05, GL=4.355e-05
-
-    MANmot: Baseline=3.118e-05, BC=3.108e-05, EU=3.1e-05, GL=3.282e-05
+    PROleg: Baseline=6.545e-05, BC=-1.04%, EU=-2.22%, GL=12.42%
+    TRDmot: Baseline=5.78e-05, BC=-1.00%, EU=-2.14%, GL=11.83%
+    CNS+: Baseline=4.3e-05, BC=-0.46%, EU=-1.48%, GL=7.69%
+    RES+: Baseline=3.839e-05, BC=-0.93%, EU=-2.27%, GL=13.44%
+    MANmot: Baseline=3.118e-05, BC=-0.31%, EU=-0.57%, GL=5.28%
+    Combined top5 share of baseline Authority Score: 47.73%
+    Combined variation for these sectors: BC -0.81%, EU -1.86%, GL 10.63%
 
 Country: AUT
   Clustering Coefficient: Baseline=0.0003197, BC=0.0003121, EU=0.0003104, GL=0.0003263
@@ -810,33 +971,40 @@ Country: AUT
   Authority Score:         Baseline=0.000219, BC=0.0002162, EU=0.0002154, GL=0.0002262
 
   Top 5 sectors by Clustering Coefficient:
-    RES+: Baseline=2.857e-05, BC=2.788e-05, EU=2.793e-05, GL=2.929e-05
-    TRDmot: Baseline=2.46e-05, BC=2.421e-05, EU=2.404e-05, GL=2.513e-05
-    ADM+: Baseline=2.135e-05, BC=2.103e-05, EU=2.087e-05, GL=2.224e-05
-    CNS+: Baseline=1.985e-05, BC=1.894e-05, EU=1.915e-05, GL=1.965e-05
-    PROleg: Baseline=1.846e-05, BC=1.818e-05, EU=1.805e-05, GL=1.893e-05
+    RES+: Baseline=2.857e-05, BC=-2.42%, EU=-2.24%, GL=2.51%
+    TRDmot: Baseline=2.46e-05, BC=-1.60%, EU=-2.27%, GL=2.14%
+    ADM+: Baseline=2.135e-05, BC=-1.54%, EU=-2.25%, GL=4.16%
+    CNS+: Baseline=1.985e-05, BC=-4.55%, EU=-3.49%, GL=-0.97%
+    PROleg: Baseline=1.846e-05, BC=-1.56%, EU=-2.24%, GL=2.54%
+    Combined top5 share of baseline Clustering Coefficient: 35.29%
+    Combined variation for these sectors: BC -2.31%, EU -2.47%, GL 2.13%
+
   Top 5 sectors by Betweenness Centrality:
-    TRDmot: Baseline=0.01999, BC=0.02033, EU=0.02011, GL=0.01979
-    PROleg: Baseline=0.01448, BC=0.01451, EU=0.01452, GL=0.0144
-    MANmac: Baseline=0.009041, BC=0.0007925, EU=0.009434, GL=0.0007156
-    CNS+: Baseline=0.006774, BC=0.006771, EU=0.006776, GL=0.006774
-    MANmot: Baseline=0.004602, BC=0.01345, EU=0.004951, GL=0.01143
+    TRDmot: Baseline=0.01999, BC=1.74%, EU=0.62%, GL=-0.99%
+    PROleg: Baseline=0.01448, BC=0.26%, EU=0.28%, GL=-0.55%
+    MANmac: Baseline=0.009041, BC=-91.23%, EU=4.34%, GL=-92.09%
+    CNS+: Baseline=0.006774, BC=-0.03%, EU=0.03%, GL=-0.00%
+    MANmot: Baseline=0.004602, BC=192.30%, EU=7.58%, GL=148.36%
+    Combined top5 share of baseline Betweenness Centrality: 69.53%
+    Combined variation for these sectors: BC 1.79%, EU 1.66%, GL -3.24%
+
   Top 5 sectors by Hub Score:
-    PROleg: Baseline=2.782e-05, BC=2.76e-05, EU=2.749e-05, GL=2.983e-05
-    MANmac: Baseline=2.219e-05, BC=2.23e-05, EU=2.257e-05, GL=1.895e-05
-    TRDmot: Baseline=1.861e-05, BC=1.871e-05, EU=1.883e-05, GL=1.69e-05
-    FINser: Baseline=1.73e-05, BC=1.712e-05, EU=1.702e-05, GL=1.907e-05
-    MANmot: Baseline=1.681e-05, BC=1.66e-05, EU=1.666e-05, GL=1.693e-05
+    PROleg: Baseline=2.782e-05, BC=-0.78%, EU=-1.19%, GL=7.22%
+    MANmac: Baseline=2.219e-05, BC=0.50%, EU=1.71%, GL=-14.62%
+    TRDmot: Baseline=1.861e-05, BC=0.56%, EU=1.17%, GL=-9.15%
+    FINser: Baseline=1.73e-05, BC=-1.02%, EU=-1.62%, GL=10.23%
+    MANmot: Baseline=1.681e-05, BC=-1.28%, EU=-0.90%, GL=0.72%
+    Combined top5 share of baseline Hub Score: 43.76%
+    Combined variation for these sectors: BC -0.38%, EU -0.16%, GL -1.02%
+
   Top 5 sectors by Authority Score:
-    PROleg: Baseline=2.383e-05, BC=2.335e-05, EU=2.31e-05, GL=2.641e-05
-
-    TRDmot: Baseline=2.148e-05, BC=2.108e-05, EU=2.088e-05, GL=2.347e-05
-
-    FINser: Baseline=2.076e-05, BC=2.032e-05, EU=2.009e-05, GL=2.323e-05
-
-    CNS+: Baseline=1.569e-05, BC=1.557e-05, EU=1.552e-05, GL=1.511e-05
-
-    MANmac: Baseline=8.753e-06, BC=8.862e-06, EU=8.934e-06, GL=7.874e-06
+    PROleg: Baseline=2.383e-05, BC=-1.99%, EU=-3.06%, GL=10.82%
+    TRDmot: Baseline=2.148e-05, BC=-1.87%, EU=-2.83%, GL=9.23%
+    FINser: Baseline=2.076e-05, BC=-2.10%, EU=-3.25%, GL=11.87%
+    CNS+: Baseline=1.569e-05, BC=-0.76%, EU=-1.08%, GL=-3.73%
+    MANmac: Baseline=8.753e-06, BC=1.25%, EU=2.06%, GL=-10.05%
+    Combined top5 share of baseline Authority Score: 41.33%
+    Combined variation for these sectors: BC -1.46%, EU -2.21%, GL 6.14%
 
 Country: CZE
   Clustering Coefficient: Baseline=0.0003004, BC=0.0002851, EU=0.0002841, GL=0.0002974
@@ -845,33 +1013,40 @@ Country: CZE
   Authority Score:         Baseline=0.0001491, BC=0.0001469, EU=0.0001479, GL=0.0001297
 
   Top 5 sectors by Clustering Coefficient:
-    TRDmot: Baseline=2.801e-05, BC=2.674e-05, EU=2.659e-05, GL=2.79e-05
-    RES+: Baseline=2.162e-05, BC=2.064e-05, EU=2.052e-05, GL=2.155e-05
-    CNS+: Baseline=1.738e-05, BC=1.668e-05, EU=1.658e-05, GL=1.73e-05
-    PROleg: Baseline=1.715e-05, BC=1.652e-05, EU=1.643e-05, GL=1.722e-05
-    ADM+: Baseline=1.396e-05, BC=1.332e-05, EU=1.325e-05, GL=1.388e-05
+    TRDmot: Baseline=2.801e-05, BC=-4.54%, EU=-5.06%, GL=-0.41%
+    RES+: Baseline=2.162e-05, BC=-4.51%, EU=-5.08%, GL=-0.31%
+    CNS+: Baseline=1.738e-05, BC=-4.07%, EU=-4.61%, GL=-0.49%
+    PROleg: Baseline=1.715e-05, BC=-3.70%, EU=-4.22%, GL=0.39%
+    ADM+: Baseline=1.396e-05, BC=-4.60%, EU=-5.09%, GL=-0.56%
+    Combined top5 share of baseline Clustering Coefficient: 32.67%
+    Combined variation for these sectors: BC -4.31%, EU -4.84%, GL -0.28%
+
   Top 5 sectors by Betweenness Centrality:
-    MANmot: Baseline=0.05615, BC=0.05654, EU=0.05581, GL=0.05572
-    TRDmot: Baseline=0.03162, BC=0.03158, EU=0.03141, GL=0.03124
-    RES+: Baseline=0.006293, BC=0.006294, EU=0.006293, GL=0.006293
-    CNS+: Baseline=0.004352, BC=0.004352, EU=0.004352, GL=0.004352
-    TRAinl: Baseline=0.003865, BC=0.003862, EU=0.003865, GL=0.003866
+    MANmot: Baseline=0.05615, BC=0.71%, EU=-0.59%, GL=-0.76%
+    TRDmot: Baseline=0.03162, BC=-0.13%, EU=-0.65%, GL=-1.18%
+    RES+: Baseline=0.006293, BC=0.01%, EU=0.01%, GL=0.01%
+    CNS+: Baseline=0.004352, BC=0.00%, EU=0.00%, GL=0.00%
+    TRAinl: Baseline=0.003865, BC=-0.08%, EU=-0.01%, GL=0.02%
+    Combined top5 share of baseline Betweenness Centrality: 89.03%
+    Combined variation for these sectors: BC 0.35%, EU -0.52%, GL -0.78%
+
   Top 5 sectors by Hub Score:
-    PROleg: Baseline=1.456e-05, BC=1.439e-05, EU=1.431e-05, GL=1.596e-05
-    MANcom: Baseline=9.383e-06, BC=9.339e-06, EU=9.437e-06, GL=7.912e-06
-    MANpla: Baseline=8.338e-06, BC=8.211e-06, EU=8.224e-06, GL=8.502e-06
-    MANmac: Baseline=7.595e-06, BC=7.437e-06, EU=7.569e-06, GL=6.231e-06
-    FINser: Baseline=7.305e-06, BC=7.221e-06, EU=7.178e-06, GL=8.076e-06
+    PROleg: Baseline=1.456e-05, BC=-1.11%, EU=-1.66%, GL=9.66%
+    MANcom: Baseline=9.383e-06, BC=-0.47%, EU=0.57%, GL=-15.68%
+    MANpla: Baseline=8.338e-06, BC=-1.52%, EU=-1.37%, GL=1.97%
+    MANmac: Baseline=7.595e-06, BC=-2.08%, EU=-0.35%, GL=-17.96%
+    FINser: Baseline=7.305e-06, BC=-1.16%, EU=-1.75%, GL=10.55%
+    Combined top5 share of baseline Hub Score: 45.26%
+    Combined variation for these sectors: BC -1.22%, EU -0.97%, GL -1.05%
+
   Top 5 sectors by Authority Score:
-    MANcom: Baseline=2.135e-05, BC=2.169e-05, EU=2.204e-05, GL=1.35e-05
-
-    FINser: Baseline=1.401e-05, BC=1.341e-05, EU=1.327e-05, GL=1.503e-05
-
-    MANmot: Baseline=1.273e-05, BC=1.319e-05, EU=1.339e-05, GL=9.84e-06
-
-    PROleg: Baseline=1.227e-05, BC=1.182e-05, EU=1.174e-05, GL=1.27e-05
-
-    TRDmot: Baseline=1.136e-05, BC=1.094e-05, EU=1.087e-05, GL=1.158e-05
+    MANcom: Baseline=2.135e-05, BC=1.61%, EU=3.26%, GL=-36.76%
+    FINser: Baseline=1.401e-05, BC=-4.24%, EU=-5.23%, GL=7.34%
+    MANmot: Baseline=1.273e-05, BC=3.63%, EU=5.19%, GL=-22.71%
+    PROleg: Baseline=1.227e-05, BC=-3.66%, EU=-4.38%, GL=3.45%
+    TRDmot: Baseline=1.136e-05, BC=-3.74%, EU=-4.31%, GL=1.92%
+    Combined top5 share of baseline Authority Score: 48.09%
+    Combined variation for these sectors: BC -0.92%, EU -0.56%, GL -12.65%
 
 Country: NOR
   Clustering Coefficient: Baseline=0.0004436, BC=0.0004499, EU=0.0004441, GL=0.0004704
@@ -880,33 +1055,40 @@ Country: NOR
   Authority Score:         Baseline=0.0002912, BC=0.0002955, EU=0.0002904, GL=0.0003222
 
   Top 5 sectors by Clustering Coefficient:
-    TRDmot: Baseline=3.316e-05, BC=3.363e-05, EU=3.32e-05, GL=3.48e-05
-    PROleg: Baseline=2.654e-05, BC=2.675e-05, EU=2.659e-05, GL=2.755e-05
-    MANrep: Baseline=2.488e-05, BC=2.495e-05, EU=2.459e-05, GL=2.724e-05
-    CNS+: Baseline=2.474e-05, BC=2.528e-05, EU=2.475e-05, GL=2.655e-05
-    ADM+: Baseline=2.435e-05, BC=2.475e-05, EU=2.439e-05, GL=2.572e-05
+    TRDmot: Baseline=3.316e-05, BC=1.43%, EU=0.14%, GL=4.96%
+    PROleg: Baseline=2.654e-05, BC=0.79%, EU=0.16%, GL=3.79%
+    MANrep: Baseline=2.488e-05, BC=0.31%, EU=-1.14%, GL=9.50%
+    CNS+: Baseline=2.474e-05, BC=2.19%, EU=0.04%, GL=7.28%
+    ADM+: Baseline=2.435e-05, BC=1.66%, EU=0.18%, GL=5.65%
+    Combined top5 share of baseline Clustering Coefficient: 30.13%
+    Combined variation for these sectors: BC 1.27%, EU -0.11%, GL 6.13%
+
   Top 5 sectors by Betweenness Centrality:
-    TRDmot: Baseline=0.0241, BC=0.02406, EU=0.02411, GL=0.02613
-    RES+: Baseline=0.02079, BC=0.02082, EU=0.02079, GL=0.02279
-    TRAwat: Baseline=0.01669, BC=0.01543, EU=0.01641, GL=0.01403
-    FINser: Baseline=0.01616, BC=0.01671, EU=0.01619, GL=0.01715
-    CNS+: Baseline=0.006943, BC=0.006938, EU=0.006942, GL=0.008081
+    TRDmot: Baseline=0.0241, BC=-0.20%, EU=0.02%, GL=8.39%
+    RES+: Baseline=0.02079, BC=0.15%, EU=0.03%, GL=9.63%
+    TRAwat: Baseline=0.01669, BC=-7.55%, EU=-1.69%, GL=-15.92%
+    FINser: Baseline=0.01616, BC=3.37%, EU=0.14%, GL=6.08%
+    CNS+: Baseline=0.006943, BC=-0.08%, EU=-0.02%, GL=16.38%
+    Combined top5 share of baseline Betweenness Centrality: 80.12%
+    Combined variation for these sectors: BC -0.87%, EU -0.30%, GL 4.12%
+
   Top 5 sectors by Hub Score:
-    FINser: Baseline=2.389e-05, BC=2.365e-05, EU=2.349e-05, GL=2.648e-05
-    ENRoil: Baseline=2.039e-05, BC=2.022e-05, EU=2.011e-05, GL=2.27e-05
-    PROleg: Baseline=1.599e-05, BC=1.594e-05, EU=1.589e-05, GL=1.674e-05
-    TRAwat: Baseline=1.109e-05, BC=1.137e-05, EU=1.156e-05, GL=7.927e-06
-    TRDmot: Baseline=1.016e-05, BC=1.019e-05, EU=1.021e-05, GL=9.894e-06
+    FINser: Baseline=2.389e-05, BC=-1.00%, EU=-1.66%, GL=10.85%
+    ENRoil: Baseline=2.039e-05, BC=-0.83%, EU=-1.36%, GL=11.32%
+    PROleg: Baseline=1.599e-05, BC=-0.34%, EU=-0.63%, GL=4.69%
+    TRAwat: Baseline=1.109e-05, BC=2.55%, EU=4.23%, GL=-28.52%
+    TRDmot: Baseline=1.016e-05, BC=0.29%, EU=0.43%, GL=-2.64%
+    Combined top5 share of baseline Hub Score: 60.39%
+    Combined variation for these sectors: BC -0.19%, EU -0.32%, GL 2.72%
+
   Top 5 sectors by Authority Score:
-    FINser: Baseline=5.495e-05, BC=5.533e-05, EU=5.43e-05, GL=6.336e-05
-
-    ENRoil: Baseline=2.495e-05, BC=2.499e-05, EU=2.458e-05, GL=2.907e-05
-
-    CNS+: Baseline=2.069e-05, BC=2.111e-05, EU=2.083e-05, GL=2.135e-05
-
-    PUB+: Baseline=1.847e-05, BC=1.867e-05, EU=1.831e-05, GL=2.115e-05
-
-    TRDmot: Baseline=1.785e-05, BC=1.805e-05, EU=1.778e-05, GL=1.957e-05
+    FINser: Baseline=5.495e-05, BC=0.68%, EU=-1.19%, GL=15.30%
+    ENRoil: Baseline=2.495e-05, BC=0.14%, EU=-1.50%, GL=16.51%
+    CNS+: Baseline=2.069e-05, BC=2.04%, EU=0.68%, GL=3.23%
+    PUB+: Baseline=1.847e-05, BC=1.04%, EU=-0.91%, GL=14.50%
+    TRDmot: Baseline=1.785e-05, BC=1.14%, EU=-0.39%, GL=9.62%
+    Combined top5 share of baseline Authority Score: 47.02%
+    Combined variation for these sectors: BC 0.90%, EU -0.82%, GL 12.85%
 
 Country: FIN
   Clustering Coefficient: Baseline=0.0003543, BC=0.0003457, EU=0.0003446, GL=0.0003612
@@ -915,33 +1097,40 @@ Country: FIN
   Authority Score:         Baseline=0.0002326, BC=0.0002294, EU=0.0002278, GL=0.0002482
 
   Top 5 sectors by Clustering Coefficient:
-    RES+: Baseline=3.493e-05, BC=3.447e-05, EU=3.425e-05, GL=3.598e-05
-    TRDmot: Baseline=2.277e-05, BC=2.227e-05, EU=2.214e-05, GL=2.309e-05
-    MANrep: Baseline=2.035e-05, BC=1.941e-05, EU=2.047e-05, GL=2.099e-05
-    CNS+: Baseline=2.007e-05, BC=1.977e-05, EU=1.967e-05, GL=2.063e-05
-    FINser: Baseline=1.895e-05, BC=1.867e-05, EU=1.856e-05, GL=1.95e-05
+    RES+: Baseline=3.493e-05, BC=-1.32%, EU=-1.93%, GL=3.02%
+    TRDmot: Baseline=2.277e-05, BC=-2.19%, EU=-2.74%, GL=1.39%
+    MANrep: Baseline=2.035e-05, BC=-4.63%, EU=0.58%, GL=3.14%
+    CNS+: Baseline=2.007e-05, BC=-1.51%, EU=-1.99%, GL=2.76%
+    FINser: Baseline=1.895e-05, BC=-1.43%, EU=-2.03%, GL=2.95%
+    Combined top5 share of baseline Clustering Coefficient: 33.04%
+    Combined variation for these sectors: BC -2.11%, EU -1.68%, GL 2.67%
+
   Top 5 sectors by Betweenness Centrality:
-    MANpap: Baseline=0.01966, BC=0.01963, EU=0.01965, GL=0.01918
-    CNS+: Baseline=0.0147, BC=0.01481, EU=0.01453, GL=0.01504
-    TRAinl: Baseline=0.0139, BC=0.01468, EU=0.01371, GL=0.01235
-    TRDmot: Baseline=0.0139, BC=0.01414, EU=0.01393, GL=0.01417
-    RES+: Baseline=0.009486, BC=0.009592, EU=0.009337, GL=0.009819
+    MANpap: Baseline=0.01966, BC=-0.12%, EU=-0.02%, GL=-2.44%
+    CNS+: Baseline=0.0147, BC=0.72%, EU=-1.16%, GL=2.26%
+    TRAinl: Baseline=0.0139, BC=5.61%, EU=-1.38%, GL=-11.14%
+    TRDmot: Baseline=0.0139, BC=1.71%, EU=0.21%, GL=1.95%
+    RES+: Baseline=0.009486, BC=1.12%, EU=-1.56%, GL=3.51%
+    Combined top5 share of baseline Betweenness Centrality: 66.12%
+    Combined variation for these sectors: BC 1.68%, EU -0.68%, GL -1.52%
+
   Top 5 sectors by Hub Score:
-    MANpap: Baseline=2.909e-05, BC=2.843e-05, EU=2.849e-05, GL=2.943e-05
-    PROleg: Baseline=1.67e-05, BC=1.655e-05, EU=1.647e-05, GL=1.813e-05
-    MANmac: Baseline=1.271e-05, BC=1.277e-05, EU=1.289e-05, GL=1.126e-05
-    TRDmot: Baseline=1.135e-05, BC=1.137e-05, EU=1.141e-05, GL=1.078e-05
-    MANcom: Baseline=1.097e-05, BC=1.102e-05, EU=1.107e-05, GL=1.011e-05
+    MANpap: Baseline=2.909e-05, BC=-2.26%, EU=-2.06%, GL=1.17%
+    PROleg: Baseline=1.67e-05, BC=-0.86%, EU=-1.35%, GL=8.58%
+    MANmac: Baseline=1.271e-05, BC=0.49%, EU=1.47%, GL=-11.38%
+    TRDmot: Baseline=1.135e-05, BC=0.18%, EU=0.54%, GL=-5.00%
+    MANcom: Baseline=1.097e-05, BC=0.47%, EU=0.97%, GL=-7.77%
+    Combined top5 share of baseline Hub Score: 51.60%
+    Combined variation for these sectors: BC -0.83%, EU -0.58%, GL -1.35%
+
   Top 5 sectors by Authority Score:
-    TRDmot: Baseline=2.908e-05, BC=2.855e-05, EU=2.827e-05, GL=3.212e-05
-
-    PROleg: Baseline=2.508e-05, BC=2.468e-05, EU=2.447e-05, GL=2.719e-05
-
-    CNS+: Baseline=1.965e-05, BC=1.947e-05, EU=1.936e-05, GL=1.997e-05
-
-    MANcom: Baseline=1.303e-05, BC=1.301e-05, EU=1.296e-05, GL=1.314e-05
-
-    PUB+: Baseline=1.159e-05, BC=1.138e-05, EU=1.126e-05, GL=1.276e-05
+    TRDmot: Baseline=2.908e-05, BC=-1.82%, EU=-2.78%, GL=10.45%
+    PROleg: Baseline=2.508e-05, BC=-1.56%, EU=-2.41%, GL=8.42%
+    CNS+: Baseline=1.965e-05, BC=-0.93%, EU=-1.50%, GL=1.62%
+    MANcom: Baseline=1.303e-05, BC=-0.18%, EU=-0.54%, GL=0.78%
+    PUB+: Baseline=1.159e-05, BC=-1.80%, EU=-2.84%, GL=10.15%
+    Combined top5 share of baseline Authority Score: 42.31%
+    Combined variation for these sectors: BC -1.36%, EU -2.14%, GL 6.86%
 
 Country: DNK
   Clustering Coefficient: Baseline=0.0002656, BC=0.0002632, EU=0.0002612, GL=0.0002725
@@ -950,33 +1139,40 @@ Country: DNK
   Authority Score:         Baseline=0.0002065, BC=0.0002056, EU=0.0002047, GL=0.000214
 
   Top 5 sectors by Clustering Coefficient:
-    PROleg: Baseline=1.876e-05, BC=1.867e-05, EU=1.855e-05, GL=1.932e-05
-    RES+: Baseline=1.852e-05, BC=1.846e-05, EU=1.833e-05, GL=1.913e-05
-    TRDmot: Baseline=1.554e-05, BC=1.546e-05, EU=1.538e-05, GL=1.587e-05
-    ADM+: Baseline=1.49e-05, BC=1.483e-05, EU=1.474e-05, GL=1.533e-05
-    MANrep: Baseline=1.284e-05, BC=1.231e-05, EU=1.206e-05, GL=1.286e-05
+    PROleg: Baseline=1.876e-05, BC=-0.46%, EU=-1.12%, GL=2.98%
+    RES+: Baseline=1.852e-05, BC=-0.30%, EU=-1.02%, GL=3.31%
+    TRDmot: Baseline=1.554e-05, BC=-0.50%, EU=-1.03%, GL=2.15%
+    ADM+: Baseline=1.49e-05, BC=-0.48%, EU=-1.09%, GL=2.87%
+    MANrep: Baseline=1.284e-05, BC=-4.17%, EU=-6.06%, GL=0.17%
+    Combined top5 share of baseline Clustering Coefficient: 30.33%
+    Combined variation for these sectors: BC -1.03%, EU -1.86%, GL 2.43%
+
   Top 5 sectors by Betweenness Centrality:
-    TRAwat: Baseline=0.07834, BC=0.07826, EU=0.07822, GL=0.07519
-    TRDmot: Baseline=0.0359, BC=0.03589, EU=0.03589, GL=0.0359
-    CNS+: Baseline=0.03223, BC=0.03222, EU=0.03223, GL=0.03216
-    RES+: Baseline=0.008373, BC=0.008372, EU=0.008369, GL=0.00837
-    PROleg: Baseline=0.005687, BC=0.005671, EU=0.005684, GL=0.005667
+    TRAwat: Baseline=0.07834, BC=-0.11%, EU=-0.16%, GL=-4.02%
+    TRDmot: Baseline=0.0359, BC=-0.02%, EU=-0.02%, GL=0.02%
+    CNS+: Baseline=0.03223, BC=-0.03%, EU=0.02%, GL=-0.21%
+    RES+: Baseline=0.008373, BC=-0.01%, EU=-0.04%, GL=-0.04%
+    PROleg: Baseline=0.005687, BC=-0.27%, EU=-0.04%, GL=-0.34%
+    Combined top5 share of baseline Betweenness Centrality: 95.86%
+    Combined variation for these sectors: BC -0.07%, EU -0.09%, GL -2.02%
+
   Top 5 sectors by Hub Score:
-    MANpha: Baseline=5.955e-05, BC=5.9e-05, EU=5.873e-05, GL=6.471e-05
-    TRAwat: Baseline=4.406e-05, BC=4.555e-05, EU=4.679e-05, GL=2.545e-05
-    PROleg: Baseline=3.457e-05, BC=3.433e-05, EU=3.419e-05, GL=3.714e-05
-    TRDmot: Baseline=3.381e-05, BC=3.38e-05, EU=3.385e-05, GL=3.333e-05
-    TRAwar: Baseline=3.306e-05, BC=3.297e-05, EU=3.294e-05, GL=3.336e-05
+    MANpha: Baseline=5.955e-05, BC=-0.92%, EU=-1.38%, GL=8.67%
+    TRAwat: Baseline=4.406e-05, BC=3.40%, EU=6.20%, GL=-42.23%
+    PROleg: Baseline=3.457e-05, BC=-0.69%, EU=-1.11%, GL=7.44%
+    TRDmot: Baseline=3.381e-05, BC=-0.04%, EU=0.12%, GL=-1.43%
+    TRAwar: Baseline=3.306e-05, BC=-0.26%, EU=-0.37%, GL=0.92%
+    Combined top5 share of baseline Hub Score: 65.06%
+    Combined variation for these sectors: BC 0.30%, EU 0.70%, GL -5.39%
+
   Top 5 sectors by Authority Score:
-    CNS+: Baseline=2.528e-05, BC=2.529e-05, EU=2.517e-05, GL=2.508e-05
-
-    TRDmot: Baseline=2.257e-05, BC=2.244e-05, EU=2.23e-05, GL=2.362e-05
-
-    FINser: Baseline=2.027e-05, BC=2.007e-05, EU=1.983e-05, GL=2.269e-05
-
-    TRAwat: Baseline=1.915e-05, BC=1.895e-05, EU=1.89e-05, GL=1.992e-05
-
-    PROleg: Baseline=1.664e-05, BC=1.648e-05, EU=1.629e-05, GL=1.841e-05
+    CNS+: Baseline=2.528e-05, BC=0.06%, EU=-0.42%, GL=-0.79%
+    TRDmot: Baseline=2.257e-05, BC=-0.59%, EU=-1.22%, GL=4.63%
+    FINser: Baseline=2.027e-05, BC=-1.01%, EU=-2.19%, GL=11.95%
+    TRAwat: Baseline=1.915e-05, BC=-1.03%, EU=-1.32%, GL=4.01%
+    PROleg: Baseline=1.664e-05, BC=-1.00%, EU=-2.11%, GL=10.63%
+    Combined top5 share of baseline Authority Score: 50.32%
+    Combined variation for these sectors: BC -0.66%, EU -1.38%, GL 5.59%
 
 Country: ROU
   Clustering Coefficient: Baseline=0.0002163, BC=0.0002086, EU=0.0002071, GL=0.0002155
@@ -985,33 +1181,40 @@ Country: ROU
   Authority Score:         Baseline=9.003e-05, BC=8.835e-05, EU=8.85e-05, GL=8.655e-05
 
   Top 5 sectors by Clustering Coefficient:
-    CNS+: Baseline=1.701e-05, BC=1.641e-05, EU=1.637e-05, GL=1.678e-05
-    TRDmot: Baseline=1.522e-05, BC=1.469e-05, EU=1.464e-05, GL=1.509e-05
-    PROleg: Baseline=1.281e-05, BC=1.239e-05, EU=1.235e-05, GL=1.272e-05
-    ENRele: Baseline=1.064e-05, BC=1.022e-05, EU=1.023e-05, GL=1.05e-05
-    ADM+: Baseline=7.984e-06, BC=7.726e-06, EU=7.702e-06, GL=7.925e-06
+    CNS+: Baseline=1.701e-05, BC=-3.54%, EU=-3.76%, GL=-1.33%
+    TRDmot: Baseline=1.522e-05, BC=-3.50%, EU=-3.80%, GL=-0.86%
+    PROleg: Baseline=1.281e-05, BC=-3.24%, EU=-3.56%, GL=-0.71%
+    ENRele: Baseline=1.064e-05, BC=-3.89%, EU=-3.79%, GL=-1.33%
+    ADM+: Baseline=7.984e-06, BC=-3.23%, EU=-3.54%, GL=-0.74%
+    Combined top5 share of baseline Clustering Coefficient: 29.42%
+    Combined variation for these sectors: BC -3.49%, EU -3.71%, GL -1.02%
+
   Top 5 sectors by Betweenness Centrality:
-    ENRele: Baseline=0.0178, BC=0.01682, EU=0.01727, GL=0.01696
-    PROleg: Baseline=0.01109, BC=0.01107, EU=0.01109, GL=0.01109
-    TRDmot: Baseline=0.01078, BC=0.01076, EU=0.01071, GL=0.01082
-    ENRgas: Baseline=0.008842, BC=0.007914, EU=0.007908, GL=0.007999
-    TRAinl: Baseline=0.008249, BC=0.009255, EU=0.009255, GL=0.009059
+    ENRele: Baseline=0.0178, BC=-5.50%, EU=-3.00%, GL=-4.71%
+    PROleg: Baseline=0.01109, BC=-0.11%, EU=0.00%, GL=-0.00%
+    TRDmot: Baseline=0.01078, BC=-0.19%, EU=-0.65%, GL=0.38%
+    ENRgas: Baseline=0.008842, BC=-10.50%, EU=-10.56%, GL=-9.53%
+    TRAinl: Baseline=0.008249, BC=12.19%, EU=12.20%, GL=9.82%
+    Combined top5 share of baseline Betweenness Centrality: 69.08%
+    Combined variation for these sectors: BC -1.65%, EU -0.94%, GL -1.46%
+
   Top 5 sectors by Hub Score:
-    PROleg: Baseline=3.478e-05, BC=3.44e-05, EU=3.419e-05, GL=3.854e-05
-    COMcom: Baseline=8.55e-06, BC=8.459e-06, EU=8.406e-06, GL=9.474e-06
-    TRDmot: Baseline=4.255e-06, BC=4.211e-06, EU=4.21e-06, GL=4.37e-06
-    MANmac: Baseline=3.962e-06, BC=3.837e-06, EU=3.915e-06, GL=3.247e-06
-    TRAinl: Baseline=3.782e-06, BC=3.786e-06, EU=3.86e-06, GL=2.609e-06
+    PROleg: Baseline=3.478e-05, BC=-1.10%, EU=-1.70%, GL=10.81%
+    COMcom: Baseline=8.55e-06, BC=-1.07%, EU=-1.68%, GL=10.81%
+    TRDmot: Baseline=4.255e-06, BC=-1.04%, EU=-1.05%, GL=2.72%
+    MANmac: Baseline=3.962e-06, BC=-3.15%, EU=-1.18%, GL=-18.04%
+    TRAinl: Baseline=3.782e-06, BC=0.11%, EU=2.05%, GL=-31.02%
+    Combined top5 share of baseline Hub Score: 68.63%
+    Combined variation for these sectors: BC -1.15%, EU -1.35%, GL 5.26%
+
   Top 5 sectors by Authority Score:
-    PROleg: Baseline=9.139e-06, BC=8.889e-06, EU=8.825e-06, GL=9.677e-06
-
-    CNS+: Baseline=7.237e-06, BC=7.175e-06, EU=7.263e-06, GL=5.269e-06
-
-    FINser: Baseline=6.181e-06, BC=5.99e-06, EU=5.932e-06, GL=6.687e-06
-
-    TRAinl: Baseline=5.345e-06, BC=5.16e-06, EU=5.13e-06, GL=5.26e-06
-
-    TRDmot: Baseline=5.216e-06, BC=5.11e-06, EU=5.106e-06, GL=4.912e-06
+    PROleg: Baseline=9.139e-06, BC=-2.73%, EU=-3.43%, GL=5.89%
+    CNS+: Baseline=7.237e-06, BC=-0.86%, EU=0.36%, GL=-27.19%
+    FINser: Baseline=6.181e-06, BC=-3.10%, EU=-4.03%, GL=8.18%
+    TRAinl: Baseline=5.345e-06, BC=-3.47%, EU=-4.03%, GL=-1.60%
+    TRDmot: Baseline=5.216e-06, BC=-2.03%, EU=-2.09%, GL=-5.83%
+    Combined top5 share of baseline Authority Score: 36.79%
+    Combined variation for these sectors: BC -2.40%, EU -2.60%, GL -3.96%
 
 Country: IRL
   Clustering Coefficient: Baseline=0.0002037, BC=0.0002023, EU=0.0002019, GL=0.0002066
@@ -1020,33 +1223,40 @@ Country: IRL
   Authority Score:         Baseline=0.007454, BC=0.007362, EU=0.00731, GL=0.008184
 
   Top 5 sectors by Clustering Coefficient:
-    TRDmot: Baseline=1.868e-05, BC=1.854e-05, EU=1.853e-05, GL=1.847e-05
-    CNS+: Baseline=1.503e-05, BC=1.491e-05, EU=1.49e-05, GL=1.531e-05
-    PROleg: Baseline=1.2e-05, BC=1.191e-05, EU=1.19e-05, GL=1.207e-05
-    FINser: Baseline=9.684e-06, BC=9.621e-06, EU=9.605e-06, GL=9.819e-06
-    MANfoo: Baseline=7.4e-06, BC=7.432e-06, EU=7.422e-06, GL=7.39e-06
+    TRDmot: Baseline=1.868e-05, BC=-0.78%, EU=-0.83%, GL=-1.16%
+    CNS+: Baseline=1.503e-05, BC=-0.81%, EU=-0.88%, GL=1.85%
+    PROleg: Baseline=1.2e-05, BC=-0.72%, EU=-0.84%, GL=0.56%
+    FINser: Baseline=9.684e-06, BC=-0.64%, EU=-0.81%, GL=1.40%
+    MANfoo: Baseline=7.4e-06, BC=0.43%, EU=0.30%, GL=-0.14%
+    Combined top5 share of baseline Clustering Coefficient: 30.83%
+    Combined variation for these sectors: BC -0.61%, EU -0.71%, GL 0.40%
+
   Top 5 sectors by Betweenness Centrality:
-    COMcom: Baseline=0.02781, BC=0.02542, EU=0.03035, GL=0.03336
-    MANpha: Baseline=0.01948, BC=0.0261, EU=0.02004, GL=0.0127
-    TRDmot: Baseline=0.005705, BC=0.005728, EU=0.005727, GL=0.005704
-    COMpub: Baseline=0.003858, BC=0.003858, EU=0.003858, GL=0.003858
-    RES+: Baseline=0.003435, BC=0.003435, EU=0.003435, GL=0.003433
+    COMcom: Baseline=0.02781, BC=-8.59%, EU=9.16%, GL=19.97%
+    MANpha: Baseline=0.01948, BC=34.00%, EU=2.89%, GL=-34.80%
+    TRDmot: Baseline=0.005705, BC=0.41%, EU=0.39%, GL=-0.02%
+    COMpub: Baseline=0.003858, BC=0.00%, EU=0.00%, GL=0.00%
+    RES+: Baseline=0.003435, BC=0.00%, EU=-0.02%, GL=-0.05%
+    Combined top5 share of baseline Betweenness Centrality: 82.97%
+    Combined variation for these sectors: BC 7.06%, EU 5.20%, GL -2.04%
+
   Top 5 sectors by Hub Score:
-    MANpha: Baseline=0.0006031, BC=0.0005968, EU=0.0005933, GL=0.0006659
-    FINser: Baseline=0.000587, BC=0.0005808, EU=0.0005773, GL=0.0006494
-    MANfur: Baseline=0.0001164, BC=0.0001152, EU=0.0001146, GL=0.0001277
-    MANcom: Baseline=9.925e-05, BC=9.923e-05, EU=9.95e-05, GL=9.633e-05
-    ADM+: Baseline=9.196e-05, BC=9.147e-05, EU=9.125e-05, GL=9.612e-05
+    MANpha: Baseline=0.0006031, BC=-1.03%, EU=-1.62%, GL=10.43%
+    FINser: Baseline=0.000587, BC=-1.07%, EU=-1.66%, GL=10.62%
+    MANfur: Baseline=0.0001164, BC=-1.04%, EU=-1.59%, GL=9.72%
+    MANcom: Baseline=9.925e-05, BC=-0.02%, EU=0.25%, GL=-2.94%
+    ADM+: Baseline=9.196e-05, BC=-0.53%, EU=-0.78%, GL=4.52%
+    Combined top5 share of baseline Hub Score: 76.66%
+    Combined variation for these sectors: BC -0.95%, EU -1.46%, GL 9.20%
+
   Top 5 sectors by Authority Score:
-    COMcom: Baseline=0.001871, BC=0.00184, EU=0.001825, GL=0.002063
-
-    FINser: Baseline=0.001848, BC=0.001822, EU=0.001812, GL=0.002018
-
-    MANpha: Baseline=0.001493, BC=0.001485, EU=0.001473, GL=0.001645
-
-    TRDmot: Baseline=0.000334, BC=0.0003289, EU=0.0003271, GL=0.0003651
-
-    MANcom: Baseline=0.0003265, BC=0.0003234, EU=0.0003216, GL=0.0003547
+    COMcom: Baseline=0.001871, BC=-1.65%, EU=-2.46%, GL=10.29%
+    FINser: Baseline=0.001848, BC=-1.40%, EU=-1.93%, GL=9.20%
+    MANpha: Baseline=0.001493, BC=-0.54%, EU=-1.34%, GL=10.18%
+    TRDmot: Baseline=0.000334, BC=-1.52%, EU=-2.07%, GL=9.32%
+    MANcom: Baseline=0.0003265, BC=-0.94%, EU=-1.50%, GL=8.64%
+    Combined top5 share of baseline Authority Score: 78.78%
+    Combined variation for these sectors: BC -1.24%, EU -1.93%, GL 9.77%
 
 Country: PRT
   Clustering Coefficient: Baseline=0.000309, BC=0.0003032, EU=0.0003007, GL=0.0003128
@@ -1055,33 +1265,40 @@ Country: PRT
   Authority Score:         Baseline=6.844e-05, BC=6.791e-05, EU=6.797e-05, GL=6.792e-05
 
   Top 5 sectors by Clustering Coefficient:
-    TRDmot: Baseline=2.656e-05, BC=2.619e-05, EU=2.61e-05, GL=2.688e-05
-    PROleg: Baseline=1.563e-05, BC=1.544e-05, EU=1.538e-05, GL=1.584e-05
-    ADM+: Baseline=1.346e-05, BC=1.329e-05, EU=1.324e-05, GL=1.364e-05
-    CNS+: Baseline=1.326e-05, BC=1.32e-05, EU=1.314e-05, GL=1.354e-05
-    MANfoo: Baseline=1.262e-05, BC=1.223e-05, EU=1.207e-05, GL=1.258e-05
+    TRDmot: Baseline=2.656e-05, BC=-1.41%, EU=-1.76%, GL=1.20%
+    PROleg: Baseline=1.563e-05, BC=-1.22%, EU=-1.62%, GL=1.33%
+    ADM+: Baseline=1.346e-05, BC=-1.22%, EU=-1.62%, GL=1.36%
+    CNS+: Baseline=1.326e-05, BC=-0.47%, EU=-0.93%, GL=2.05%
+    MANfoo: Baseline=1.262e-05, BC=-3.09%, EU=-4.36%, GL=-0.31%
+    Combined top5 share of baseline Clustering Coefficient: 26.39%
+    Combined variation for these sectors: BC -1.45%, EU -1.98%, GL 1.16%
+
   Top 5 sectors by Betweenness Centrality:
-    TRDmot: Baseline=0.03161, BC=0.03161, EU=0.03208, GL=0.03162
-    ENRele: Baseline=0.01949, BC=0.01949, EU=0.01995, GL=0.0195
-    MANmot: Baseline=0.01708, BC=0.01708, EU=0.01708, GL=0.01707
-    PROleg: Baseline=0.004364, BC=0.004364, EU=0.004364, GL=0.004364
-    CNS+: Baseline=0.00291, BC=0.002911, EU=0.002912, GL=0.002907
+    TRDmot: Baseline=0.03161, BC=0.00%, EU=1.48%, GL=0.02%
+    ENRele: Baseline=0.01949, BC=-0.00%, EU=2.39%, GL=0.04%
+    MANmot: Baseline=0.01708, BC=0.01%, EU=0.01%, GL=-0.01%
+    PROleg: Baseline=0.004364, BC=0.00%, EU=0.00%, GL=-0.01%
+    CNS+: Baseline=0.00291, BC=0.03%, EU=0.06%, GL=-0.10%
+    Combined top5 share of baseline Betweenness Centrality: 92.21%
+    Combined variation for these sectors: BC 0.00%, EU 1.24%, GL 0.01%
+
   Top 5 sectors by Hub Score:
-    ENRoil: Baseline=1.905e-05, BC=1.881e-05, EU=1.872e-05, GL=2.087e-05
-    TRDmot: Baseline=1.071e-05, BC=1.064e-05, EU=1.064e-05, GL=1.105e-05
-    PROleg: Baseline=7.202e-06, BC=7.128e-06, EU=7.087e-06, GL=7.939e-06
-    TRAair: Baseline=6.444e-06, BC=6.38e-06, EU=6.351e-06, GL=6.876e-06
-    FINser: Baseline=6.133e-06, BC=6.065e-06, EU=6.026e-06, GL=6.808e-06
+    ENRoil: Baseline=1.905e-05, BC=-1.27%, EU=-1.74%, GL=9.56%
+    TRDmot: Baseline=1.071e-05, BC=-0.62%, EU=-0.71%, GL=3.20%
+    PROleg: Baseline=7.202e-06, BC=-1.03%, EU=-1.60%, GL=10.23%
+    TRAair: Baseline=6.444e-06, BC=-0.99%, EU=-1.44%, GL=6.70%
+    FINser: Baseline=6.133e-06, BC=-1.10%, EU=-1.74%, GL=11.01%
+    Combined top5 share of baseline Hub Score: 49.44%
+    Combined variation for these sectors: BC -1.04%, EU -1.46%, GL 8.09%
+
   Top 5 sectors by Authority Score:
-    FINser: Baseline=1.313e-05, BC=1.294e-05, EU=1.281e-05, GL=1.45e-05
-
-    TRDmot: Baseline=7.146e-06, BC=7.048e-06, EU=7.004e-06, GL=7.539e-06
-
-    PROleg: Baseline=5.276e-06, BC=5.196e-06, EU=5.148e-06, GL=5.781e-06
-
-    ENRoil: Baseline=4.833e-06, BC=4.79e-06, EU=4.811e-06, GL=4.384e-06
-
-    MANfoo: Baseline=3.265e-06, BC=3.253e-06, EU=3.289e-06, GL=3.185e-06
+    FINser: Baseline=1.313e-05, BC=-1.48%, EU=-2.50%, GL=10.39%
+    TRDmot: Baseline=7.146e-06, BC=-1.38%, EU=-1.99%, GL=5.49%
+    PROleg: Baseline=5.276e-06, BC=-1.53%, EU=-2.44%, GL=9.57%
+    ENRoil: Baseline=4.833e-06, BC=-0.89%, EU=-0.45%, GL=-9.30%
+    MANfoo: Baseline=3.265e-06, BC=-0.36%, EU=0.73%, GL=-2.45%
+    Combined top5 share of baseline Authority Score: 49.17%
+    Combined variation for these sectors: BC -1.27%, EU -1.77%, GL 5.15%
 
 Country: GRC
   Clustering Coefficient: Baseline=0.000113, BC=0.0001105, EU=0.0001105, GL=0.0001113
@@ -1090,33 +1307,40 @@ Country: GRC
   Authority Score:         Baseline=0.0001051, BC=0.000104, EU=0.0001041, GL=0.0001033
 
   Top 5 sectors by Clustering Coefficient:
-    TRDmot: Baseline=8.008e-06, BC=7.8e-06, EU=7.846e-06, GL=7.882e-06
-    RES+: Baseline=7.491e-06, BC=7.366e-06, EU=7.355e-06, GL=7.438e-06
-    PROleg: Baseline=6.861e-06, BC=6.724e-06, EU=6.726e-06, GL=6.744e-06
-    FD+: Baseline=5.767e-06, BC=5.674e-06, EU=5.676e-06, GL=5.706e-06
-    ADM+: Baseline=4.741e-06, BC=4.652e-06, EU=4.655e-06, GL=4.685e-06
+    TRDmot: Baseline=8.008e-06, BC=-2.60%, EU=-2.02%, GL=-1.57%
+    RES+: Baseline=7.491e-06, BC=-1.67%, EU=-1.82%, GL=-0.71%
+    PROleg: Baseline=6.861e-06, BC=-2.00%, EU=-1.96%, GL=-1.70%
+    FD+: Baseline=5.767e-06, BC=-1.62%, EU=-1.58%, GL=-1.06%
+    ADM+: Baseline=4.741e-06, BC=-1.88%, EU=-1.81%, GL=-1.18%
+    Combined top5 share of baseline Clustering Coefficient: 29.09%
+    Combined variation for these sectors: BC -1.99%, EU -1.86%, GL -1.26%
+
   Top 5 sectors by Betweenness Centrality:
-    ENRoil: Baseline=0.03164, BC=0.03176, EU=0.03211, GL=0.0325
-    TRDmot: Baseline=0.02577, BC=0.02591, EU=0.02625, GL=0.02661
-    TRAwat: Baseline=0.02183, BC=0.0223, EU=0.0223, GL=0.02229
-    ENRele: Baseline=0.007508, BC=0.007466, EU=0.007497, GL=0.007495
-    PROleg: Baseline=0.003462, BC=0.003463, EU=0.003463, GL=0.003463
+    ENRoil: Baseline=0.03164, BC=0.38%, EU=1.48%, GL=2.71%
+    TRDmot: Baseline=0.02577, BC=0.54%, EU=1.88%, GL=3.28%
+    TRAwat: Baseline=0.02183, BC=2.15%, EU=2.15%, GL=2.13%
+    ENRele: Baseline=0.007508, BC=-0.56%, EU=-0.14%, GL=-0.17%
+    PROleg: Baseline=0.003462, BC=0.01%, EU=0.01%, GL=0.01%
+    Combined top5 share of baseline Betweenness Centrality: 75.45%
+    Combined variation for these sectors: BC 0.76%, EU 1.57%, GL 2.39%
+
   Top 5 sectors by Hub Score:
-    TRAwat: Baseline=1.154e-05, BC=1.154e-05, EU=1.171e-05, GL=9.577e-06
-    FINser: Baseline=7.104e-06, BC=7.028e-06, EU=6.985e-06, GL=7.876e-06
-    MIN+: Baseline=6.215e-06, BC=6.63e-06, EU=6.892e-06, GL=2e-06
-    AGRfis: Baseline=5.988e-06, BC=5.916e-06, EU=5.886e-06, GL=6.643e-06
-    TRAair: Baseline=5.412e-06, BC=5.354e-06, EU=5.333e-06, GL=5.758e-06
+    TRAwat: Baseline=1.154e-05, BC=0.02%, EU=1.50%, GL=-17.01%
+    FINser: Baseline=7.104e-06, BC=-1.07%, EU=-1.68%, GL=10.87%
+    MIN+: Baseline=6.215e-06, BC=6.68%, EU=10.90%, GL=-67.82%
+    AGRfis: Baseline=5.988e-06, BC=-1.21%, EU=-1.71%, GL=10.93%
+    TRAair: Baseline=5.412e-06, BC=-1.07%, EU=-1.47%, GL=6.39%
+    Combined top5 share of baseline Hub Score: 50.62%
+    Combined variation for these sectors: BC 0.58%, EU 1.51%, GL -12.15%
+
   Top 5 sectors by Authority Score:
-    FINser: Baseline=3.033e-05, BC=2.98e-05, EU=2.957e-05, GL=3.285e-05
-
-    TRDmot: Baseline=2.078e-05, BC=2.041e-05, EU=2.035e-05, GL=2.144e-05
-
-    CNS+: Baseline=4.879e-06, BC=4.886e-06, EU=4.928e-06, GL=3.964e-06
-
-    ENRoil: Baseline=4.24e-06, BC=4.258e-06, EU=4.21e-06, GL=3.889e-06
-
-    PUB+: Baseline=3.867e-06, BC=3.836e-06, EU=3.819e-06, GL=3.896e-06
+    FINser: Baseline=3.033e-05, BC=-1.76%, EU=-2.53%, GL=8.29%
+    TRDmot: Baseline=2.078e-05, BC=-1.78%, EU=-2.05%, GL=3.21%
+    CNS+: Baseline=4.879e-06, BC=0.15%, EU=1.02%, GL=-18.76%
+    ENRoil: Baseline=4.24e-06, BC=0.43%, EU=-0.70%, GL=-8.28%
+    PUB+: Baseline=3.867e-06, BC=-0.80%, EU=-1.24%, GL=0.77%
+    Combined top5 share of baseline Authority Score: 60.99%
+    Combined variation for these sectors: BC -1.42%, EU -1.90%, GL 3.03%
 
 Country: HUN
   Clustering Coefficient: Baseline=0.000154, BC=0.0001485, EU=0.0001483, GL=0.0001534
@@ -1125,33 +1349,40 @@ Country: HUN
   Authority Score:         Baseline=0.000131, BC=0.000129, EU=0.0001291, GL=0.0001271
 
   Top 5 sectors by Clustering Coefficient:
-    TRDmot: Baseline=1.333e-05, BC=1.282e-05, EU=1.28e-05, GL=1.321e-05
-    CNS+: Baseline=9.008e-06, BC=8.715e-06, EU=8.711e-06, GL=8.955e-06
-    PROleg: Baseline=7.323e-06, BC=7.109e-06, EU=7.093e-06, GL=7.314e-06
-    ADM+: Baseline=6.088e-06, BC=5.905e-06, EU=5.893e-06, GL=6.075e-06
-    RES+: Baseline=5.779e-06, BC=5.576e-06, EU=5.56e-06, GL=5.736e-06
+    TRDmot: Baseline=1.333e-05, BC=-3.80%, EU=-3.94%, GL=-0.89%
+    CNS+: Baseline=9.008e-06, BC=-3.25%, EU=-3.29%, GL=-0.58%
+    PROleg: Baseline=7.323e-06, BC=-2.91%, EU=-3.13%, GL=-0.12%
+    ADM+: Baseline=6.088e-06, BC=-3.01%, EU=-3.21%, GL=-0.22%
+    RES+: Baseline=5.779e-06, BC=-3.51%, EU=-3.78%, GL=-0.74%
+    Combined top5 share of baseline Clustering Coefficient: 26.96%
+    Combined variation for these sectors: BC -3.37%, EU -3.53%, GL -0.57%
+
   Top 5 sectors by Betweenness Centrality:
-    TRDmot: Baseline=0.01993, BC=0.02025, EU=0.02024, GL=0.02026
-    MANmot: Baseline=0.01718, BC=0.01809, EU=0.01809, GL=0.01717
-    CNS+: Baseline=0.007356, BC=0.00721, EU=0.007211, GL=0.007223
-    RES+: Baseline=0.00598, BC=0.005932, EU=0.005933, GL=0.005935
-    ENRoil: Baseline=0.004714, BC=0.004491, EU=0.004639, GL=0.002606
+    TRDmot: Baseline=0.01993, BC=1.61%, EU=1.58%, GL=1.68%
+    MANmot: Baseline=0.01718, BC=5.30%, EU=5.25%, GL=-0.05%
+    CNS+: Baseline=0.007356, BC=-1.99%, EU=-1.98%, GL=-1.81%
+    RES+: Baseline=0.00598, BC=-0.79%, EU=-0.79%, GL=-0.76%
+    ENRoil: Baseline=0.004714, BC=-4.74%, EU=-1.59%, GL=-44.73%
+    Combined top5 share of baseline Betweenness Centrality: 84.09%
+    Combined variation for these sectors: BC 1.48%, EU 1.72%, GL -3.55%
+
   Top 5 sectors by Hub Score:
-    PROleg: Baseline=2.561e-05, BC=2.535e-05, EU=2.521e-05, GL=2.819e-05
-    MANmot: Baseline=2.103e-05, BC=2.089e-05, EU=2.116e-05, GL=1.819e-05
-    MANcom: Baseline=1.622e-05, BC=1.622e-05, EU=1.633e-05, GL=1.478e-05
-    TRDmot: Baseline=6.319e-06, BC=6.29e-06, EU=6.315e-06, GL=6.047e-06
-    MANmac: Baseline=6.189e-06, BC=6.162e-06, EU=6.224e-06, GL=5.492e-06
+    PROleg: Baseline=2.561e-05, BC=-1.02%, EU=-1.58%, GL=10.08%
+    MANmot: Baseline=2.103e-05, BC=-0.66%, EU=0.63%, GL=-13.50%
+    MANcom: Baseline=1.622e-05, BC=0.02%, EU=0.68%, GL=-8.90%
+    TRDmot: Baseline=6.319e-06, BC=-0.46%, EU=-0.06%, GL=-4.31%
+    MANmac: Baseline=6.189e-06, BC=-0.45%, EU=0.56%, GL=-11.27%
+    Combined top5 share of baseline Hub Score: 64.21%
+    Combined variation for these sectors: BC -0.60%, EU -0.17%, GL -3.54%
+
   Top 5 sectors by Authority Score:
-    FINser: Baseline=1.718e-05, BC=1.668e-05, EU=1.652e-05, GL=1.875e-05
-
-    MANcom: Baseline=1.637e-05, BC=1.666e-05, EU=1.685e-05, GL=1.213e-05
-
-    MANmot: Baseline=1.404e-05, BC=1.424e-05, EU=1.438e-05, GL=1.24e-05
-
-    TRDmot: Baseline=1.226e-05, BC=1.189e-05, EU=1.183e-05, GL=1.28e-05
-
-    PROleg: Baseline=7.099e-06, BC=6.927e-06, EU=6.875e-06, GL=7.64e-06
+    FINser: Baseline=1.718e-05, BC=-2.93%, EU=-3.81%, GL=9.16%
+    MANcom: Baseline=1.637e-05, BC=1.78%, EU=2.93%, GL=-25.89%
+    MANmot: Baseline=1.404e-05, BC=1.40%, EU=2.37%, GL=-11.74%
+    TRDmot: Baseline=1.226e-05, BC=-2.95%, EU=-3.43%, GL=4.45%
+    PROleg: Baseline=7.099e-06, BC=-2.42%, EU=-3.16%, GL=7.62%
+    Combined top5 share of baseline Authority Score: 51.12%
+    Combined variation for these sectors: BC -0.82%, EU -0.73%, GL -4.82%
 
 Country: SVK
   Clustering Coefficient: Baseline=0.0001249, BC=0.0001191, EU=0.0001187, GL=0.0001237
@@ -1160,33 +1391,40 @@ Country: SVK
   Authority Score:         Baseline=4.008e-05, BC=3.981e-05, EU=4.032e-05, GL=3.276e-05
 
   Top 5 sectors by Clustering Coefficient:
-    TRDmot: Baseline=1.037e-05, BC=9.941e-06, EU=9.914e-06, GL=1.027e-05
-    MANrep: Baseline=7.804e-06, BC=7.55e-06, EU=7.504e-06, GL=8.076e-06
-    ENRele: Baseline=5.81e-06, BC=5.472e-06, EU=5.443e-06, GL=5.69e-06
-    PROleg: Baseline=5.744e-06, BC=5.512e-06, EU=5.487e-06, GL=5.7e-06
-    CNS+: Baseline=5.515e-06, BC=5.281e-06, EU=5.264e-06, GL=5.418e-06
+    TRDmot: Baseline=1.037e-05, BC=-4.17%, EU=-4.44%, GL=-0.97%
+    MANrep: Baseline=7.804e-06, BC=-3.24%, EU=-3.84%, GL=3.49%
+    ENRele: Baseline=5.81e-06, BC=-5.81%, EU=-6.32%, GL=-2.07%
+    PROleg: Baseline=5.744e-06, BC=-4.04%, EU=-4.46%, GL=-0.77%
+    CNS+: Baseline=5.515e-06, BC=-4.26%, EU=-4.56%, GL=-1.76%
+    Combined top5 share of baseline Clustering Coefficient: 28.22%
+    Combined variation for these sectors: BC -4.23%, EU -4.64%, GL -0.25%
+
   Top 5 sectors by Betweenness Centrality:
-    MANmot: Baseline=0.03231, BC=0.03232, EU=0.03232, GL=0.03231
-    TRDmot: Baseline=0.02544, BC=0.02543, EU=0.02591, GL=0.02497
-    PROleg: Baseline=0.004848, BC=0.004848, EU=0.004848, GL=0.004848
-    CNS+: Baseline=0.002894, BC=0.002894, EU=0.002894, GL=0.002892
-    ENRele: Baseline=0.002436, BC=0.002899, EU=0.003383, GL=0.002437
+    MANmot: Baseline=0.03231, BC=0.03%, EU=0.04%, GL=0.02%
+    TRDmot: Baseline=0.02544, BC=-0.03%, EU=1.84%, GL=-1.86%
+    PROleg: Baseline=0.004848, BC=0.01%, EU=0.00%, GL=0.00%
+    CNS+: Baseline=0.002894, BC=0.00%, EU=-0.01%, GL=-0.05%
+    ENRele: Baseline=0.002436, BC=18.98%, EU=38.85%, GL=0.03%
+    Combined top5 share of baseline Betweenness Centrality: 87.56%
+    Combined variation for these sectors: BC 0.68%, EU 2.10%, GL -0.69%
+
   Top 5 sectors by Hub Score:
-    MANmot: Baseline=3.465e-05, BC=3.43e-05, EU=3.476e-05, GL=3.024e-05
-    TRDmot: Baseline=3.568e-06, BC=3.578e-06, EU=3.616e-06, GL=3.042e-06
-    MANmac: Baseline=3.368e-06, BC=3.289e-06, EU=3.349e-06, GL=2.814e-06
-    PROleg: Baseline=3.106e-06, BC=3.079e-06, EU=3.066e-06, GL=3.337e-06
-    COMcom: Baseline=3.02e-06, BC=2.989e-06, EU=2.971e-06, GL=3.344e-06
+    MANmot: Baseline=3.465e-05, BC=-1.00%, EU=0.30%, GL=-12.74%
+    TRDmot: Baseline=3.568e-06, BC=0.28%, EU=1.34%, GL=-14.75%
+    MANmac: Baseline=3.368e-06, BC=-2.36%, EU=-0.55%, GL=-16.46%
+    PROleg: Baseline=3.106e-06, BC=-0.87%, EU=-1.28%, GL=7.44%
+    COMcom: Baseline=3.02e-06, BC=-1.03%, EU=-1.64%, GL=10.70%
+    Combined top5 share of baseline Hub Score: 76.11%
+    Combined variation for these sectors: BC -0.99%, EU 0.09%, GL -10.35%
+
   Top 5 sectors by Authority Score:
-    MANcom: Baseline=6.901e-06, BC=7.086e-06, EU=7.206e-06, GL=4.091e-06
-
-    MANmot: Baseline=5.611e-06, BC=5.688e-06, EU=5.739e-06, GL=4.848e-06
-
-    FINser: Baseline=5.435e-06, BC=5.232e-06, EU=5.172e-06, GL=5.895e-06
-
-    TRDmot: Baseline=2.643e-06, BC=2.575e-06, EU=2.577e-06, GL=2.431e-06
-
-    PROleg: Baseline=1.909e-06, BC=1.849e-06, EU=1.836e-06, GL=1.966e-06
+    MANcom: Baseline=6.901e-06, BC=2.67%, EU=4.42%, GL=-40.71%
+    MANmot: Baseline=5.611e-06, BC=1.37%, EU=2.28%, GL=-13.60%
+    FINser: Baseline=5.435e-06, BC=-3.74%, EU=-4.85%, GL=8.46%
+    TRDmot: Baseline=2.643e-06, BC=-2.55%, EU=-2.47%, GL=-8.01%
+    PROleg: Baseline=1.909e-06, BC=-3.18%, EU=-3.85%, GL=2.95%
+    Combined top5 share of baseline Authority Score: 56.13%
+    Combined variation for these sectors: BC -0.31%, EU 0.14%, GL -14.53%
 
 Country: LUX
   Clustering Coefficient: Baseline=7.405e-05, BC=7.343e-05, EU=7.3e-05, GL=7.656e-05
@@ -1195,33 +1433,40 @@ Country: LUX
   Authority Score:         Baseline=0.001751, BC=0.001726, EU=0.00171, GL=0.001941
 
   Top 5 sectors by Clustering Coefficient:
-    TRDmot: Baseline=7.324e-06, BC=7.271e-06, EU=7.234e-06, GL=7.546e-06
-    ADM+: Baseline=7.248e-06, BC=7.183e-06, EU=7.155e-06, GL=7.419e-06
-    FINser: Baseline=5.948e-06, BC=5.891e-06, EU=5.874e-06, GL=6.108e-06
-    MANpla: Baseline=5.167e-06, BC=5.146e-06, EU=5.095e-06, GL=5.335e-06
-    CNS+: Baseline=4.336e-06, BC=4.303e-06, EU=4.265e-06, GL=4.549e-06
+    TRDmot: Baseline=7.324e-06, BC=-0.72%, EU=-1.22%, GL=3.03%
+    ADM+: Baseline=7.248e-06, BC=-0.90%, EU=-1.28%, GL=2.35%
+    FINser: Baseline=5.948e-06, BC=-0.97%, EU=-1.26%, GL=2.68%
+    MANpla: Baseline=5.167e-06, BC=-0.40%, EU=-1.39%, GL=3.26%
+    CNS+: Baseline=4.336e-06, BC=-0.74%, EU=-1.62%, GL=4.93%
+    Combined top5 share of baseline Clustering Coefficient: 40.54%
+    Combined variation for these sectors: BC -0.76%, EU -1.33%, GL 3.11%
+
   Top 5 sectors by Betweenness Centrality:
-    FINser: Baseline=0.02004, BC=0.0216, EU=0.02002, GL=0.0222
-    TRDmot: Baseline=0.01405, BC=0.01405, EU=0.01405, GL=0.01405
-    ADM+: Baseline=0.009531, BC=0.00953, EU=0.009531, GL=0.009531
-    CNS+: Baseline=0.003884, BC=0.003883, EU=0.003884, GL=0.003876
-    RES+: Baseline=0.00291, BC=0.00291, EU=0.00291, GL=0.002902
+    FINser: Baseline=0.02004, BC=7.80%, EU=-0.10%, GL=10.77%
+    TRDmot: Baseline=0.01405, BC=0.01%, EU=0.00%, GL=-0.01%
+    ADM+: Baseline=0.009531, BC=-0.01%, EU=0.00%, GL=0.00%
+    CNS+: Baseline=0.003884, BC=-0.01%, EU=0.00%, GL=-0.21%
+    RES+: Baseline=0.00291, BC=-0.01%, EU=0.00%, GL=-0.27%
+    Combined top5 share of baseline Betweenness Centrality: 86.67%
+    Combined variation for these sectors: BC 3.10%, EU -0.04%, GL 4.25%
+
   Top 5 sectors by Hub Score:
-    FINser: Baseline=0.0002854, BC=0.0002814, EU=0.000279, GL=0.0003193
-    PROleg: Baseline=1.198e-05, BC=1.18e-05, EU=1.169e-05, GL=1.346e-05
-    ADM+: Baseline=1.182e-05, BC=1.162e-05, EU=1.151e-05, GL=1.326e-05
-    TRDmot: Baseline=6.192e-06, BC=6.139e-06, EU=6.118e-06, GL=6.479e-06
-    COMcom: Baseline=5.399e-06, BC=5.341e-06, EU=5.308e-06, GL=5.917e-06
+    FINser: Baseline=0.0002854, BC=-1.40%, EU=-2.23%, GL=11.87%
+    PROleg: Baseline=1.198e-05, BC=-1.46%, EU=-2.37%, GL=12.36%
+    ADM+: Baseline=1.182e-05, BC=-1.70%, EU=-2.59%, GL=12.20%
+    TRDmot: Baseline=6.192e-06, BC=-0.86%, EU=-1.20%, GL=4.63%
+    COMcom: Baseline=5.399e-06, BC=-1.07%, EU=-1.69%, GL=9.59%
+    Combined top5 share of baseline Hub Score: 94.61%
+    Combined variation for these sectors: BC -1.39%, EU -2.22%, GL 11.73%
+
   Top 5 sectors by Authority Score:
-    FINser: Baseline=0.001615, BC=0.001592, EU=0.001577, GL=0.001789
-
-    TRDmot: Baseline=2.718e-05, BC=2.68e-05, EU=2.65e-05, GL=3.045e-05
-
-    ADM+: Baseline=2.698e-05, BC=2.656e-05, EU=2.63e-05, GL=2.992e-05
-
-    COMvid: Baseline=1.372e-05, BC=1.354e-05, EU=1.343e-05, GL=1.509e-05
-
-    PROleg: Baseline=9.449e-06, BC=9.316e-06, EU=9.217e-06, GL=1.051e-05
+    FINser: Baseline=0.001615, BC=-1.42%, EU=-2.32%, GL=10.79%
+    TRDmot: Baseline=2.718e-05, BC=-1.40%, EU=-2.51%, GL=12.02%
+    ADM+: Baseline=2.698e-05, BC=-1.55%, EU=-2.49%, GL=10.90%
+    COMvid: Baseline=1.372e-05, BC=-1.30%, EU=-2.11%, GL=10.03%
+    PROleg: Baseline=9.449e-06, BC=-1.40%, EU=-2.45%, GL=11.20%
+    Combined top5 share of baseline Authority Score: 96.65%
+    Combined variation for these sectors: BC -1.42%, EU -2.33%, GL 10.81%
 
 Country: BGR
   Clustering Coefficient: Baseline=7.825e-05, BC=7.282e-05, EU=7.385e-05, GL=7.437e-05
@@ -1230,33 +1475,40 @@ Country: BGR
   Authority Score:         Baseline=3.117e-05, BC=2.959e-05, EU=2.992e-05, GL=2.988e-05
 
   Top 5 sectors by Clustering Coefficient:
-    TRDmot: Baseline=7.087e-06, BC=6.629e-06, EU=6.685e-06, GL=6.786e-06
-    FINser: Baseline=4.721e-06, BC=4.417e-06, EU=4.448e-06, GL=4.525e-06
-    CNS+: Baseline=4.254e-06, BC=4.035e-06, EU=4.077e-06, GL=4.057e-06
-    TRAinl: Baseline=3.256e-06, BC=3.018e-06, EU=3.044e-06, GL=3.094e-06
-    MANfoo: Baseline=3.123e-06, BC=2.855e-06, EU=2.922e-06, GL=2.905e-06
+    TRDmot: Baseline=7.087e-06, BC=-6.47%, EU=-5.67%, GL=-4.24%
+    FINser: Baseline=4.721e-06, BC=-6.43%, EU=-5.79%, GL=-4.16%
+    CNS+: Baseline=4.254e-06, BC=-5.13%, EU=-4.16%, GL=-4.62%
+    TRAinl: Baseline=3.256e-06, BC=-7.31%, EU=-6.51%, GL=-4.97%
+    MANfoo: Baseline=3.123e-06, BC=-8.57%, EU=-6.44%, GL=-6.99%
+    Combined top5 share of baseline Clustering Coefficient: 28.68%
+    Combined variation for these sectors: BC -6.62%, EU -5.64%, GL -4.79%
+
   Top 5 sectors by Betweenness Centrality:
-    MANmet: Baseline=0.01802, BC=0.01787, EU=0.01797, GL=0.01843
-    TRDmot: Baseline=0.01643, BC=0.01924, EU=0.01738, GL=0.01878
-    ENRele: Baseline=0.01144, BC=0.01191, EU=0.01191, GL=0.01052
-    CNS+: Baseline=0.007755, BC=0.007294, EU=0.007293, GL=0.008678
-    TRAinl: Baseline=0.007194, BC=0.00674, EU=0.006732, GL=0.008593
+    MANmet: Baseline=0.01802, BC=-0.82%, EU=-0.31%, GL=2.24%
+    TRDmot: Baseline=0.01643, BC=17.13%, EU=5.78%, GL=14.29%
+    ENRele: Baseline=0.01144, BC=4.04%, EU=4.04%, GL=-8.07%
+    CNS+: Baseline=0.007755, BC=-5.94%, EU=-5.96%, GL=11.90%
+    TRAinl: Baseline=0.007194, BC=-6.31%, EU=-6.42%, GL=19.45%
+    Combined top5 share of baseline Betweenness Centrality: 80.40%
+    Combined variation for these sectors: BC 3.64%, EU 0.71%, GL 6.82%
+
   Top 5 sectors by Hub Score:
-    PROleg: Baseline=2.777e-06, BC=2.748e-06, EU=2.732e-06, GL=3.055e-06
-    FINser: Baseline=2.373e-06, BC=2.348e-06, EU=2.334e-06, GL=2.623e-06
-    ENRoil: Baseline=2.262e-06, BC=2.21e-06, EU=2.213e-06, GL=2.385e-06
-    TRDmot: Baseline=1.883e-06, BC=1.86e-06, EU=1.865e-06, GL=1.88e-06
-    MANmet: Baseline=1.746e-06, BC=1.525e-06, EU=1.779e-06, GL=6.962e-07
+    PROleg: Baseline=2.777e-06, BC=-1.06%, EU=-1.61%, GL=10.00%
+    FINser: Baseline=2.373e-06, BC=-1.07%, EU=-1.65%, GL=10.52%
+    ENRoil: Baseline=2.262e-06, BC=-2.26%, EU=-2.17%, GL=5.47%
+    TRDmot: Baseline=1.883e-06, BC=-1.23%, EU=-0.96%, GL=-0.16%
+    MANmet: Baseline=1.746e-06, BC=-12.66%, EU=1.89%, GL=-60.13%
+    Combined top5 share of baseline Hub Score: 48.29%
+    Combined variation for these sectors: BC -3.17%, EU -1.07%, GL -3.64%
+
   Top 5 sectors by Authority Score:
-    CNS+: Baseline=4.563e-06, BC=4.307e-06, EU=4.338e-06, GL=4.282e-06
-
-    TRDmot: Baseline=3.272e-06, BC=3.095e-06, EU=3.103e-06, GL=3.33e-06
-
-    FINser: Baseline=2.867e-06, BC=2.699e-06, EU=2.698e-06, GL=3.024e-06
-
-    PROleg: Baseline=2.624e-06, BC=2.504e-06, EU=2.497e-06, GL=2.783e-06
-
-    TRAinl: Baseline=2.086e-06, BC=1.936e-06, EU=1.931e-06, GL=2.127e-06
+    CNS+: Baseline=4.563e-06, BC=-5.60%, EU=-4.93%, GL=-6.15%
+    TRDmot: Baseline=3.272e-06, BC=-5.42%, EU=-5.17%, GL=1.78%
+    FINser: Baseline=2.867e-06, BC=-5.87%, EU=-5.91%, GL=5.48%
+    PROleg: Baseline=2.624e-06, BC=-4.56%, EU=-4.84%, GL=6.06%
+    TRAinl: Baseline=2.086e-06, BC=-7.20%, EU=-7.42%, GL=1.94%
+    Combined top5 share of baseline Authority Score: 49.44%
+    Combined variation for these sectors: BC -5.65%, EU -5.48%, GL 0.87%
 
 Country: HRV
   Clustering Coefficient: Baseline=7.339e-05, BC=7.158e-05, EU=7.123e-05, GL=7.416e-05
@@ -1265,33 +1517,40 @@ Country: HRV
   Authority Score:         Baseline=2.041e-05, BC=2.02e-05, EU=2.018e-05, GL=2.064e-05
 
   Top 5 sectors by Clustering Coefficient:
-    TRDmot: Baseline=6.852e-06, BC=6.7e-06, EU=6.674e-06, GL=6.924e-06
-    CNS+: Baseline=4.179e-06, BC=4.08e-06, EU=4.078e-06, GL=4.207e-06
-    PROleg: Baseline=3.021e-06, BC=2.96e-06, EU=2.948e-06, GL=3.058e-06
-    MANfoo: Baseline=2.945e-06, BC=2.881e-06, EU=2.88e-06, GL=3.03e-06
-    MANpri: Baseline=2.708e-06, BC=2.637e-06, EU=2.531e-06, GL=2.688e-06
+    TRDmot: Baseline=6.852e-06, BC=-2.22%, EU=-2.60%, GL=1.06%
+    CNS+: Baseline=4.179e-06, BC=-2.37%, EU=-2.42%, GL=0.65%
+    PROleg: Baseline=3.021e-06, BC=-2.02%, EU=-2.40%, GL=1.22%
+    MANfoo: Baseline=2.945e-06, BC=-2.18%, EU=-2.21%, GL=2.89%
+    MANpri: Baseline=2.708e-06, BC=-2.60%, EU=-6.54%, GL=-0.74%
+    Combined top5 share of baseline Clustering Coefficient: 26.85%
+    Combined variation for these sectors: BC -2.27%, EU -3.01%, GL 1.02%
+
   Top 5 sectors by Betweenness Centrality:
-    TRDmot: Baseline=0.03443, BC=0.03443, EU=0.03443, GL=0.03446
-    ENRgas: Baseline=0.02106, BC=0.02111, EU=0.02111, GL=0.0212
-    ENRoil: Baseline=0.01752, BC=0.01704, EU=0.01704, GL=0.01704
-    CNS+: Baseline=0.00843, BC=0.008854, EU=0.008854, GL=0.008794
-    PROleg: Baseline=0.007449, BC=0.007873, EU=0.007873, GL=0.007813
+    TRDmot: Baseline=0.03443, BC=0.02%, EU=0.02%, GL=0.09%
+    ENRgas: Baseline=0.02106, BC=0.25%, EU=0.25%, GL=0.65%
+    ENRoil: Baseline=0.01752, BC=-2.71%, EU=-2.71%, GL=-2.71%
+    CNS+: Baseline=0.00843, BC=5.04%, EU=5.04%, GL=4.32%
+    PROleg: Baseline=0.007449, BC=5.70%, EU=5.70%, GL=4.89%
+    Combined top5 share of baseline Betweenness Centrality: 92.85%
+    Combined variation for these sectors: BC 0.49%, EU 0.49%, GL 0.48%
+
   Top 5 sectors by Hub Score:
-    PROleg: Baseline=3.766e-06, BC=3.73e-06, EU=3.711e-06, GL=4.101e-06
-    FINser: Baseline=2.232e-06, BC=2.208e-06, EU=2.194e-06, GL=2.478e-06
-    TRDmot: Baseline=1.083e-06, BC=1.069e-06, EU=1.069e-06, GL=1.123e-06
-    MANpha: Baseline=1.055e-06, BC=1.027e-06, EU=1.022e-06, GL=1.147e-06
-    MANfmp: Baseline=9.322e-07, BC=9.15e-07, EU=9.139e-07, GL=1.005e-06
+    PROleg: Baseline=3.766e-06, BC=-0.96%, EU=-1.46%, GL=8.89%
+    FINser: Baseline=2.232e-06, BC=-1.07%, EU=-1.70%, GL=11.01%
+    TRDmot: Baseline=1.083e-06, BC=-1.29%, EU=-1.36%, GL=3.68%
+    MANpha: Baseline=1.055e-06, BC=-2.71%, EU=-3.14%, GL=8.68%
+    MANfmp: Baseline=9.322e-07, BC=-1.85%, EU=-1.97%, GL=7.83%
+    Combined top5 share of baseline Hub Score: 62.41%
+    Combined variation for these sectors: BC -1.32%, EU -1.75%, GL 8.66%
+
   Top 5 sectors by Authority Score:
-    TRDmot: Baseline=2.847e-06, BC=2.784e-06, EU=2.765e-06, GL=3.025e-06
-
-    CNS+: Baseline=2.684e-06, BC=2.658e-06, EU=2.655e-06, GL=2.592e-06
-
-    PROleg: Baseline=2.456e-06, BC=2.412e-06, EU=2.391e-06, GL=2.667e-06
-
-    ENRoil: Baseline=1.206e-06, BC=1.202e-06, EU=1.203e-06, GL=1.121e-06
-
-    MANfoo: Baseline=9.582e-07, BC=9.605e-07, EU=9.644e-07, GL=9.688e-07
+    TRDmot: Baseline=2.847e-06, BC=-2.20%, EU=-2.85%, GL=6.27%
+    CNS+: Baseline=2.684e-06, BC=-0.96%, EU=-1.07%, GL=-3.42%
+    PROleg: Baseline=2.456e-06, BC=-1.82%, EU=-2.66%, GL=8.58%
+    ENRoil: Baseline=1.206e-06, BC=-0.32%, EU=-0.20%, GL=-7.06%
+    MANfoo: Baseline=9.582e-07, BC=0.23%, EU=0.64%, GL=1.10%
+    Combined top5 share of baseline Authority Score: 49.73%
+    Combined variation for these sectors: BC -1.33%, EU -1.69%, GL 2.19%
 
 Country: SVN
   Clustering Coefficient: Baseline=6.549e-05, BC=6.365e-05, EU=6.35e-05, GL=6.586e-05
@@ -1300,33 +1559,40 @@ Country: SVN
   Authority Score:         Baseline=3.389e-05, BC=3.357e-05, EU=3.381e-05, GL=3.172e-05
 
   Top 5 sectors by Clustering Coefficient:
-    TRDmot: Baseline=4.737e-06, BC=4.619e-06, EU=4.604e-06, GL=4.778e-06
-    CNS+: Baseline=3.277e-06, BC=3.187e-06, EU=3.179e-06, GL=3.304e-06
-    MANele: Baseline=3.022e-06, BC=2.954e-06, EU=2.954e-06, GL=3.056e-06
-    PROleg: Baseline=3.003e-06, BC=2.93e-06, EU=2.919e-06, GL=3.034e-06
-    MANfmp: Baseline=2.631e-06, BC=2.587e-06, EU=2.562e-06, GL=2.672e-06
+    TRDmot: Baseline=4.737e-06, BC=-2.48%, EU=-2.80%, GL=0.87%
+    CNS+: Baseline=3.277e-06, BC=-2.74%, EU=-2.99%, GL=0.81%
+    MANele: Baseline=3.022e-06, BC=-2.26%, EU=-2.24%, GL=1.12%
+    PROleg: Baseline=3.003e-06, BC=-2.41%, EU=-2.78%, GL=1.05%
+    MANfmp: Baseline=2.631e-06, BC=-1.68%, EU=-2.65%, GL=1.53%
+    Combined top5 share of baseline Clustering Coefficient: 25.45%
+    Combined variation for these sectors: BC -2.35%, EU -2.71%, GL 1.04%
+
   Top 5 sectors by Betweenness Centrality:
-    TRDmot: Baseline=0.01881, BC=0.01883, EU=0.01883, GL=0.01788
-    MANmot: Baseline=0.01413, BC=0.0142, EU=0.0142, GL=0.01326
-    CNS+: Baseline=0.007473, BC=0.007983, EU=0.007528, GL=0.01288
-    MANfmp: Baseline=0.007235, BC=0.007794, EU=0.007336, GL=0.0127
-    TRAinl: Baseline=0.005838, BC=0.005328, EU=0.005779, GL=0.000485
+    TRDmot: Baseline=0.01881, BC=0.08%, EU=0.11%, GL=-4.97%
+    MANmot: Baseline=0.01413, BC=0.49%, EU=0.49%, GL=-6.14%
+    CNS+: Baseline=0.007473, BC=6.82%, EU=0.74%, GL=72.32%
+    MANfmp: Baseline=0.007235, BC=7.72%, EU=1.40%, GL=75.51%
+    TRAinl: Baseline=0.005838, BC=-8.75%, EU=-1.02%, GL=-91.69%
+    Combined top5 share of baseline Betweenness Centrality: 81.12%
+    Combined variation for these sectors: BC 1.20%, EU 0.35%, GL 6.94%
+
   Top 5 sectors by Hub Score:
-    MANele: Baseline=2.022e-06, BC=2.01e-06, EU=2.022e-06, GL=1.927e-06
-    MANpha: Baseline=1.698e-06, BC=1.671e-06, EU=1.666e-06, GL=1.843e-06
-    PROleg: Baseline=1.685e-06, BC=1.669e-06, EU=1.661e-06, GL=1.826e-06
-    FINser: Baseline=1.591e-06, BC=1.573e-06, EU=1.562e-06, GL=1.768e-06
-    TRDmot: Baseline=1.556e-06, BC=1.547e-06, EU=1.551e-06, GL=1.527e-06
+    MANele: Baseline=2.022e-06, BC=-0.62%, EU=-0.02%, GL=-4.70%
+    MANpha: Baseline=1.698e-06, BC=-1.63%, EU=-1.93%, GL=8.55%
+    PROleg: Baseline=1.685e-06, BC=-1.00%, EU=-1.46%, GL=8.37%
+    FINser: Baseline=1.591e-06, BC=-1.17%, EU=-1.83%, GL=11.10%
+    TRDmot: Baseline=1.556e-06, BC=-0.54%, EU=-0.30%, GL=-1.87%
+    Combined top5 share of baseline Hub Score: 44.02%
+    Combined variation for these sectors: BC -0.98%, EU -1.07%, GL 3.96%
+
   Top 5 sectors by Authority Score:
-    FINser: Baseline=5.698e-06, BC=5.548e-06, EU=5.487e-06, GL=6.294e-06
-
-    TRDmot: Baseline=3.217e-06, BC=3.143e-06, EU=3.124e-06, GL=3.355e-06
-
-    PROleg: Baseline=2.259e-06, BC=2.213e-06, EU=2.199e-06, GL=2.354e-06
-
-    MANele: Baseline=1.936e-06, BC=1.994e-06, EU=2.058e-06, GL=1.254e-06
-
-    CNS+: Baseline=1.742e-06, BC=1.738e-06, EU=1.76e-06, GL=1.253e-06
+    FINser: Baseline=5.698e-06, BC=-2.64%, EU=-3.69%, GL=10.46%
+    TRDmot: Baseline=3.217e-06, BC=-2.33%, EU=-2.90%, GL=4.27%
+    PROleg: Baseline=2.259e-06, BC=-2.05%, EU=-2.69%, GL=4.19%
+    MANele: Baseline=1.936e-06, BC=2.98%, EU=6.26%, GL=-35.24%
+    CNS+: Baseline=1.742e-06, BC=-0.23%, EU=1.01%, GL=-28.11%
+    Combined top5 share of baseline Authority Score: 43.83%
+    Combined variation for these sectors: BC -1.47%, EU -1.52%, GL -2.31%
 
 Country: LTU
   Clustering Coefficient: Baseline=3.816e-05, BC=3.727e-05, EU=3.73e-05, GL=3.819e-05
@@ -1335,33 +1601,40 @@ Country: LTU
   Authority Score:         Baseline=2.439e-05, BC=2.407e-05, EU=2.396e-05, GL=2.538e-05
 
   Top 5 sectors by Clustering Coefficient:
-    TRDmot: Baseline=2.667e-06, BC=2.618e-06, EU=2.611e-06, GL=2.683e-06
-    ENRoil: Baseline=1.968e-06, BC=1.861e-06, EU=1.938e-06, GL=1.845e-06
-    TRAinl: Baseline=1.893e-06, BC=1.855e-06, EU=1.852e-06, GL=1.909e-06
-    CNS+: Baseline=1.778e-06, BC=1.743e-06, EU=1.731e-06, GL=1.774e-06
-    MANrep: Baseline=1.644e-06, BC=1.621e-06, EU=1.633e-06, GL=1.706e-06
+    TRDmot: Baseline=2.667e-06, BC=-1.85%, EU=-2.11%, GL=0.59%
+    ENRoil: Baseline=1.968e-06, BC=-5.44%, EU=-1.52%, GL=-6.24%
+    TRAinl: Baseline=1.893e-06, BC=-2.00%, EU=-2.17%, GL=0.88%
+    CNS+: Baseline=1.778e-06, BC=-1.97%, EU=-2.60%, GL=-0.18%
+    MANrep: Baseline=1.644e-06, BC=-1.41%, EU=-0.70%, GL=3.76%
+    Combined top5 share of baseline Clustering Coefficient: 26.07%
+    Combined variation for these sectors: BC -2.54%, EU -1.86%, GL -0.32%
+
   Top 5 sectors by Betweenness Centrality:
-    ENRoil: Baseline=0.01666, BC=0.01613, EU=0.01568, GL=0.02712
-    TRAinl: Baseline=0.01181, BC=0.01182, EU=0.01182, GL=0.01181
-    TRDmot: Baseline=0.01132, BC=0.01131, EU=0.01131, GL=0.0113
-    TRAwar: Baseline=0.006193, BC=0.006193, EU=0.006198, GL=0.006193
-    PROleg: Baseline=0.005801, BC=0.005801, EU=0.005801, GL=0.005801
+    ENRoil: Baseline=0.01666, BC=-3.19%, EU=-5.89%, GL=62.77%
+    TRAinl: Baseline=0.01181, BC=0.06%, EU=0.06%, GL=-0.02%
+    TRDmot: Baseline=0.01132, BC=-0.07%, EU=-0.06%, GL=-0.16%
+    TRAwar: Baseline=0.006193, BC=0.00%, EU=0.07%, GL=-0.01%
+    PROleg: Baseline=0.005801, BC=0.00%, EU=0.00%, GL=0.00%
+    Combined top5 share of baseline Betweenness Centrality: 76.99%
+    Combined variation for these sectors: BC -1.03%, EU -1.89%, GL 20.15%
+
   Top 5 sectors by Hub Score:
-    ENRoil: Baseline=1.901e-05, BC=1.875e-05, EU=1.868e-05, GL=2.073e-05
-    TRDmot: Baseline=4.897e-06, BC=4.857e-06, EU=4.84e-06, GL=5.247e-06
-    TRAinl: Baseline=3.801e-06, BC=3.794e-06, EU=3.806e-06, GL=3.631e-06
-    PROleg: Baseline=3.415e-06, BC=3.381e-06, EU=3.363e-06, GL=3.754e-06
-    MANfur: Baseline=2.858e-06, BC=2.837e-06, EU=2.829e-06, GL=3.011e-06
+    ENRoil: Baseline=1.901e-05, BC=-1.34%, EU=-1.75%, GL=9.03%
+    TRDmot: Baseline=4.897e-06, BC=-0.82%, EU=-1.18%, GL=7.13%
+    TRAinl: Baseline=3.801e-06, BC=-0.19%, EU=0.13%, GL=-4.47%
+    PROleg: Baseline=3.415e-06, BC=-0.98%, EU=-1.53%, GL=9.92%
+    MANfur: Baseline=2.858e-06, BC=-0.76%, EU=-1.01%, GL=5.34%
+    Combined top5 share of baseline Hub Score: 73.65%
+    Combined variation for these sectors: BC -1.05%, EU -1.37%, GL 7.03%
+
   Top 5 sectors by Authority Score:
-    TRAinl: Baseline=2.636e-06, BC=2.597e-06, EU=2.568e-06, GL=2.903e-06
-
-    CNS+: Baseline=2.274e-06, BC=2.259e-06, EU=2.243e-06, GL=2.295e-06
-
-    TRDmot: Baseline=1.971e-06, BC=1.938e-06, EU=1.921e-06, GL=2.13e-06
-
-    TRAwar: Baseline=1.838e-06, BC=1.81e-06, EU=1.797e-06, GL=1.981e-06
-
-    PROleg: Baseline=1.587e-06, BC=1.56e-06, EU=1.544e-06, GL=1.74e-06
+    TRAinl: Baseline=2.636e-06, BC=-1.49%, EU=-2.59%, GL=10.11%
+    CNS+: Baseline=2.274e-06, BC=-0.69%, EU=-1.39%, GL=0.92%
+    TRDmot: Baseline=1.971e-06, BC=-1.64%, EU=-2.50%, GL=8.07%
+    TRAwar: Baseline=1.838e-06, BC=-1.48%, EU=-2.20%, GL=7.81%
+    PROleg: Baseline=1.587e-06, BC=-1.76%, EU=-2.73%, GL=9.60%
+    Combined top5 share of baseline Authority Score: 42.26%
+    Combined variation for these sectors: BC -1.38%, EU -2.26%, GL 7.20%
 
 Country: LVA
   Clustering Coefficient: Baseline=2.806e-05, BC=2.731e-05, EU=2.739e-05, GL=2.786e-05
@@ -1370,33 +1643,40 @@ Country: LVA
   Authority Score:         Baseline=2.479e-05, BC=2.434e-05, EU=2.425e-05, GL=2.624e-05
 
   Top 5 sectors by Clustering Coefficient:
-    TRDmot: Baseline=2.294e-06, BC=2.245e-06, EU=2.248e-06, GL=2.289e-06
-    CNS+: Baseline=1.746e-06, BC=1.728e-06, EU=1.705e-06, GL=1.747e-06
-    ENRele: Baseline=1.676e-06, BC=1.609e-06, EU=1.581e-06, GL=1.635e-06
-    TRAinl: Baseline=1.481e-06, BC=1.443e-06, EU=1.445e-06, GL=1.476e-06
-    MANrep: Baseline=1.443e-06, BC=1.342e-06, EU=1.459e-06, GL=1.389e-06
+    TRDmot: Baseline=2.294e-06, BC=-2.17%, EU=-2.03%, GL=-0.24%
+    CNS+: Baseline=1.746e-06, BC=-0.99%, EU=-2.32%, GL=0.07%
+    ENRele: Baseline=1.676e-06, BC=-4.00%, EU=-5.68%, GL=-2.45%
+    TRAinl: Baseline=1.481e-06, BC=-2.56%, EU=-2.46%, GL=-0.38%
+    MANrep: Baseline=1.443e-06, BC=-7.02%, EU=1.10%, GL=-3.81%
+    Combined top5 share of baseline Clustering Coefficient: 30.80%
+    Combined variation for these sectors: BC -3.16%, EU -2.35%, GL -1.22%
+
   Top 5 sectors by Betweenness Centrality:
-    TRDmot: Baseline=0.01636, BC=0.01636, EU=0.01636, GL=0.01677
-    MANwoo: Baseline=0.01565, BC=0.01565, EU=0.01565, GL=0.01649
-    ENRele: Baseline=0.01435, BC=0.01435, EU=0.01434, GL=0.01435
-    TRAinl: Baseline=0.006651, BC=0.006651, EU=0.006646, GL=0.007085
-    RES+: Baseline=0.003917, BC=0.003916, EU=0.003916, GL=0.003918
+    TRDmot: Baseline=0.01636, BC=0.01%, EU=0.01%, GL=2.50%
+    MANwoo: Baseline=0.01565, BC=0.01%, EU=0.01%, GL=5.37%
+    ENRele: Baseline=0.01435, BC=0.01%, EU=-0.01%, GL=0.03%
+    TRAinl: Baseline=0.006651, BC=-0.00%, EU=-0.08%, GL=6.52%
+    RES+: Baseline=0.003917, BC=-0.02%, EU=-0.02%, GL=0.02%
+    Combined top5 share of baseline Betweenness Centrality: 87.66%
+    Combined variation for these sectors: BC 0.01%, EU -0.01%, GL 2.96%
+
   Top 5 sectors by Hub Score:
-    FINser: Baseline=5.703e-06, BC=5.642e-06, EU=5.608e-06, GL=6.32e-06
-    MANfoo: Baseline=1.588e-06, BC=1.56e-06, EU=1.56e-06, GL=1.687e-06
-    TRDmot: Baseline=1.331e-06, BC=1.318e-06, EU=1.317e-06, GL=1.405e-06
-    TRAwar: Baseline=1.02e-06, BC=1.016e-06, EU=1.016e-06, GL=1.024e-06
-    TRAinl: Baseline=1.018e-06, BC=1.02e-06, EU=1.035e-06, GL=8.148e-07
+    FINser: Baseline=5.703e-06, BC=-1.07%, EU=-1.66%, GL=10.81%
+    MANfoo: Baseline=1.588e-06, BC=-1.77%, EU=-1.77%, GL=6.18%
+    TRDmot: Baseline=1.331e-06, BC=-0.96%, EU=-1.08%, GL=5.55%
+    TRAwar: Baseline=1.02e-06, BC=-0.44%, EU=-0.37%, GL=0.33%
+    TRAinl: Baseline=1.018e-06, BC=0.24%, EU=1.71%, GL=-19.94%
+    Combined top5 share of baseline Hub Score: 66.45%
+    Combined variation for these sectors: BC -0.97%, EU -1.16%, GL 5.52%
+
   Top 5 sectors by Authority Score:
-    FINser: Baseline=6.757e-06, BC=6.629e-06, EU=6.591e-06, GL=7.34e-06
-
-    TRDmot: Baseline=5.041e-06, BC=4.936e-06, EU=4.909e-06, GL=5.46e-06
-
-    CNS+: Baseline=1.496e-06, BC=1.479e-06, EU=1.48e-06, GL=1.442e-06
-
-    RES+: Baseline=1.308e-06, BC=1.285e-06, EU=1.277e-06, GL=1.418e-06
-
-    TRAwar: Baseline=1.058e-06, BC=1.037e-06, EU=1.032e-06, GL=1.135e-06
+    FINser: Baseline=6.757e-06, BC=-1.89%, EU=-2.46%, GL=8.62%
+    TRDmot: Baseline=5.041e-06, BC=-2.07%, EU=-2.61%, GL=8.31%
+    CNS+: Baseline=1.496e-06, BC=-1.12%, EU=-1.06%, GL=-3.57%
+    RES+: Baseline=1.308e-06, BC=-1.73%, EU=-2.41%, GL=8.40%
+    TRAwar: Baseline=1.058e-06, BC=-2.00%, EU=-2.43%, GL=7.32%
+    Combined top5 share of baseline Authority Score: 63.18%
+    Combined variation for these sectors: BC -1.87%, EU -2.37%, GL 7.25%
 
 Country: EST
   Clustering Coefficient: Baseline=3.472e-05, BC=3.318e-05, EU=3.313e-05, GL=3.4e-05
@@ -1405,33 +1685,40 @@ Country: EST
   Authority Score:         Baseline=1.896e-05, BC=1.869e-05, EU=1.872e-05, GL=1.79e-05
 
   Top 5 sectors by Clustering Coefficient:
-    MANrep: Baseline=2.534e-06, BC=2.258e-06, EU=2.216e-06, GL=2.351e-06
-    TRDmot: Baseline=2.501e-06, BC=2.43e-06, EU=2.429e-06, GL=2.49e-06
-    CNS+: Baseline=2.224e-06, BC=2.155e-06, EU=2.155e-06, GL=2.208e-06
-    RES+: Baseline=1.519e-06, BC=1.475e-06, EU=1.472e-06, GL=1.51e-06
-    TRAwar: Baseline=1.425e-06, BC=1.381e-06, EU=1.382e-06, GL=1.415e-06
+    MANrep: Baseline=2.534e-06, BC=-10.90%, EU=-12.56%, GL=-7.20%
+    TRDmot: Baseline=2.501e-06, BC=-2.83%, EU=-2.88%, GL=-0.46%
+    CNS+: Baseline=2.224e-06, BC=-3.11%, EU=-3.09%, GL=-0.71%
+    RES+: Baseline=1.519e-06, BC=-2.90%, EU=-3.12%, GL=-0.64%
+    TRAwar: Baseline=1.425e-06, BC=-3.10%, EU=-3.03%, GL=-0.70%
+    Combined top5 share of baseline Clustering Coefficient: 29.39%
+    Combined variation for these sectors: BC -4.94%, EU -5.39%, GL -2.25%
+
   Top 5 sectors by Betweenness Centrality:
-    TRDmot: Baseline=0.02063, BC=0.0211, EU=0.02107, GL=0.02112
-    MANwoo: Baseline=0.01847, BC=0.0185, EU=0.01848, GL=0.01851
-    RES+: Baseline=0.01537, BC=0.01583, EU=0.01582, GL=0.01585
-    CNS+: Baseline=0.01535, BC=0.01582, EU=0.0158, GL=0.01584
-    MANfmp: Baseline=0.01416, BC=0.01465, EU=0.01466, GL=0.003646
+    TRDmot: Baseline=0.02063, BC=2.25%, EU=2.13%, GL=2.34%
+    MANwoo: Baseline=0.01847, BC=0.17%, EU=0.06%, GL=0.25%
+    RES+: Baseline=0.01537, BC=3.04%, EU=2.92%, GL=3.16%
+    CNS+: Baseline=0.01535, BC=3.04%, EU=2.92%, GL=3.16%
+    MANfmp: Baseline=0.01416, BC=3.46%, EU=3.54%, GL=-74.25%
+    Combined top5 share of baseline Betweenness Centrality: 86.50%
+    Combined variation for these sectors: BC 2.29%, EU 2.20%, GL -10.73%
+
   Top 5 sectors by Hub Score:
-    PROleg: Baseline=3.884e-06, BC=3.844e-06, EU=3.823e-06, GL=4.27e-06
-    FINser: Baseline=3.868e-06, BC=3.826e-06, EU=3.802e-06, GL=4.295e-06
-    TRAwar: Baseline=2.343e-06, BC=2.326e-06, EU=2.323e-06, GL=2.391e-06
-    TRDmot: Baseline=1.504e-06, BC=1.488e-06, EU=1.484e-06, GL=1.585e-06
-    MANwoo: Baseline=1.398e-06, BC=1.382e-06, EU=1.381e-06, GL=1.447e-06
+    PROleg: Baseline=3.884e-06, BC=-1.02%, EU=-1.57%, GL=9.95%
+    FINser: Baseline=3.868e-06, BC=-1.10%, EU=-1.71%, GL=11.03%
+    TRAwar: Baseline=2.343e-06, BC=-0.72%, EU=-0.86%, GL=2.05%
+    TRDmot: Baseline=1.504e-06, BC=-1.10%, EU=-1.33%, GL=5.35%
+    MANwoo: Baseline=1.398e-06, BC=-1.09%, EU=-1.20%, GL=3.53%
+    Combined top5 share of baseline Hub Score: 62.45%
+    Combined variation for these sectors: BC -1.01%, EU -1.42%, GL 7.62%
+
   Top 5 sectors by Authority Score:
-    TRDmot: Baseline=1.914e-06, BC=1.864e-06, EU=1.855e-06, GL=1.946e-06
-
-    CNS+: Baseline=1.604e-06, BC=1.598e-06, EU=1.608e-06, GL=1.319e-06
-
-    PROleg: Baseline=1.506e-06, BC=1.47e-06, EU=1.461e-06, GL=1.583e-06
-
-    FINser: Baseline=1.255e-06, BC=1.224e-06, EU=1.213e-06, GL=1.36e-06
-
-    MANcom: Baseline=1.105e-06, BC=1.124e-06, EU=1.133e-06, GL=9.055e-07
+    TRDmot: Baseline=1.914e-06, BC=-2.63%, EU=-3.08%, GL=1.68%
+    CNS+: Baseline=1.604e-06, BC=-0.42%, EU=0.23%, GL=-17.77%
+    PROleg: Baseline=1.506e-06, BC=-2.37%, EU=-3.01%, GL=5.14%
+    FINser: Baseline=1.255e-06, BC=-2.50%, EU=-3.36%, GL=8.35%
+    MANcom: Baseline=1.105e-06, BC=1.72%, EU=2.51%, GL=-18.05%
+    Combined top5 share of baseline Authority Score: 38.96%
+    Combined variation for these sectors: BC -1.42%, EU -1.56%, GL -3.66%
 
 Country: CYP
   Clustering Coefficient: Baseline=2.316e-05, BC=2.27e-05, EU=2.284e-05, GL=2.257e-05
@@ -1440,33 +1727,40 @@ Country: CYP
   Authority Score:         Baseline=6.403e-05, BC=6.272e-05, EU=6.281e-05, GL=6.712e-05
 
   Top 5 sectors by Clustering Coefficient:
-    TRAwar: Baseline=2.1e-06, BC=2.065e-06, EU=2.075e-06, GL=2.103e-06
-    TRDmot: Baseline=2.06e-06, BC=2.021e-06, EU=2.031e-06, GL=2.008e-06
-    FINser: Baseline=1.762e-06, BC=1.744e-06, EU=1.754e-06, GL=1.733e-06
-    CNS+: Baseline=1.285e-06, BC=1.261e-06, EU=1.27e-06, GL=1.254e-06
-    FD+: Baseline=1.005e-06, BC=9.875e-07, EU=9.941e-07, GL=9.783e-07
+    TRAwar: Baseline=2.1e-06, BC=-1.68%, EU=-1.21%, GL=0.12%
+    TRDmot: Baseline=2.06e-06, BC=-1.93%, EU=-1.43%, GL=-2.57%
+    FINser: Baseline=1.762e-06, BC=-1.02%, EU=-0.47%, GL=-1.68%
+    CNS+: Baseline=1.285e-06, BC=-1.83%, EU=-1.16%, GL=-2.42%
+    FD+: Baseline=1.005e-06, BC=-1.74%, EU=-1.09%, GL=-2.66%
+    Combined top5 share of baseline Clustering Coefficient: 35.47%
+    Combined variation for these sectors: BC -1.63%, EU -1.09%, GL -1.68%
+
   Top 5 sectors by Betweenness Centrality:
-    FINser: Baseline=0.02287, BC=0.02287, EU=0.02287, GL=0.02335
-    TRDmot: Baseline=0.01883, BC=0.01883, EU=0.01883, GL=0.01883
-    TRAwar: Baseline=0.01384, BC=0.01384, EU=0.01384, GL=0.01384
-    CNS+: Baseline=0.006296, BC=0.006296, EU=0.006296, GL=0.006773
-    FD+: Baseline=0.003393, BC=0.003393, EU=0.003393, GL=0.003393
+    FINser: Baseline=0.02287, BC=-0.01%, EU=0.00%, GL=2.09%
+    TRDmot: Baseline=0.01883, BC=0.01%, EU=0.01%, GL=0.01%
+    TRAwar: Baseline=0.01384, BC=-0.00%, EU=-0.00%, GL=0.00%
+    CNS+: Baseline=0.006296, BC=-0.00%, EU=-0.00%, GL=7.57%
+    FD+: Baseline=0.003393, BC=0.00%, EU=0.00%, GL=0.00%
+    Combined top5 share of baseline Betweenness Centrality: 91.82%
+    Combined variation for these sectors: BC -0.00%, EU 0.00%, GL 1.47%
+
   Top 5 sectors by Hub Score:
-    FINser: Baseline=2.922e-05, BC=2.89e-05, EU=2.874e-05, GL=3.228e-05
-    TRAwar: Baseline=2.447e-06, BC=2.43e-06, EU=2.432e-06, GL=2.44e-06
-    PROleg: Baseline=1.967e-06, BC=1.956e-06, EU=1.954e-06, GL=2.04e-06
-    TRAwat: Baseline=1.109e-06, BC=1.132e-06, EU=1.151e-06, GL=8.324e-07
-    AGRfis: Baseline=6.046e-07, BC=5.943e-07, EU=5.914e-07, GL=6.664e-07
+    FINser: Baseline=2.922e-05, BC=-1.08%, EU=-1.64%, GL=10.48%
+    TRAwar: Baseline=2.447e-06, BC=-0.67%, EU=-0.58%, GL=-0.28%
+    PROleg: Baseline=1.967e-06, BC=-0.55%, EU=-0.68%, GL=3.70%
+    TRAwat: Baseline=1.109e-06, BC=2.03%, EU=3.81%, GL=-24.95%
+    AGRfis: Baseline=6.046e-07, BC=-1.70%, EU=-2.18%, GL=10.21%
+    Combined top5 share of baseline Hub Score: 94.09%
+    Combined variation for these sectors: BC -0.94%, EU -1.35%, GL 8.24%
+
   Top 5 sectors by Authority Score:
-    FINser: Baseline=2.143e-05, BC=2.096e-05, EU=2.097e-05, GL=2.281e-05
-
-    TRAwat: Baseline=1.125e-05, BC=1.104e-05, EU=1.103e-05, GL=1.207e-05
-
-    TRAwar: Baseline=5.496e-06, BC=5.374e-06, EU=5.366e-06, GL=5.839e-06
-
-    TRDmot: Baseline=5.095e-06, BC=4.982e-06, EU=4.973e-06, GL=5.381e-06
-
-    COMcom: Baseline=2.186e-06, BC=2.134e-06, EU=2.144e-06, GL=2.269e-06
+    FINser: Baseline=2.143e-05, BC=-2.21%, EU=-2.16%, GL=6.44%
+    TRAwat: Baseline=1.125e-05, BC=-1.88%, EU=-1.95%, GL=7.27%
+    TRAwar: Baseline=5.496e-06, BC=-2.21%, EU=-2.36%, GL=6.25%
+    TRDmot: Baseline=5.095e-06, BC=-2.22%, EU=-2.39%, GL=5.62%
+    COMcom: Baseline=2.186e-06, BC=-2.38%, EU=-1.92%, GL=3.80%
+    Combined top5 share of baseline Authority Score: 71.00%
+    Combined variation for these sectors: BC -2.14%, EU -2.15%, GL 6.40%
 
 Country: MLT
   Clustering Coefficient: Baseline=2.721e-05, BC=2.696e-05, EU=2.699e-05, GL=2.732e-05
@@ -1475,31 +1769,38 @@ Country: MLT
   Authority Score:         Baseline=0.000178, BC=0.0001755, EU=0.0001743, GL=0.0001948
 
   Top 5 sectors by Clustering Coefficient:
-    FINser: Baseline=4.459e-06, BC=4.441e-06, EU=4.433e-06, GL=4.537e-06
-    TRDmot: Baseline=1.569e-06, BC=1.553e-06, EU=1.555e-06, GL=1.57e-06
-    TRAwar: Baseline=1.425e-06, BC=1.407e-06, EU=1.411e-06, GL=1.418e-06
-    PROleg: Baseline=1.355e-06, BC=1.344e-06, EU=1.343e-06, GL=1.371e-06
-    CNS+: Baseline=1.266e-06, BC=1.255e-06, EU=1.256e-06, GL=1.259e-06
+    FINser: Baseline=4.459e-06, BC=-0.40%, EU=-0.58%, GL=1.76%
+    TRDmot: Baseline=1.569e-06, BC=-1.05%, EU=-0.92%, GL=0.01%
+    TRAwar: Baseline=1.425e-06, BC=-1.25%, EU=-1.00%, GL=-0.52%
+    PROleg: Baseline=1.355e-06, BC=-0.85%, EU=-0.89%, GL=1.18%
+    CNS+: Baseline=1.266e-06, BC=-0.90%, EU=-0.79%, GL=-0.61%
+    Combined top5 share of baseline Clustering Coefficient: 37.02%
+    Combined variation for these sectors: BC -0.75%, EU -0.76%, GL 0.79%
+
   Top 5 sectors by Betweenness Centrality:
-    FINser: Baseline=0.01446, BC=0.01446, EU=0.01446, GL=0.01446
-    TRDmot: Baseline=0.009683, BC=0.009683, EU=0.009683, GL=0.009684
-    CNS+: Baseline=0.003395, BC=0.003395, EU=0.003395, GL=0.003395
-    FD+: Baseline=0.001939, BC=0.001939, EU=0.001939, GL=0.001939
-    TRAwar: Baseline=0.001455, BC=0.001455, EU=0.001455, GL=0.001455
+    FINser: Baseline=0.01446, BC=0.00%, EU=0.00%, GL=0.00%
+    TRDmot: Baseline=0.009683, BC=0.00%, EU=0.00%, GL=0.01%
+    CNS+: Baseline=0.003395, BC=0.01%, EU=0.00%, GL=0.01%
+    FD+: Baseline=0.001939, BC=0.00%, EU=0.00%, GL=0.00%
+    TRAwar: Baseline=0.001455, BC=0.03%, EU=0.00%, GL=0.00%
+    Combined top5 share of baseline Betweenness Centrality: 76.15%
+    Combined variation for these sectors: BC 0.00%, EU 0.00%, GL 0.01%
+
   Top 5 sectors by Hub Score:
-    FINser: Baseline=0.0001791, BC=0.0001772, EU=0.0001761, GL=0.0001989
-    PROleg: Baseline=7.434e-06, BC=7.364e-06, EU=7.325e-06, GL=8.137e-06
-    MANcom: Baseline=3.878e-06, BC=3.834e-06, EU=3.97e-06, GL=2.571e-06
-    ADM+: Baseline=1.344e-06, BC=1.336e-06, EU=1.332e-06, GL=1.404e-06
-    TRAwar: Baseline=1.236e-06, BC=1.237e-06, EU=1.25e-06, GL=1.086e-06
+    FINser: Baseline=0.0001791, BC=-1.07%, EU=-1.69%, GL=11.04%
+    PROleg: Baseline=7.434e-06, BC=-0.94%, EU=-1.46%, GL=9.47%
+    MANcom: Baseline=3.878e-06, BC=-1.14%, EU=2.35%, GL=-33.71%
+    ADM+: Baseline=1.344e-06, BC=-0.65%, EU=-0.89%, GL=4.45%
+    TRAwar: Baseline=1.236e-06, BC=0.11%, EU=1.12%, GL=-12.15%
+    Combined top5 share of baseline Hub Score: 97.52%
+    Combined variation for these sectors: BC -1.06%, EU -1.58%, GL 9.89%
+
   Top 5 sectors by Authority Score:
-    FINser: Baseline=0.0001267, BC=0.0001249, EU=0.000124, GL=0.0001395
-
-    PROleg: Baseline=1.013e-05, BC=9.99e-06, EU=9.916e-06, GL=1.112e-05
-
-    ART+: Baseline=6.559e-06, BC=6.49e-06, EU=6.455e-06, GL=7.123e-06
-
-    TRAwar: Baseline=4.895e-06, BC=4.796e-06, EU=4.779e-06, GL=5.287e-06
-
-    TRDmot: Baseline=3.98e-06, BC=3.916e-06, EU=3.892e-06, GL=4.329e-06
+    FINser: Baseline=0.0001267, BC=-1.45%, EU=-2.17%, GL=10.04%
+    PROleg: Baseline=1.013e-05, BC=-1.37%, EU=-2.10%, GL=9.79%
+    ART+: Baseline=6.559e-06, BC=-1.05%, EU=-1.59%, GL=8.60%
+    TRAwar: Baseline=4.895e-06, BC=-2.03%, EU=-2.37%, GL=8.00%
+    TRDmot: Baseline=3.98e-06, BC=-1.60%, EU=-2.21%, GL=8.77%
+    Combined top5 share of baseline Authority Score: 85.55%
+    Combined variation for these sectors: BC -1.45%, EU -2.15%, GL 9.86%
 

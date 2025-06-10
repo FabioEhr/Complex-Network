@@ -381,6 +381,13 @@ def write_text_report_all(countries, net_trillions, output_filename="all_countri
     a_eu   = compute_simple_average(policy_auth['EU'], countries)
     a_gl   = compute_simple_average(policy_auth['GL'], countries)
 
+    # Write file with all unique sectors present in data
+    all_nodes = list(base_clust.index) + list(base_bet.index) + list(base_hub.index) + list(base_auth.index)
+    sectors = {node.split('_',1)[1] for node in all_nodes if "_" in node}
+    with open("all_sectors.txt", "w") as sf:
+        for sector in sorted(sectors):
+            sf.write(f"{sector}\n")
+
     # --- 4) Write single report ---
     with open(output_filename, "w") as f:
         for country in countries:
@@ -390,38 +397,45 @@ def write_text_report_all(countries, net_trillions, output_filename="all_countri
             f.write(f"  Hub Score:               Baseline={h_base.get(country,float('nan')):.4g}, BC={h_bc.get(country,float('nan')):.4g}, EU={h_eu.get(country,float('nan')):.4g}, GL={h_gl.get(country,float('nan')):.4g}\n")
             f.write(f"  Authority Score:         Baseline={a_base.get(country,float('nan')):.4g}, BC={a_bc.get(country,float('nan')):.4g}, EU={a_eu.get(country,float('nan')):.4g}, GL={a_gl.get(country,float('nan')):.4g}\n\n")
 
-            # --- Top 5 sectors for each measure ---
-            # Clustering Coefficient
-            nodes = [n for n in base_clust.index if n.startswith(f"{country}_")]
-            top5 = base_clust[nodes].nlargest(5)
-            f.write("  Top 5 sectors by Clustering Coefficient:\n")
-            for node, val in top5.items():
-                sector = node.split('_', 1)[1]
-                f.write(f"    {sector}: Baseline={val:.4g}, BC={policy_clust['BC'].get(node, float('nan')):.4g}, EU={policy_clust['EU'].get(node, float('nan')):.4g}, GL={policy_clust['GL'].get(node, float('nan')):.4g}\n")
+            # --- Top 5 sectors with percentage variation & contributions ---
+            import numpy as np
 
-            # Betweenness Centrality
-            nodes = [n for n in base_bet.index if n.startswith(f"{country}_")]
-            top5 = base_bet[nodes].nlargest(5)
-            f.write("  Top 5 sectors by Betweenness Centrality:\n")
-            for node, val in top5.items():
-                sector = node.split('_', 1)[1]
-                f.write(f"    {sector}: Baseline={val:.4g}, BC={policy_bet['BC'].get(node, float('nan')):.4g}, EU={policy_bet['EU'].get(node, float('nan')):.4g}, GL={policy_bet['GL'].get(node, float('nan')):.4g}\n")
+            def color_pct(x):
+                if np.isnan(x):
+                    return "nan"
+                return f"{x:.2f}%"
 
+            # Helper to process each measure
+            def report_top5(name, base_series, policy_map, total_base):
+                nodes = [n for n in base_series.index if n.startswith(f"{country}_")]
+                top5 = base_series.loc[nodes].nlargest(5)
+                sum_base5 = top5.sum()
+                variations = {}
+                for pol, series in policy_map.items():
+                    sum_pol5 = series.reindex(top5.index).sum()
+                    variations[pol] = ((sum_pol5 - sum_base5) / sum_base5 * 100) if sum_base5 else np.nan
+                contrib_pct = (sum_base5 / total_base * 100) if total_base else np.nan
+                f.write(f"  Top 5 sectors by {name}:\n")
+                for node, val in top5.items():
+                    sector = node.split('_',1)[1]
+                    vals_pol = {pol: series.get(node, np.nan) for pol, series in policy_map.items()}
+                    pct_changes = {pol: ((vals_pol[pol] - val) / val * 100) if val else np.nan for pol in policy_map}
+                    f.write(f"    {sector}: Baseline={val:.4g}")
+                    for pol in ["BC","EU","GL"]:
+                        f.write(f", {pol}={color_pct(pct_changes[pol])}")
+                    f.write("\n")
+                f.write(f"    Combined top5 share of baseline {name}: {contrib_pct:.2f}%\n")
+                f.write("    Combined variation for these sectors: "
+                        + ", ".join(f"{pol} {color_pct(variations[pol])}" for pol in ["BC","EU","GL"]) + "\n\n")
+
+            # Clustering
+            report_top5("Clustering Coefficient", base_clust, policy_clust, c_base.get(country, np.nan))
+            # Betweenness
+            report_top5("Betweenness Centrality", base_bet, policy_bet, b_base.get(country, np.nan))
             # Hub Score
-            nodes = [n for n in base_hub.index if n.startswith(f"{country}_")]
-            top5 = base_hub[nodes].nlargest(5)
-            f.write("  Top 5 sectors by Hub Score:\n")
-            for node, val in top5.items():
-                sector = node.split('_', 1)[1]
-                f.write(f"    {sector}: Baseline={val:.4g}, BC={policy_hub['BC'].get(node, float('nan')):.4g}, EU={policy_hub['EU'].get(node, float('nan')):.4g}, GL={policy_hub['GL'].get(node, float('nan')):.4g}\n")
-
+            report_top5("Hub Score", base_hub, policy_hub, h_base.get(country, np.nan))
             # Authority Score
-            nodes = [n for n in base_auth.index if n.startswith(f"{country}_")]
-            top5 = base_auth[nodes].nlargest(5)
-            f.write("  Top 5 sectors by Authority Score:\n")
-            for node, val in top5.items():
-                sector = node.split('_', 1)[1]
-                f.write(f"    {sector}: Baseline={val:.4g}, BC={policy_auth['BC'].get(node, float('nan')):.4g}, EU={policy_auth['EU'].get(node, float('nan')):.4g}, GL={policy_auth['GL'].get(node, float('nan')):.4g}\n\n")
+            report_top5("Authority Score", base_auth, policy_auth, a_base.get(country, np.nan))
 
 
 
