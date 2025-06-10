@@ -10,6 +10,85 @@ EU_MEMBERS = {
     "SVK","SVN","ESP","SWE"
 }
 
+
+sector_codes = {
+    "ENRcoa": "ENRcoa",
+    "ENRele": "ENRele",
+    "ENRgas": "ENRele", # Note: Original had ENRele, if this is a typo and should be ENRgas description, adjust here.
+    "ENRoil": "ENRoil",
+    "EXT+": "EXT+",
+    # Codes from the first image (the "continued" part)
+    "TRDret": "Retail trade services, except of motor vehicles and motorcycles", # Corresponds to NACE G47
+    "TRA+": "Transportation and storage",
+    "TRAinl": "Land transport and transport via pipelines",
+    "TRAwat": "Water transport",
+    "TRAair": "Air transport",
+    "TRAwar": "Warehousing and support activities for transportation",
+    "TRApos": "Postal and courier activities",
+    "FD+": "Accommodation and food service activities",
+    "COM+": "Information and communication",
+    "COMpub": "Publishing activities",
+    "COMvid": "Motion picture, video and television production, sound recording, broadcast-ing",
+    "COMtel": "Telecommunications",
+    "COMcom": "Computer programming, consultancy; Information service activities",
+    "FIN+": "Financial and insurance activities",
+    "FINser": "Financial services, except insurance and pension funding",
+    "FINins": "Insurance, reinsurance and pension funding services, except compulsory social security",
+    "FINaux": "Activities auxiliary to financial services and insurance services",
+    "RES+": "Real estate activities",
+    "PRO+": "Professional, scientific and technical activities",
+    "PROleg": "Legal and accounting services; Activities of head offices; management consultancy activities",
+    "PROeng": "Architectural and engineering activities; technical testing and analysis",
+    "PROsci": "Scientific research and development",
+    "PROadv": "Advertising and market research",
+    "PROoth": "Other professional, scientific and technical activities; Veterinary activities",
+    "ADM+": "Administrative and support service activities",
+    "PUB+": "Public administration and defence; compulsory social security",
+    "EDU+": "Education",
+    "HEA+": "Human health and social work activities",
+    "ART+": "Arts, entertainment and recreation",
+    "HOU+": "Activities of households as employers",
+    "AGR+": "Agriculture, forestry and fishing",
+    "AGRagr": "Crop and animal production, hunting and related service activities",
+    "AGRfor": "Forestry and logging",
+    "AGRfis": "Fishing and aquaculture",
+    "MIN+": "Mining and quarrying",
+    "MINfos": "Mining and extraction of energy producing products",
+    "MINoth": "Mining and quarrying of non-energy producing products",
+    "MINsup": "Mining support service activities",
+    "MAN+": "Manufacturing",
+    "MANfoo": "Food, beverages and tobacco products",
+    "MANtex": "Textiles, wearing apparel, leather and related products",
+    "MANwoo": "Wood and products of wood and cork, except furniture",
+    "MANpap": "Paper and paper products",
+    "MANpri": "Printing and reproduction of recorded media",
+    "MANref": "Coke and refined petroleum products",
+    "MANche": "Chemicals and chemical products",
+    "MANpha": "Basic pharmaceutical products and pharmaceutical preparations",
+    "MANpla": "Rubber and plastic products",
+    "MANmin": "Other non-metallic mineral products",
+    "MANmet": "Basic metals",
+    "MANfmp": "Fabricated metal products, except machinery and equipment",
+    "MANcom": "Computer, electronic and optical products",
+    "MANele": "Electrical equipment",
+    "MANmac": "Machinery and equipment n.e.c.",
+    "MANmot": "Motor vehicles, trailers and semi-trailers",
+    "MANtra": "Other transport equipment",
+    "MANfur": "Furniture and other manufactured goods",
+    "MANrep": "Repair and installation services of machinery and equipment",
+    "PWR+": "Electricity, gas, steam and air conditioning",
+    "WAT+": "Water supply; sewerage; waste management and remediation",
+    "WATwat": "Natural water; water treatment and supply services",
+    "WATwst": "Sewerage services; sewage sludge; waste collection, treatment and disposal services",
+    "CNS+": "Constructions and construction works",
+    "TRD+": "Wholesale and retail trade; repair of motor vehicles and motorcycles", # NACE G
+    "TRDmot": "Wholesale and retail trade and repair services of motor vehicles and motorcycles", # NACE G45
+    "TRDwho": "Wholesale trade, except of motor vehicles and motorcycles" # NACE G46
+}
+
+
+
+
 def compute_simple_average(series, countries):
     simple_avgs = {}
     for country in countries:
@@ -422,13 +501,37 @@ def write_text_report_all(countries, net_trillions, output_filename="all_countri
                     variationsAbs[pol] = (top5_diff / total_diff * 100) if total_diff else np.nan
                 contrib_pct = (sum_base5 / total_base * 100) if total_base else np.nan
                 f.write(f"  Top 5 sectors by {name}:\n")
+                # --- Sector rank/shift reporting ---
+                new_sector_codes = {}
                 for node, val in top5.items():
-                    sector = node.split('_',1)[1]
+                    # Extract sector code and description
+                    code = node.split('_',1)[1]
+                    sector = sector_codes.get(code, new_sector_codes.get(code, code))
+
+                    # Determine all country-specific nodes for this sector
+                    sector_nodes = [n for n in base_series.index if n.split('_',1)[1] == code]
+
+                    # Compute baseline ranking for this sector across countries
+                    sorted_base = base_series.loc[sector_nodes].sort_values(ascending=False).index.tolist()
+                    base_rank = sorted_base.index(node) + 1
+
+                    # Compute policy rankings
+                    policy_ranks = {}
+                    for pol, series in policy_map.items():
+                        sorted_pol = series.loc[sector_nodes].sort_values(ascending=False).index.tolist()
+                        policy_ranks[pol] = sorted_pol.index(node) + 1
+
+                    # Compute percentage changes
                     vals_pol = {pol: series.get(node, np.nan) for pol, series in policy_map.items()}
                     pct_changes = {pol: ((vals_pol[pol] - val) / val * 100) if val else np.nan for pol in policy_map}
-                    f.write(f"    {sector}: Baseline={val:.4g}")
+
+                    # Write line with percent change and position shift
+                    f.write(f"Baseline={val:.4g}")
                     for pol in ["BC","EU","GL"]:
-                        f.write(f", {pol}={color_pct(pct_changes[pol])}")
+                        shift = base_rank - policy_ranks[pol]
+                        f.write(f", {pol}={color_pct(pct_changes[pol])} ({shift:+d})")
+                    f.write(f"    {sector} (Rank: Baseline={base_rank})")
+
                     f.write("\n")
                 f.write(f"    Combined top5 share of baseline {name}: {contrib_pct:.2f}%\n")
                 f.write("    Combined variation for these sectors account for the following share in change: "

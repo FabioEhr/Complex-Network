@@ -1,4 +1,9 @@
 sector_codes = {
+    "ENRcoa": "ENRcoa", 
+    "ENRele": "ENRele", 
+    "ENRgas": "ENRele",
+    "ENRoil": "ENRoil", 
+    "EXT+": "EXT+", 
     # Codes from the first image (the "continued" part)
     "TRDret": "Retail trade services, except of motor vehicles and motorcycles", # Corresponds to NACE G47
     "TRA+": "Transportation and storage",
