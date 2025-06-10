@@ -408,12 +408,18 @@ def write_text_report_all(countries, net_trillions, output_filename="all_countri
             # Helper to process each measure
             def report_top5(name, base_series, policy_map, total_base):
                 nodes = [n for n in base_series.index if n.startswith(f"{country}_")]
-                top5 = base_series.loc[nodes].nlargest(5)
+                top5 = base_series.loc[nodes].nlargest(10)
+                Total_base = base_series.loc[nodes].sum()
                 sum_base5 = top5.sum()
                 variations = {}
+                variationsAbs = {}
                 for pol, series in policy_map.items():
                     sum_pol5 = series.reindex(top5.index).sum()
-                    variations[pol] = ((sum_pol5 - sum_base5) / sum_base5 * 100) if sum_base5 else np.nan
+                    Total_pol = series.loc[nodes].sum()
+                    total_diff = np.abs(series.loc[nodes] - base_series.loc[nodes]).sum()
+                    top5_diff = np.abs(series.reindex(top5.index) - top5).sum()
+                    variations[pol] = ((sum_pol5 - sum_base5) / (Total_pol-Total_base) * 100) if (Total_pol-Total_base)!=0 else np.nan
+                    variationsAbs[pol] = (top5_diff / total_diff * 100) if total_diff else np.nan
                 contrib_pct = (sum_base5 / total_base * 100) if total_base else np.nan
                 f.write(f"  Top 5 sectors by {name}:\n")
                 for node, val in top5.items():
@@ -425,8 +431,11 @@ def write_text_report_all(countries, net_trillions, output_filename="all_countri
                         f.write(f", {pol}={color_pct(pct_changes[pol])}")
                     f.write("\n")
                 f.write(f"    Combined top5 share of baseline {name}: {contrib_pct:.2f}%\n")
-                f.write("    Combined variation for these sectors: "
+                f.write("    Combined variation for these sectors account for the following share in change: "
                         + ", ".join(f"{pol} {color_pct(variations[pol])}" for pol in ["BC","EU","GL"]) + "\n\n")
+                f.write("    Combined absolute value variation for these sectors account for the following share: "
+                        + ", ".join(f"{pol} {color_pct(variationsAbs[pol])}" for pol in ["BC","EU","GL"]) + "\n\n")
+
 
             # Clustering
             report_top5("Clustering Coefficient", base_clust, policy_clust, c_base.get(country, np.nan))
