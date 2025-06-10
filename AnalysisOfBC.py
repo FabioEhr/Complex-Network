@@ -92,7 +92,8 @@ def main():
                 else:
                     print(f"Skipping policy file {pf}: cannot identify centrality column.")
                     continue
-            z = (series_p - bc_2020) / sigma
+            #z = (series_p - bc_2020) / sigma
+            z = (series_p - bc_2020) / series_p
             results[policy] = z
         except Exception as e:
             print(f"Error reading {pf}: {e}")
@@ -101,14 +102,15 @@ def main():
     df = pd.read_parquet('./dfz_2018.parquet')
 
     # Compute total inflows per country (sum of each column)
-    inflows = df.sum(axis=0)
+    #inflows = df.sum(axis=0)- pd.Series(df.values.diagonal(), index=df.index)
+    inflows = df.sum(axis=0) - pd.Series(df.values.diagonal(), index=df.index)
+
 
     # Compute total outflows per country (sum of each row, excluding the diagonal)
     # i.e., subtract the self-flow df.loc[c, c] from each row sum
-    outflows = df.sum(axis=1) - pd.Series(df.values.diagonal(), index=df.index)
-
+    outflows = df.sum(axis=1) 
     # Net inflow = inflows − outflows
-    net = inflows - outflows
+    net =- inflows + outflows
 
     # Convert to trillions of dollars
     net_trillions = net / 1e9
@@ -134,7 +136,8 @@ def main():
                 if s.startswith(f"{country}_"):
                     num += net_trillions.get(s, 0.0) * results[policy].get(s, 0.0)
                     den += net_trillions.get(s, 0.0)
-                    #num += 1 * (series_p[s] - bc_2020[s])
+                    #
+                    #num += 1 * results[policy].get(s, 0.0)
                     #den += 1
             wavg = num / den if den != 0.0 else np.nan
             weighted_avgs[policy][country] = wavg

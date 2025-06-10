@@ -139,9 +139,9 @@ def main():
 
     # 6) COMPUTE NET INFLOWS PER NODE (USE dfz_2018.parquet AS BEFORE)
     df_net = pd.read_parquet('./dfz_2018.parquet')
-    inflows = df_net.sum(axis=0)
-    outflows = df_net.sum(axis=1) - pd.Series(df_net.values.diagonal(), index=df_net.index)
-    net = inflows - outflows
+    inflows = df_net.sum(axis=0) - pd.Series(df_net.values.diagonal(), index=df_net.index)
+    outflows = df_net.sum(axis=1)
+    net =outflows- inflows 
     net_trillions = net / 1e9
     print(f"Net inflows (trillions) computed for {len(net_trillions)} nodes.")
     print(net_trillions.head())
@@ -166,6 +166,7 @@ def main():
             for node in results_hub[policy].index:
                 if node.startswith(f"{country}_"):
                     weight = net_trillions.get(node, 0.0)
+                    #weight=1
                     num_h += weight * results_hub[policy].get(node, 0.0)
                     den_h += weight
             wavg_h = num_h / den_h if den_h != 0.0 else np.nan
