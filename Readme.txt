@@ -37,4 +37,13 @@ Questo repository contiene script per calcolare e visualizzare metriche di rete 
   - Pondera le differenze con i net inflows 2018 per paese e produce mappe.  
   - Stampa statistiche aggiuntive (top/bottom 20, NaN, medie) e salva un CSV di z-score.
 
----
+- **Filter.jpynb**
+Filtra il dataset iniziale, creando le matrici d'adiacenza con il nodo Rest of the World (RoW) (quest'ultimo creato dalle nazioni del mondo che hano dati simulati nel database GLORIA). Infine crea le matrici aggregate a livello delle nazioni, sommando sui settori.
+
+-** Z_sparsee.jpynb**
+Rende sparse le matrici d'adiacenza attraverso la funzione sparsify_by_sector_inflow() e le salva. Calcola il clustering coefficient per tali matrici e lo salva.
+
+-**Base measures.jpynb**
+  Fornisce una prima analisi per weights and strengths distributions (calcola media e deviazione standard, mostra le distribuzioni), mostra hub e authorities aggregate per nazioni e salva tale misure.
+
+
