@@ -15,7 +15,7 @@ def main():
         (2017, "dfz_2017_c.parquet"),
         (2018, "dfz_2018_c.parquet"),
         (2019, "dfz_2019_c.parquet"),
-        (2020, "Dfz_c.parquet")  # Baseline 2020 data
+        (2020, "dfz_2020_c.parquet")  # Baseline 2020 data
     ]
 
     baseline_net = {}
@@ -48,6 +48,18 @@ def main():
         return
     baseline_2020 = baseline_df[2020]
 
+    # 4) LOAD CARBON INTENSITY DATA (2020)
+    try:
+        carb_df = pd.read_csv(
+            "API_EN.GHG.CO2.RT.GDP.PP.KD_DS2_en_csv_v2_37939.csv",
+            skiprows=4, header=0
+        )
+        carbon_intensity = carb_df.set_index("Country Code")["2020"].astype(float)
+        print("Loaded carbon intensity data for 2020.")
+    except Exception as e:
+        print(f"Error loading carbon intensity data: {e}")
+        return
+
     # 4) LOAD POLICY SCENARIO FILES AND COMPUTE Z-SCORES
     policy_files = {
         "BC": "dfz_bc_c.parquet",  # EU-wide carbon tax with CBAM
@@ -71,6 +83,11 @@ def main():
             # Difference from baseline 2020
             diff = net_p_aligned - baseline_2020
 
+            # Compute correlation with carbon intensity
+            ci_aligned = carbon_intensity.reindex(diff.index)
+            corr = diff.corr(ci_aligned)
+            print(f"Correlation between change in net inflow and carbon intensity for policy {policy}: {corr:.3f}")
+
             # Compute z-scores
             #z_score = diff / std_dev
             z_score = diff / baseline_2020
@@ -91,6 +108,11 @@ def main():
     # Compute average relative variation for each country over 2010–2020
     rel_changes = (baseline_df.subtract(baseline_df[2010], axis=0)).div(baseline_df[2010], axis=0)
     mean_rel_change = rel_changes.loc[:, list(range(2011, 2021))].mean(axis=1)
+
+    # Compute baseline correlation with carbon intensity
+    ci_baseline = carbon_intensity.reindex(mean_rel_change.index)
+    corr_baseline = mean_rel_change.corr(ci_baseline)
+    print(f"Baseline correlation between mean relative change and carbon intensity: {corr_baseline:.3f}")
 
     # Define EU country ISO codes
     eu_codes = {
