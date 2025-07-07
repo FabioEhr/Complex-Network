@@ -49,7 +49,7 @@ Questo repository contiene script per calcolare e visualizzare metriche di rete 
 >> *** Code_and_dataset *** contiene:
    > i codici:
       - **Filter.jpynb**
-        Filtra il dataset iniziale, creando le matrici d'adiacenza con il nodo Rest of the World (RoW) (dfz_{label}) (quest'ultimo creato dalle nazioni del mondo che hano dati simulati nel database GLORIA).Infine         crea le matrici aggregate a livello delle nazioni, sommando sui settori (dfz_{label}_c).
+        Filtra il dataset iniziale (condiviso separatamente), creando le matrici d'adiacenza con il nodo Rest of the World (RoW) (dfz_{label}) (quest'ultimo creato dalle nazioni del mondo che hano dati simulati           nel database GLORIA).Infine crea le matrici aggregate a livello delle nazioni, sommando sui settori (dfz_{label}_c).
 
       - ** Z_sparser.jpynb**
       Rende sparse le matrici d'adiacenza attraverso la funzione sparsify_by_sector_inflow() e le salva (dfz_s_{label}). Calcola il clustering coefficient per tali matrici e lo salva (clus_{label}).
