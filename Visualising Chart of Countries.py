@@ -278,6 +278,29 @@ def process_hub_authority(countries, net_trillions):
         if negatives:
             print(f"Warning: Negative authority averages in {label} for countries: {negatives}")
 
+    # Print delta rankings for Authority Score
+    import pandas as _pd
+    s_baseline_auth = _pd.Series(weighted_auth_baseline)
+    s_bc_auth       = _pd.Series(weighted_auth_bc)
+    s_eu_auth       = _pd.Series(weighted_auth_eu)
+    s_gl_auth       = _pd.Series(weighted_auth_gl)
+
+    def _rank_delta_auth(series_policy):
+        baseline_rank = (-s_baseline_auth).rank(method="min")
+        policy_rank   = (-series_policy).rank(method="min")
+        return (baseline_rank - policy_rank)
+
+    rd_bc_auth = _rank_delta_auth(s_bc_auth)
+    rd_eu_auth = _rank_delta_auth(s_eu_auth)
+    rd_gl_auth = _rank_delta_auth(s_gl_auth)
+
+    print("Authority Score Δ Rank: EU tax + CBAM")
+    print(rd_bc_auth)
+    print("Authority Score Δ Rank: EU-only tax")
+    print(rd_eu_auth)
+    print("Authority Score Δ Rank: Global tax")
+    print(rd_gl_auth)
+
     create_and_save_map_plot('Authority Score', weighted_auth_baseline, weighted_auth_bc, weighted_auth_eu, weighted_auth_gl, 'authority_maps.png')
 
 def main():

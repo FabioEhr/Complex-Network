@@ -1,3 +1,6 @@
+#non mi ricordo a cosa serva questo file, per me si può cestinare
+
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt

@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from World_map import plot_world_map, plot_world_maps_grid
 import matplotlib.pyplot as plt
+from scipy.stats import pearsonr
 
 def main():
     # 1) LOAD BASELINE COUNTRY-LEVEL DATA FOR YEARS 2010–2020
@@ -163,14 +164,12 @@ def main():
             "Net Flow % Change under Global Carbon Tax"
         )
         plt.title(
-            "Correlation: Carbon Intensity vs Net Flow % Change (Global Tax)"
+            "Countries with Higher Carbon Intensity Tend to Experience Greater Net Trade Losses under a Global Carbon Tax"
         )
-        # Annotate correlation coefficient
-        corr_coef = (1/combined["ci_2020"]).corr(
-            combined["perc_change_gl"]
-        )
+        # Compute Pearson correlation and p-value
+        r_value, p_value = pearsonr(combined["ci_2020"], combined["perc_change_gl"])
         plt.annotate(
-            f"r = {corr_coef:.2f}",
+            f"r = {r_value:.2f}, p = {p_value:.3f}",
             xy=(0.05, 0.95),
             xycoords="axes fraction",
             va="top"
@@ -187,7 +186,7 @@ def main():
             df_gdp_co2,
             '',
             '',
-            'GDP per CO2e emitted (Purchasing Power Parity $ per kg CO2e)'
+            'Carbon Efficiency of GDP (2020): PPP-adjusted $ Output per kg CO2e'
         )
     except Exception as e:
         print(f"Error plotting correlation: {e}")

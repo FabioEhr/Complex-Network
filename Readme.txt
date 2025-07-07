@@ -4,12 +4,15 @@ analizza le misure principali sui network non sparsificati
 Z_analysis.ipynb
 Nella fine del codice c'è un'analisi interessante
 
-BetweennessCentralityMay.py
-file che calcola la Betweenness Centrality
+BetweennessCentralityMay.py computes the Betweenness Centrality on the sparsified matrices
 
-AnalysisOfBC.py
-File che dà una prima lettura dei risultati della Betweenness Centrality
+ChartOfCountries.py loads network‐analysis data for 2010–2020 and three policy scenarios, computes per‐country averages (simple or weighted) of four metrics (clustering, betweenness, hub and authority), and outputs side-by-side comparison tables as PNG images.
 
+CountrySectorAnalysis.py Aggregates network‐analysis metrics across 2010–2020 baselines and three policy scenarios and generates comparative tables and detailed text reports to highlight sectoral drivers and support economic interpretation of trade‐network impacts.
+
+Output in percentage.py Computes country-level net trade flow changes from 2010–2020 baselines and three policy scenarios, then visualizes average trends and percentage variations on a 2×2 world‐map grid and correlates global policy impacts with carbon intensity via a scatterplot.
+
+Aggregates node-level network metrics (clustering coefficient, betweenness centrality, hub and authority scores) into country-level averages—either simple or weighted by net trade flows—and generates 2×2 world-map grids comparing baseline 2020 values with three policy scenarios, saving each metric’s visualization as a PNG.
 
 # Panoramica del progetto
 
@@ -47,3 +50,6 @@ Rende sparse le matrici d'adiacenza attraverso la funzione sparsify_by_sector_in
   Fornisce una prima analisi per weights and strengths distributions (calcola media e deviazione standard, mostra le distribuzioni), mostra hub e authorities aggregate per nazioni e salva tale misure.
 
 
+- API_EN.GHG.CO2.RT.GDP.PP.KD_DS2_en_csv_v2_37939.csv is the data with the carbon intensities that are sourced from the World Development Indicators and were last updated on July 1, 2025.
+
+- authority_tables.png betweenness_tables.png clustering_tables.png hub_tables are the results of the measurements aggregated at a country level for the gl, eu and bc scenario

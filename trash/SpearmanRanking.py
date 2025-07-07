@@ -48,9 +48,26 @@ for t in years[1:]:
     # find common nodes
     common = df_prev.index.intersection(df_curr.index)
     for m in measures:
+        print(f"Computing SRCC for year {t} and measure '{m}'")
         a = df_prev.loc[common, m]
         b = df_curr.loc[common, m]
+        # Sort by values and compute position changes
+        a_sorted = a.sort_values()
+        b_sorted = b.sort_values()
+        a_pos = {node: i for i, node in enumerate(a_sorted.index)}
+        b_pos = {node: i for i, node in enumerate(b_sorted.index)}
+        print(f"Position changes for measure '{m}' between {t-1} and {t}:")
+        if m == "clustering_coefficient":
+            # For clustering coefficient, we can also print the delta in values
+            print("  Node: ΔClustering Coefficient")
+            for node in common[220:250]:
+                delta = b_pos[node] - a_pos[node]
+                print(f"  {node}: Δpos = {delta}")
+        #print(a.head(), b.head())
+        #print(f"Year {t}, measure '{m}': common={len(a)}, prev={len(df_prev.loc[:, m])}, curr={len(df_curr.loc[:, m])}")
         rho, _ = spearmanr(a, b)
+        print(f"Spearman SRCC for {m} between {t-1} and {t}: ρ={rho:.3f}")
+        #print(f"Spearman SRCC for {m} between {t-1} and {t}: ρ={rho:.3f}, p-value={pippo:.3f}")
         srcc.loc[t, m] = rho
 
 # (optional) print the time-average SRCC for each measure
