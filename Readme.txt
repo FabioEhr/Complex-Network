@@ -14,11 +14,11 @@ Output in percentage.py Computes country-level net trade flow changes from 2010�
 
 Aggregates node-level network metrics (clustering coefficient, betweenness centrality, hub and authority scores) into country-level averages—either simple or weighted by net trade flows—and generates 2×2 world-map grids comparing baseline 2020 values with three policy scenarios, saving each metric’s visualization as a PNG.
 
-# Panoramica del progetto
+######################## Panoramica
 
-Questo repository contiene script per calcolare e visualizzare metriche di rete (hub/authority, clustering coefficient, betweenness centrality) su scala mondiale, usando dati di base (2010–2020) e scenari di policy (bc, eu, gl, cbam).
+Questo repository contiene script per calcolare e visualizzare metriche di rete (hub/authority, clustering coefficient, betweenness centrality) su scala mondiale, usando dati di base (2010–2020) e scenari di policy (bc, eu, gl, cbam). La cartella 
 
-## Elenco dei principali script
+## Elenco dei 
 
 - **World_map.py**  
   Funzione generica per tracciare un _choropleth_ mondiale dati codici ISO A3 e valori numerici.  
@@ -41,14 +41,17 @@ Questo repository contiene script per calcolare e visualizzare metriche di rete 
   - Stampa statistiche aggiuntive (top/bottom 20, NaN, medie) e salva un CSV di z-score.
 
 - **Filter.jpynb**
-Filtra il dataset iniziale, creando le matrici d'adiacenza con il nodo Rest of the World (RoW) (quest'ultimo creato dalle nazioni del mondo che hano dati simulati nel database GLORIA). Infine crea le matrici aggregate a livello delle nazioni, sommando sui settori.
+   Filtra il dataset iniziale, creando le matrici d'adiacenza con il nodo Rest of the World (RoW) (quest'ultimo creato dalle nazioni del mondo che hano dati simulati nel database GLORIA). Infine crea le matrici      aggregate a livello delle nazioni, sommando sui settori.
 
--** Z_sparsee.jpynb**
-Rende sparse le matrici d'adiacenza attraverso la funzione sparsify_by_sector_inflow() e le salva. Calcola il clustering coefficient per tali matrici e lo salva.
+-** Z_sparser.jpynb**
+    Rende sparse le matrici d'adiacenza attraverso la funzione sparsify_by_sector_inflow() e le salva. Calcola il clustering coefficient per tali matrici e lo salva.
 
 -**Base measures.jpynb**
-  Fornisce una prima analisi per weights and strengths distributions (calcola media e deviazione standard, mostra le distribuzioni), mostra hub e authorities aggregate per nazioni e salva tale misure.
+   Fornisce una prima analisi per weights and strengths distributions (calcola media e deviazione standard, mostra le distribuzioni), mostra hub e authorities aggregate per nazioni e salva tale misure.
 
+-**Stat_analysis_final.jpynb**
+  Contiene il codice per calcolare, mostrare e salvare i risultati (e i grafici ove possibile) di: quattro momenti delle distribuzioni delle misure, probabilità condizionate e istogramma di comparazione 2010-       2020, M_values, coefficienti di correlazione (calcolati sia da matrici complete che sparsificate per misure riguardanti i pesi, calcolati da matrici sparsificate per misure riguardanti il degree), variazioni 
+  relative (tra policy e 2020) delle misure per le varie nazioni, SRCC. 
 
 - API_EN.GHG.CO2.RT.GDP.PP.KD_DS2_en_csv_v2_37939.csv is the data with the carbon intensities that are sourced from the World Development Indicators and were last updated on July 1, 2025.
 
