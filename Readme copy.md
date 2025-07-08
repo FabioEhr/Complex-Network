@@ -1,99 +1,51 @@
+# Overview
 
-# Complex Network Analysis
+This repository contains scripts to compute and visualize network metrics (hub/authority, clustering coefficient, betweenness centrality) on a global scale, using baseline data (2010–2020) and policy scenarios (bc, eu, gl, cbam). The folder `Code_and_dataset` contains the datasets we worked on and the files used for the analysis. The `results` folder contains the outputs of the analyses (in parquet files) and the final plots.
 
-[![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](#license)
+## `Code_and_dataset`
 
-**Analysis and Visualization of Global Trade Network Metrics (2010–2020) under Policy Scenarios**
+This folder contains:
 
-## Table of Contents
-- [Overview](#overview)
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Data](#data)
-- [Usage](#usage)
-  - [Scripts](#scripts)
-- [Directory Structure](#directory-structure)
-- [Results](#results)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+### The scripts:
 
-## Overview
-This project computes and visualizes network metrics—**clustering coefficient**, **betweenness centrality**, **hub/authority scores**—on global trade data from 2010 to 2020. It also compares baseline metrics with three policy scenarios: **Global Liberalization (gl)**, **EU-centric (eu)**, and **CBAM (cbam)**.
+*   **`Filter.ipynb`**:
+    Filters the initial dataset (shared separately), creating adjacency matrices including the Rest of the World (RoW) node (`dfz_{label}`) (this node is created from countries in the world that have simulated data in the GLORIA database). It also creates matrices aggregated at the country level by summing over sectors (`dfz_{label}_c`).
 
-![Workflow Diagram](docs/workflow.png)
+*   **`Z_sparser.ipynb`**:
+    Makes the adjacency matrices sparse using the function `sparsify_by_sector_inflow()` and saves them (`dfz_s_{label}`). Computes the clustering coefficient for these matrices and saves the results (`clus_{label}`).
 
-## Features
-- Compute node-level network metrics on original and sparsified adjacency matrices.
-- Aggregate metrics at the country level (simple and flow-weighted averages).
-- Generate 2×2 world-map grids and choropleth maps for scenario comparisons.
-- Perform z-score analysis and sectoral impact assessments.
-- Correlate policy impacts with carbon intensity.
+*   **`Base measures.ipynb`**:
+    Provides an initial analysis for weights and strengths distributions (computes mean and standard deviation, displays the distributions) (saved in `results/base_measures`), displays aggregated hub and authority measures by country, and saves those measures (`hub_aut_{label}`).
 
-## Prerequisites
-- Python 3.8+
-- GeoPandas, NetworkX, Matplotlib, Pandas
-- Download and place the World Development Indicators CSV in `data/`
+*   **`Stat_analysis_final.ipynb`**:
+    Contains the code to compute, display, and save the results (and plots where possible) of: four moments of the metric distributions (saved in `results\four_momenta`), conditional probabilities and comparison histogram 2010–2020 (saved in `results\avg_condit_probab`), M_values (saved in `results\M_values`), correlation coefficients (computed from both complete and sparsified matrices for weight-related measures, computed from sparsified matrices for degree-related measures) (saved in `results\correlations`), relative variations (between policy scenarios and 2020) of the measures for various countries (saved in `results\rel_diff_over_avg_rel_diff` and `results\rel_diff_over_std`), SRCC.
 
-## Installation
-```bash
-git clone https://github.com/yourusername/Complex-Network.git
-cd Complex-Network
-pip install -r requirements.txt
-```
+*   **`BetweennessCentralityMay.py`**:
+    Computes the Betweenness Centrality on the sparsified matrices.
 
-## Data
-- `API_EN.GHG.CO2.RT.GDP.PP.KD_DS2_en_csv_v2_37939.csv` — Carbon intensity data (last updated July 1, 2025)
-- Adjacency matrices and processed datasets in `Code_and_dataset/`
+*   **`ChartOfCountries.py`**:
+    Loads network-analysis data for 2010–2020 and three policy scenarios, computes per-country sum of four metrics (clustering, betweenness, hub and authority) over all sectors, and outputs side-by-side comparison tables as PNG images.
 
-## Usage
+*   **`CountrySectorAnalysis.py`**:
+    Aggregates network-analysis metrics across 2010–2020 baselines and three policy scenarios and generates comparative tables and detailed text reports to highlight sectoral drivers and support economic interpretation of trade-network impacts.
 
-### Scripts
+*   **`Output in percentage.py`**:
+    Computes country-level net trade flow changes from 2010–2020 baselines and three policy scenarios, then visualizes average trends and percentage variations on a 2×2 world-map grid and correlates global policy impacts with carbon intensity via a scatterplot.
 
-| Script | Description |
-| ------ | ----------- |
-| `BetweennessCentralityMay.py` | Compute betweenness centrality on sparsified matrices. |
-| `ChartOfCountries.py` | Load data (2010–2020 & scenarios), compute country averages, and export comparison tables as PNG. |
-| `CountrySectorAnalysis.py` | Aggregate metrics across years/scenarios; generate comparative tables and detailed text reports. |
-| `Output in percentage.py` | Visualize net trade flow changes on 2×2 world-map grid; scatterplot with carbon intensity. |
-| `World_map.py` | Functions to plot choropleth maps using GeoPandas and Natural Earth shapefile. |
-| `AnalysisOfBC.py` | Z-score analysis of betweenness centrality; filter sectors; generate CSV and maps. |
-| `Base_measures.ipynb` | Exploratory analysis of weights and strength distributions. |
-| `Z_analysis.ipynb` | Supplemental analysis with additional insights. |
+*   **`Visualising Chart of Countries.py`**:
+    Aggregates node-level network metrics (clustering coefficient, betweenness centrality, hub and authority scores) into country-level averages—either simple or weighted by net trade flows—and generates 2×2 world-map grids comparing baseline 2020 values with three policy scenarios, saving each metric’s visualization as a PNG.
 
-## Directory Structure
-```
-Complex-Network/
-├── Code_and_dataset/
-│   ├── dfz_* (adjacency matrices)
-│   ├── clus_* (clustering data)
-│   └── hub_aut_* (hub/authority data)
-├── results/
-│   ├── base_measures/
-│   ├── four_momenta/
-│   ├── avg_condit_probab/
-│   ├── M_values/
-│   ├── correlations/
-│   └── ... (other result folders)
-├── docs/
-│   └── workflow.png
-├── requirements.txt
-└── README.md
-```
+*   **`World_map.py`**:
+    Defines two functions to create choropleth maps from GeoPandas—`plot_world_map` for a single map and `plot_world_maps_grid` for a 2×2 grid—by merging a Natural Earth shapefile with a DataFrame of ISO-A3 country codes and numeric values. The script’s main block also extracts sovereign country codes to a CSV and demonstrates the mapping functions using sample data.
 
-## Results
-All generated tables (PNG and CSV) are stored in `results/`. Example outputs:
+### The datasets:
 
-![Example Map](results/example_map.png)
-![Comparison Table](results/comparison_table.png)
+*   **Adjacency matrices W**: `dfz_{label}` (total), `dfz_{label}_c` (aggregated by country), `dfz_s_{label}` (sparse)
+*   **Clustering values**: `clus_{label}`
+*   **Betweenness values**: `dfz_s_{label}_bc`
+*   **Hub and authority**: `hub_aut_{label}`
+*   **`API_EN.GHG.CO2.RT.GDP.PP.KD_DS2_en_csv_v2_37939.csv`**: This is the data with the carbon intensities that are sourced from the World Development Indicators and were last updated on July 1, 2025.
 
-## Contributing
-Contributions are welcome! Please open an issue or submit a pull request.
+## `results`
 
-## License
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
-
-## Contact
-For questions or feedback, contact [your.email@example.com].
+This folder contains subfolders with the various results and plots used, organized by type of analysis.
