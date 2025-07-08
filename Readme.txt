@@ -8,9 +8,12 @@ CountrySectorAnalysis.py Aggregates network‐analysis metrics across 2010–202
 Output in percentage.py Computes country-level net trade flow changes from 2010–2020 baselines and three policy scenarios, then visualizes average trends and percentage variations on a 2×2 world‐map grid and correlates global policy impacts with carbon intensity via a scatterplot.
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Aggregates node-level network metrics (clustering coefficient, betweenness centrality, hub and authority scores) into country-level averages—either simple or weighted by net trade flows—and generates 2×2 world-map grids comparing baseline 2020 values with three policy scenarios, saving each metric’s visualization as a PNG.
 ## Elenco dei 
 =======
+=======
+>>>>>>> Stashed changes
 Visualising Chart of Countries.py Aggregates node-level network metrics (clustering coefficient, betweenness centrality, hub and authority scores) into country-level averages—either simple or weighted by net trade flows—and generates 2×2 world-map grids comparing baseline 2020 values with three policy scenarios, saving each metric’s visualization as a PNG.
 
 World_map.py Defines two functions to create choropleth maps from GeoPandas—plot_world_map for a single map and plot_world_maps_grid for a 2×2 grid—by merging a Natural Earth shapefile with a DataFrame of ISO-A3 country codes and numeric values. The script’s main block also extracts sovereign country codes to a CSV and demonstrates the mapping functions using sample data.
@@ -45,6 +48,7 @@ Nella fine del codice c'è un'analisi interessante
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 - API_EN.GHG.CO2.RT.GDP.PP.KD_DS2_en_csv_v2_37939.csv is the data with the carbon intensities that are sourced from the World Development Indicators and were last updated on July 1, 2025.
 
 - authority_tables.png betweenness_tables.png clustering_tables.png hub_tables are the results of the measurements aggregated at a country level for the gl, eu and bc scenario
@@ -75,5 +79,7 @@ Questo repository contiene script per calcolare e visualizzare metriche di rete 
       -hub e authority: hub_aut{label}
 
 >> *** results *** contiene le cartelle con i vari risultati e grafici utilizzati, raccolti per tipologia di analisi.
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
