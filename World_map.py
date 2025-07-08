@@ -66,7 +66,7 @@ def plot_world_maps_grid(dfs, x_labels, y_labels, titles, nrows=2, ncols=2, figs
         merged = world.merge(data, left_on='ADM0_A3', right_on=iso_col, how='left')
         merged.plot(column='value', ax=ax, legend=True, missing_kwds={'color': 'lightgrey', 'label': 'No Data'})
         ax.set_xlabel(xlabel)
-        ax.set_ylabel(ylabel)
+        ax.set_ylabel(ylabel) 
         ax.set_title(title)
         ax.set_xticks([])
         ax.set_yticks([])
