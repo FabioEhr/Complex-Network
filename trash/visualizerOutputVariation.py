@@ -1,21 +1,29 @@
+import os
+import sys
+# Add project root to module search path so Code_and_dataset can be imported
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import pandas as pd
 import numpy as np
-from World_map import plot_world_map
+from Code_and_dataset.World_map import plot_world_map
+import matplotlib.pyplot as plt
+
+# Ensure results directory exists
+os.makedirs('results', exist_ok=True)
 
 def main():
     # 1) LOAD BASELINE COUNTRY-LEVEL DATA FOR YEARS 2010–2020
     baseline_files = [
-        (2010, "dfz_2010_c.parquet"),
-        (2011, "dfz_2011_c.parquet"),
-        (2012, "dfz_2012_c.parquet"),
-        (2013, "dfz_2013_c.parquet"),
-        (2014, "dfz_2014_c.parquet"),
-        (2015, "dfz_2015_c.parquet"),
-        (2016, "dfz_2016_c.parquet"),
-        (2017, "dfz_2017_c.parquet"),
-        (2018, "dfz_2018_c.parquet"),
-        (2019, "dfz_2019_c.parquet"),
-        (2020, "dfz_2020_c.parquet")  # Baseline 2020 data
+        (2010, "Dataset/dfz_2010_c.parquet"),
+        (2011, "Dataset/dfz_2011_c.parquet"),
+        (2012, "Dataset/dfz_2012_c.parquet"),
+        (2013, "Dataset/dfz_2013_c.parquet"),
+        (2014, "Dataset/dfz_2014_c.parquet"),
+        (2015, "Dataset/dfz_2015_c.parquet"),
+        (2016, "Dataset/dfz_2016_c.parquet"),
+        (2017, "Dataset/dfz_2017_c.parquet"),
+        (2018, "Dataset/dfz_2018_c.parquet"),
+        (2019, "Dataset/dfz_2019_c.parquet"),
+        (2020, "Dataset/dfz_2020_c.parquet")  # Baseline 2020 data
     ]
 
     baseline_net = {}
@@ -51,7 +59,7 @@ def main():
     # 4) LOAD CARBON INTENSITY DATA (2020)
     try:
         carb_df = pd.read_csv(
-            "API_EN.GHG.CO2.RT.GDP.PP.KD_DS2_en_csv_v2_37939.csv",
+            "Dataset/API_EN.GHG.CO2.RT.GDP.PP.KD_DS2_en_csv_v2_37939.csv",
             skiprows=4, header=0
         )
         carbon_intensity = carb_df.set_index("Country Code")["2020"].astype(float)
@@ -62,9 +70,9 @@ def main():
 
     # 4) LOAD POLICY SCENARIO FILES AND COMPUTE Z-SCORES
     policy_files = {
-        "BC": "dfz_bc_c.parquet",  # EU-wide carbon tax with CBAM
-        "EU": "dfz_eu_c.parquet",  # EU-only carbon tax
-        "GL": "dfz_gl_c.parquet"   # Global carbon tax
+        "BC": "Dataset/dfz_bc_c.parquet",  # EU-wide carbon tax with CBAM
+        "EU": "Dataset/dfz_eu_c.parquet",  # EU-only carbon tax
+        "GL": "Dataset/dfz_gl_c.parquet"   # Global carbon tax
     }
 
     policy_zscores = {}
@@ -101,9 +109,11 @@ def main():
         df_plot = pd.DataFrame(list(z.items()), columns=['ISO_A3', 'value'])
         title = f"Net Inflow Variation Z-score - Policy {policy}"
         plot_world_map(df_plot, '', '', title)
+        # Save the map to results folder
+        plt.savefig(f"results/NetInflow_Zscore_Policy_{policy}.png", bbox_inches='tight')
+        plt.close()
 
     # 6) CREATE 2x2 BAR CHARTS: VALUE PER COUNTRY FOR EACH SCENARIO
-    import matplotlib.pyplot as plt
 
     # Compute average relative variation for each country over 2010–2020
     rel_changes = (baseline_df.subtract(baseline_df[2010], axis=0)).div(baseline_df[2010], axis=0)
@@ -160,7 +170,10 @@ def main():
         ax.legend(handles=[blue_patch, grey_patch, red_patch], loc='upper right')
 
     fig.tight_layout()
-    plt.show()
+    # Save bar chart figure
+    fig.savefig('results/Policy_Comparison_BarCharts.png', bbox_inches='tight')
+    plt.close(fig)
+    #plt.show()
 
 if __name__ == "__main__":
     main()

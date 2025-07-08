@@ -1,5 +1,14 @@
 
-SIMPLE_AVG = True
+import os
+import sys
+# Add project root to module search path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# Ensure results directory exists
+os.makedirs('results', exist_ok=True)
+
+
+USE_SIMPLE_SUM = True
+ENABLE_PRINTS = False
 
 # Set of EU member country codes
 EU_MEMBERS = {
@@ -8,7 +17,7 @@ EU_MEMBERS = {
     "SVK","SVN","ESP","SWE"
 }
 
-def compute_simple_average(series, countries):
+def compute_simple_sum(series, countries):
     simple_avgs = {}
     for country in countries:
         nodes = [node for node in series.index if node.startswith(f"{country}_")]
@@ -23,7 +32,7 @@ def compute_simple_average(series, countries):
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from World_map import plot_world_maps_grid
+from Code_and_dataset.World_map import plot_world_maps_grid
 
 def compute_weighted_average(series, net_trillions, countries):
     weighted_avgs = {}
@@ -89,14 +98,14 @@ def create_and_save_map_plot(metric_name, baseline_vals, bc_vals, eu_vals, gl_va
     # Optionally save the figure created by plot_world_maps_grid (the helper already calls plt.show()).
     # A simple workaround is to call plt.savefig after the grid is drawn.
     import matplotlib.pyplot as _plt
-    _plt.savefig(output_filename, bbox_inches="tight")
+    _plt.savefig(f"results/{output_filename}", bbox_inches="tight")
     _plt.close()
 
 def process_clustering(countries, net_trillions):
     # 1) Load baseline files (2010-2020) for Clustering Coefficient
     baseline_dfs = {}
     for year in range(2010, 2021):
-        bf = f"clus_{year}.parquet"
+        bf = f"Code_and_dataset/clus_{year}.parquet"
         df = pd.read_parquet(bf)
         if {'Node', 'Clustering_Coefficient'}.issubset(df.columns):
             series = pd.to_numeric(df['Clustering_Coefficient'], errors='coerce')
@@ -107,18 +116,18 @@ def process_clustering(countries, net_trillions):
 
     # 2) Load policy files
     policy_series = {}
-    for policy, pf in [('bc', 'clus_bc.parquet'), ('eu', 'clus_eu.parquet'), ('gl', 'clus_gl.parquet')]:
+    for policy, pf in [('bc', 'Code_and_dataset/clus_bc.parquet'), ('eu', 'Code_and_dataset/clus_eu.parquet'), ('gl', 'Code_and_dataset/clus_gl.parquet')]:
         dfp = pd.read_parquet(pf)
         series = pd.to_numeric(dfp['Clustering_Coefficient'], errors='coerce')
         series.index = dfp['Node']
         policy_series[policy] = series
 
     # 3) Compute averages per country (weighted or simple)
-    if SIMPLE_AVG:
-        weighted_baseline = compute_simple_average(baseline_2020, countries)
-        weighted_bc = compute_simple_average(policy_series['bc'], countries)
-        weighted_eu = compute_simple_average(policy_series['eu'], countries)
-        weighted_gl = compute_simple_average(policy_series['gl'], countries)
+    if USE_SIMPLE_SUM:
+        weighted_baseline = compute_simple_sum(baseline_2020, countries)
+        weighted_bc = compute_simple_sum(policy_series['bc'], countries)
+        weighted_eu = compute_simple_sum(policy_series['eu'], countries)
+        weighted_gl = compute_simple_sum(policy_series['gl'], countries)
     else:
         weighted_baseline = compute_weighted_average(baseline_2020, net_trillions, countries)
         weighted_bc = compute_weighted_average(policy_series['bc'], net_trillions, countries)
@@ -134,7 +143,8 @@ def process_clustering(countries, net_trillions):
     ]:
         negatives = [country for country, value in weighted.items() if value is not None and value < 0]
         if negatives:
-            print(f"Warning: Negative clustering averages in {label} for countries: {negatives}")
+            if ENABLE_PRINTS:
+                print(f"Warning: Negative clustering averages in {label} for countries: {negatives}")
 
     create_and_save_map_plot('Clustering Coefficient', weighted_baseline, weighted_bc, weighted_eu, weighted_gl, 'clustering_maps.png')
 
@@ -142,7 +152,7 @@ def process_betweenness(countries, net_trillions):
     # 1) Load baseline files (2010-2020) for Betweenness Centrality
     baseline_dfs = {}
     for year in range(2010, 2021):
-        bf = f"dfz_s_{year}_bc.parquet"
+        bf = f"Code_and_dataset/dfz_s_{year}_bc.parquet"
         df = pd.read_parquet(bf)
         # Identify column
         if 'betweenness' in df.columns:
@@ -160,7 +170,7 @@ def process_betweenness(countries, net_trillions):
 
     # 2) Load policy files
     policy_series = {}
-    for policy, pf in [('bc', 'dfz_s_bc_bc.parquet'), ('eu', 'dfz_s_eu_bc.parquet'), ('gl', 'dfz_s_gl_bc.parquet')]:
+    for policy, pf in [('bc', 'Code_and_dataset/dfz_s_bc_bc.parquet'), ('eu', 'Code_and_dataset/dfz_s_eu_bc.parquet'), ('gl', 'Code_and_dataset/dfz_s_gl_bc.parquet')]:
         dfp = pd.read_parquet(pf)
         if 'betweenness' in dfp.columns:
             series = pd.to_numeric(dfp['betweenness'], errors='coerce')
@@ -174,11 +184,11 @@ def process_betweenness(countries, net_trillions):
         policy_series[policy] = series
 
     # 3) Compute averages per country (weighted or simple)
-    if SIMPLE_AVG:
-        weighted_baseline = compute_simple_average(baseline_2020, countries)
-        weighted_bc = compute_simple_average(policy_series['bc'], countries)
-        weighted_eu = compute_simple_average(policy_series['eu'], countries)
-        weighted_gl = compute_simple_average(policy_series['gl'], countries)
+    if USE_SIMPLE_SUM:
+        weighted_baseline = compute_simple_sum(baseline_2020, countries)
+        weighted_bc = compute_simple_sum(policy_series['bc'], countries)
+        weighted_eu = compute_simple_sum(policy_series['eu'], countries)
+        weighted_gl = compute_simple_sum(policy_series['gl'], countries)
     else:
         weighted_baseline = compute_weighted_average(baseline_2020, net_trillions, countries)
         weighted_bc = compute_weighted_average(policy_series['bc'], net_trillions, countries)
@@ -194,7 +204,8 @@ def process_betweenness(countries, net_trillions):
     ]:
         negatives = [country for country, value in weighted.items() if value is not None and value < 0]
         if negatives:
-            print(f"Warning: Negative betweenness averages in {label} for countries: {negatives}")
+            if ENABLE_PRINTS:
+                print(f"Warning: Negative betweenness averages in {label} for countries: {negatives}")
 
     create_and_save_map_plot('Betweenness Centrality', weighted_baseline, weighted_bc, weighted_eu, weighted_gl, 'betweenness_maps.png')
 
@@ -203,7 +214,7 @@ def process_hub_authority(countries, net_trillions):
     hub_baseline_dfs = {}
     auth_baseline_dfs = {}
     for year in range(2010, 2021):
-        bf = f"hub_aut_{year}.parquet"
+        bf = f"Code_and_dataset/hub_aut_{year}.parquet"
         df = pd.read_parquet(bf)
         if {'node', 'hub_score', 'authority_score'}.issubset(df.columns):
             hub_series = pd.to_numeric(df['hub_score'], errors='coerce')
@@ -221,7 +232,7 @@ def process_hub_authority(countries, net_trillions):
     # 2) Load policy files
     policy_hub = {}
     policy_auth = {}
-    for policy, pf in [('bc', 'hub_aut_bc.parquet'), ('eu', 'hub_aut_eu.parquet'), ('gl', 'hub_aut_gl.parquet')]:
+    for policy, pf in [('bc', 'Code_and_dataset/hub_aut_bc.parquet'), ('eu', 'Code_and_dataset/hub_aut_eu.parquet'), ('gl', 'Code_and_dataset/hub_aut_gl.parquet')]:
         dfp = pd.read_parquet(pf)
         hub_series = pd.to_numeric(dfp['hub_score'], errors='coerce')
         auth_series = pd.to_numeric(dfp['authority_score'], errors='coerce')
@@ -231,11 +242,11 @@ def process_hub_authority(countries, net_trillions):
         policy_auth[policy] = auth_series
 
     # 3) Compute hub averages per country (weighted or simple)
-    if SIMPLE_AVG:
-        weighted_hub_baseline = compute_simple_average(hub_2020, countries)
-        weighted_hub_bc = compute_simple_average(policy_hub['bc'], countries)
-        weighted_hub_eu = compute_simple_average(policy_hub['eu'], countries)
-        weighted_hub_gl = compute_simple_average(policy_hub['gl'], countries)
+    if USE_SIMPLE_SUM:
+        weighted_hub_baseline = compute_simple_sum(hub_2020, countries)
+        weighted_hub_bc = compute_simple_sum(policy_hub['bc'], countries)
+        weighted_hub_eu = compute_simple_sum(policy_hub['eu'], countries)
+        weighted_hub_gl = compute_simple_sum(policy_hub['gl'], countries)
     else:
         weighted_hub_baseline = compute_weighted_average(hub_2020, net_trillions, countries)
         weighted_hub_bc = compute_weighted_average(policy_hub['bc'], net_trillions, countries)
@@ -251,16 +262,17 @@ def process_hub_authority(countries, net_trillions):
     ]:
         negatives = [country for country, value in weighted.items() if value is not None and value < 0]
         if negatives:
-            print(f"Warning: Negative hub averages in {label} for countries: {negatives}")
+            if ENABLE_PRINTS:
+                print(f"Warning: Negative hub averages in {label} for countries: {negatives}")
 
     create_and_save_map_plot('Hub Score', weighted_hub_baseline, weighted_hub_bc, weighted_hub_eu, weighted_hub_gl, 'hub_maps.png')
 
     # 4) Compute authority averages per country (weighted or simple)
-    if SIMPLE_AVG:
-        weighted_auth_baseline = compute_simple_average(auth_2020, countries)
-        weighted_auth_bc = compute_simple_average(policy_auth['bc'], countries)
-        weighted_auth_eu = compute_simple_average(policy_auth['eu'], countries)
-        weighted_auth_gl = compute_simple_average(policy_auth['gl'], countries)
+    if USE_SIMPLE_SUM:
+        weighted_auth_baseline = compute_simple_sum(auth_2020, countries)
+        weighted_auth_bc = compute_simple_sum(policy_auth['bc'], countries)
+        weighted_auth_eu = compute_simple_sum(policy_auth['eu'], countries)
+        weighted_auth_gl = compute_simple_sum(policy_auth['gl'], countries)
     else:
         weighted_auth_baseline = compute_weighted_average(auth_2020, net_trillions, countries)
         weighted_auth_bc = compute_weighted_average(policy_auth['bc'], net_trillions, countries)
@@ -276,7 +288,8 @@ def process_hub_authority(countries, net_trillions):
     ]:
         negatives = [country for country, value in weighted.items() if value is not None and value < 0]
         if negatives:
-            print(f"Warning: Negative authority averages in {label} for countries: {negatives}")
+            if ENABLE_PRINTS:
+                print(f"Warning: Negative authority averages in {label} for countries: {negatives}")
 
     # Print delta rankings for Authority Score
     import pandas as _pd
@@ -294,12 +307,13 @@ def process_hub_authority(countries, net_trillions):
     rd_eu_auth = _rank_delta_auth(s_eu_auth)
     rd_gl_auth = _rank_delta_auth(s_gl_auth)
 
-    print("Authority Score Δ Rank: EU tax + CBAM")
-    print(rd_bc_auth)
-    print("Authority Score Δ Rank: EU-only tax")
-    print(rd_eu_auth)
-    print("Authority Score Δ Rank: Global tax")
-    print(rd_gl_auth)
+    if ENABLE_PRINTS:
+        print("Authority Score Δ Rank: EU tax + CBAM")
+        print(rd_bc_auth)
+        print("Authority Score Δ Rank: EU-only tax")
+        print(rd_eu_auth)
+        print("Authority Score Δ Rank: Global tax")
+        print(rd_gl_auth)
 
     create_and_save_map_plot('Authority Score', weighted_auth_baseline, weighted_auth_bc, weighted_auth_eu, weighted_auth_gl, 'authority_maps.png')
 
@@ -313,11 +327,12 @@ def main():
     ]
 
     # Compute net inflows per node
-    net_trillions = load_net_trillions('./dfz_2019.parquet')
+    net_trillions = load_net_trillions('Code_and_dataset/dfz_2019.parquet')
     # Check for negative net inflows
     neg_net = net_trillions[net_trillions < 0]
     if not neg_net.empty:
-        print("Warning: Negative net inflows detected for nodes:", neg_net.index.tolist())
+        if False:
+            print("Warning: Negative net inflows detected for nodes:", neg_net.index.tolist())
 
     # Process each metric
     process_clustering(countries, net_trillions)

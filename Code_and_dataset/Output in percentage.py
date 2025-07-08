@@ -1,23 +1,29 @@
+import os
+import sys
+# Add project root to module search path so Code_and_dataset can be imported
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# Ensure results directory exists
+os.makedirs('results', exist_ok=True)
 import pandas as pd
 import numpy as np
-from World_map import plot_world_map, plot_world_maps_grid
+from Code_and_dataset.World_map import plot_world_map, plot_world_maps_grid
 import matplotlib.pyplot as plt
 from scipy.stats import pearsonr
 
 def main():
     # 1) LOAD BASELINE COUNTRY-LEVEL DATA FOR YEARS 2010–2020
     baseline_files = [
-        (2010, "dfz_2010_c.parquet"),
-        (2011, "dfz_2011_c.parquet"),
-        (2012, "dfz_2012_c.parquet"),
-        (2013, "dfz_2013_c.parquet"),
-        (2014, "dfz_2014_c.parquet"),
-        (2015, "dfz_2015_c.parquet"),
-        (2016, "dfz_2016_c.parquet"),
-        (2017, "dfz_2017_c.parquet"),
-        (2018, "dfz_2018_c.parquet"),
-        (2019, "dfz_2019_c.parquet"),
-        (2020, "dfz_2020_c.parquet")  # Baseline 2020 data
+        (2010, "Code_and_dataset/dfz_2010_c.parquet"),
+        (2011, "Code_and_dataset/dfz_2011_c.parquet"),
+        (2012, "Code_and_dataset/dfz_2012_c.parquet"),
+        (2013, "Code_and_dataset/dfz_2013_c.parquet"),
+        (2014, "Code_and_dataset/dfz_2014_c.parquet"),
+        (2015, "Code_and_dataset/dfz_2015_c.parquet"),
+        (2016, "Code_and_dataset/dfz_2016_c.parquet"),
+        (2017, "Code_and_dataset/dfz_2017_c.parquet"),
+        (2018, "Code_and_dataset/dfz_2018_c.parquet"),
+        (2019, "Code_and_dataset/dfz_2019_c.parquet"),
+        (2020, "Code_and_dataset/dfz_2020_c.parquet")  # Baseline 2020 data
     ]
 
     baseline_net = {}
@@ -52,9 +58,9 @@ def main():
 
     # 4) LOAD POLICY SCENARIO FILES AND COMPUTE PERCENTAGE CHANGES
     policy_files = {
-        "BC": "dfz_bc_c.parquet",  # EU-wide carbon tax with CBAM
-        "EU": "dfz_eu_c.parquet",  # EU-only carbon tax
-        "GL": "dfz_gl_c.parquet"   # Global carbon tax
+        "BC": "Code_and_dataset/dfz_bc_c.parquet",  # EU-wide carbon tax with CBAM
+        "EU": "Code_and_dataset/dfz_eu_c.parquet",  # EU-only carbon tax
+        "GL": "Code_and_dataset/dfz_gl_c.parquet"   # Global carbon tax
     }
 
     policy_changes = {}
@@ -124,12 +130,15 @@ def main():
         ncols=2,
         figsize=(15, 12)
     )
+    # Save the 2×2 world map grid figure
+    plt.savefig('results/NetFlow_Variation_2x2_Maps.png', bbox_inches='tight')
+    plt.close()
 
     # 6) PLOT CORRELATION BETWEEN GLOBAL TAX NET FLOW CHANGE AND CARBON INTENSITY
     try:
         # Load carbon intensity data for 2020
         ci_df = pd.read_csv(
-            "API_EN.GHG.CO2.RT.GDP.PP.KD_DS2_en_csv_v2_37939.csv",
+            "Code_and_dataset/API_EN.GHG.CO2.RT.GDP.PP.KD_DS2_en_csv_v2_37939.csv",
             skiprows=4
         )
         # Extract ISO code and 2020 values
@@ -175,7 +184,9 @@ def main():
             va="top"
         )
         plt.tight_layout()
-        plt.show()
+        # Save scatter plot of global tax net flow change vs. carbon intensity
+        plt.savefig('results/GlobalTax_vs_CarbonIntensity_Scatter.png', bbox_inches='tight')
+        plt.close()
         # Compute GDP per CO2 (inverse of carbon intensity) for countries present in other maps
         gdp_per_co2 = (1 / ci_2020).rename('value')
         # Filter to countries present in earlier maps
@@ -188,6 +199,9 @@ def main():
             '',
             'Carbon Efficiency of GDP (2020): PPP-adjusted $ Output per kg CO2e'
         )
+        # Save the carbon efficiency map
+        plt.savefig('results/CarbonEfficiency_Map.png', bbox_inches='tight')
+        plt.close()
     except Exception as e:
         print(f"Error plotting correlation: {e}")
 

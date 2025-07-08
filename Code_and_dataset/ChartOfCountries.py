@@ -1,5 +1,22 @@
+"""
+ChartOfCountries.py
+
+This script generates comparative tables of network metrics for a set of countries under different policy scenarios.
+It loads net flow data from 'Code_and_dataset/dfz_2019.parquet', computes clustering coefficient, betweenness centrality,
+hub and authority scores for the year 2020 using either simple or weighted averages per country, and then creates tables
+highlighting ranking changes between Baseline, BC, EU, and GL scenarios. The tables are saved as image files in the
+'results' directory. Warnings for negative values can be toggled via the ENABLE_PRINTS flag.
+"""
+
+import os
+import sys
+# Add project root to module search path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# Ensure results directory exists
+os.makedirs('results', exist_ok=True)
 
 SIMPLE_AVG = True
+ENABLE_PRINTS = False
 
 # Set of EU member country codes
 EU_MEMBERS = {
@@ -111,14 +128,14 @@ def create_and_save_table_plot(metric_name, weighted_baseline, weighted_bc, weig
         # ax.set_title(title, pad=10, fontsize=14)
 
     plt.tight_layout(rect=[0, 0, 1, 0.94])
-    plt.savefig(output_filename)
+    plt.savefig(f"results/{output_filename}", bbox_inches='tight')
     plt.close(fig)
 
 def process_clustering(countries, net_trillions):
     # 1) Load baseline files (2010-2020) for Clustering Coefficient
     baseline_dfs = {}
     for year in range(2010, 2021):
-        bf = f"clus_{year}.parquet"
+        bf = f"Code_and_dataset/clus_{year}.parquet"
         df = pd.read_parquet(bf)
         if {'Node', 'Clustering_Coefficient'}.issubset(df.columns):
             series = pd.to_numeric(df['Clustering_Coefficient'], errors='coerce')
@@ -129,7 +146,7 @@ def process_clustering(countries, net_trillions):
 
     # 2) Load policy files
     policy_series = {}
-    for policy, pf in [('bc', 'clus_bc.parquet'), ('eu', 'clus_eu.parquet'), ('gl', 'clus_gl.parquet')]:
+    for policy, pf in [('bc', 'Code_and_dataset/clus_bc.parquet'), ('eu', 'Code_and_dataset/clus_eu.parquet'), ('gl', 'Code_and_dataset/clus_gl.parquet')]:
         dfp = pd.read_parquet(pf)
         series = pd.to_numeric(dfp['Clustering_Coefficient'], errors='coerce')
         series.index = dfp['Node']
@@ -156,7 +173,8 @@ def process_clustering(countries, net_trillions):
     ]:
         negatives = [country for country, value in weighted.items() if value is not None and value < 0]
         if negatives:
-            print(f"Warning: Negative clustering averages in {label} for countries: {negatives}")
+            if ENABLE_PRINTS:
+                print(f"Warning: Negative clustering averages in {label} for countries: {negatives}")
 
     create_and_save_table_plot('Clustering Coefficient', weighted_baseline, weighted_bc, weighted_eu, weighted_gl, 'clustering_tables.png')
 
@@ -164,7 +182,7 @@ def process_betweenness(countries, net_trillions):
     # 1) Load baseline files (2010-2020) for Betweenness Centrality
     baseline_dfs = {}
     for year in range(2010, 2021):
-        bf = f"dfz_s_{year}_bc.parquet"
+        bf = f"Code_and_dataset/dfz_s_{year}_bc.parquet"
         df = pd.read_parquet(bf)
         # Identify column
         if 'betweenness' in df.columns:
@@ -182,7 +200,7 @@ def process_betweenness(countries, net_trillions):
 
     # 2) Load policy files
     policy_series = {}
-    for policy, pf in [('bc', 'dfz_s_bc_bc.parquet'), ('eu', 'dfz_s_eu_bc.parquet'), ('gl', 'dfz_s_gl_bc.parquet')]:
+    for policy, pf in [('bc', 'Code_and_dataset/dfz_s_bc_bc.parquet'), ('eu', 'Code_and_dataset/dfz_s_eu_bc.parquet'), ('gl', 'Code_and_dataset/dfz_s_gl_bc.parquet')]:
         dfp = pd.read_parquet(pf)
         if 'betweenness' in dfp.columns:
             series = pd.to_numeric(dfp['betweenness'], errors='coerce')
@@ -216,7 +234,8 @@ def process_betweenness(countries, net_trillions):
     ]:
         negatives = [country for country, value in weighted.items() if value is not None and value < 0]
         if negatives:
-            print(f"Warning: Negative betweenness averages in {label} for countries: {negatives}")
+            if ENABLE_PRINTS:
+                print(f"Warning: Negative betweenness averages in {label} for countries: {negatives}")
 
     create_and_save_table_plot('Betweenness Centrality', weighted_baseline, weighted_bc, weighted_eu, weighted_gl, 'betweenness_tables.png')
 
@@ -225,7 +244,7 @@ def process_hub_authority(countries, net_trillions):
     hub_baseline_dfs = {}
     auth_baseline_dfs = {}
     for year in range(2010, 2021):
-        bf = f"hub_aut_{year}.parquet"
+        bf = f"Code_and_dataset/hub_aut_{year}.parquet"
         df = pd.read_parquet(bf)
         if {'node', 'hub_score', 'authority_score'}.issubset(df.columns):
             hub_series = pd.to_numeric(df['hub_score'], errors='coerce')
@@ -243,7 +262,7 @@ def process_hub_authority(countries, net_trillions):
     # 2) Load policy files
     policy_hub = {}
     policy_auth = {}
-    for policy, pf in [('bc', 'hub_aut_bc.parquet'), ('eu', 'hub_aut_eu.parquet'), ('gl', 'hub_aut_gl.parquet')]:
+    for policy, pf in [('bc', 'Code_and_dataset/hub_aut_bc.parquet'), ('eu', 'Code_and_dataset/hub_aut_eu.parquet'), ('gl', 'Code_and_dataset/hub_aut_gl.parquet')]:
         dfp = pd.read_parquet(pf)
         hub_series = pd.to_numeric(dfp['hub_score'], errors='coerce')
         auth_series = pd.to_numeric(dfp['authority_score'], errors='coerce')
@@ -273,7 +292,8 @@ def process_hub_authority(countries, net_trillions):
     ]:
         negatives = [country for country, value in weighted.items() if value is not None and value < 0]
         if negatives:
-            print(f"Warning: Negative hub averages in {label} for countries: {negatives}")
+            if ENABLE_PRINTS:
+                print(f"Warning: Negative hub averages in {label} for countries: {negatives}")
 
     create_and_save_table_plot('Hub Score', weighted_hub_baseline, weighted_hub_bc, weighted_hub_eu, weighted_hub_gl, 'hub_tables.png')
 
@@ -298,7 +318,8 @@ def process_hub_authority(countries, net_trillions):
     ]:
         negatives = [country for country, value in weighted.items() if value is not None and value < 0]
         if negatives:
-            print(f"Warning: Negative authority averages in {label} for countries: {negatives}")
+            if ENABLE_PRINTS:
+                print(f"Warning: Negative authority averages in {label} for countries: {negatives}")
 
     create_and_save_table_plot('Authority Score', weighted_auth_baseline, weighted_auth_bc, weighted_auth_eu, weighted_auth_gl, 'authority_tables.png')
 
@@ -312,11 +333,12 @@ def main():
     ]
 
     # Compute net inflows per node
-    net_trillions = load_net_trillions('./dfz_2019.parquet')
+    net_trillions = load_net_trillions('Code_and_dataset/dfz_2019.parquet')
     # Check for negative net inflows
     neg_net = net_trillions[net_trillions < 0]
     if not neg_net.empty:
-        print("Warning: Negative net inflows detected for nodes:", neg_net.index.tolist())
+        if ENABLE_PRINTS:
+            print("Warning: Negative net inflows detected for nodes:", neg_net.index.tolist())
 
     # Process each metric
     process_clustering(countries, net_trillions)

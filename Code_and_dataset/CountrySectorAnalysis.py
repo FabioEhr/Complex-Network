@@ -1,3 +1,9 @@
+import os
+import sys
+# Add project root to module search path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# Ensure results directory exists
+os.makedirs('results', exist_ok=True)
 
 #not working 
 from flask import Flask, request, send_file
@@ -151,6 +157,11 @@ def create_and_save_table_plot(metric_name, weighted_baseline, weighted_bc, weig
 
     for ax, (df_table, title) in zip(axes.flatten(), tables):
         ax.axis('off')
+        # Prepare table data with column labels
+        if title == 'Baseline 2020':
+            col_labels = ['Country', 'Value']
+        else:
+            col_labels = ['Country', 'Value', 'Rank Δ']  # Change in policy rank vs. Baseline
         # Prepare table data with values rounded to two significant digits
         table_rows = []
         for idx, (country, value) in enumerate(df_table['Value'].items(), start=1):
@@ -177,8 +188,7 @@ def create_and_save_table_plot(metric_name, weighted_baseline, weighted_bc, weig
                 else:
                     change_str = ""
                 table_rows.append([country, formatted, change_str])
-        # Create table without column labels
-        tbl = ax.table(cellText=table_rows, colLabels=None, loc='center')
+        tbl = ax.table(cellText=table_rows, colLabels=col_labels, loc='center')
         if title != 'Baseline 2020':
             # Set text color based on positive (green) or negative (red) change in third column
             for row_idx, row in enumerate(table_rows):
@@ -193,16 +203,22 @@ def create_and_save_table_plot(metric_name, weighted_baseline, weighted_bc, weig
         # Increase row height for more spacing and make columns narrower
         tbl.scale(0.8, 2)
         # ax.set_title(title, pad=10, fontsize=14)
+    # Legend text only once, on the bottom of the figure
+    legend_text = (
+        'Rank Δ: positive (green) = improvement vs. Baseline; '
+        'negative (red) = decline; zero = no change.'
+    )
+    fig.text(0.5, 0.02, legend_text, ha='center', fontsize=10, color='grey')
 
     plt.tight_layout(rect=[0, 0, 1, 0.94])
-    plt.savefig(output_filename)
+    plt.savefig(f"results/{output_filename}", bbox_inches='tight')
     plt.close(fig)
 
 def process_clustering(countries, net_trillions):
     # 1) Load baseline files (2010-2020) for Clustering Coefficient
     baseline_dfs = {}
     for year in range(2010, 2021):
-        bf = f"clus_{year}.parquet"
+        bf = f"Code_and_dataset/clus_{year}.parquet"
         df = pd.read_parquet(bf)
         if {'Node', 'Clustering_Coefficient'}.issubset(df.columns):
             series = pd.to_numeric(df['Clustering_Coefficient'], errors='coerce')
@@ -213,7 +229,7 @@ def process_clustering(countries, net_trillions):
 
     # 2) Load policy files
     policy_series = {}
-    for policy, pf in [('bc', 'clus_bc.parquet'), ('eu', 'clus_eu.parquet'), ('gl', 'clus_gl.parquet')]:
+    for policy, pf in [('bc', 'Code_and_dataset/clus_bc.parquet'), ('eu', 'Code_and_dataset/clus_eu.parquet'), ('gl', 'Code_and_dataset/clus_gl.parquet')]:
         dfp = pd.read_parquet(pf)
         series = pd.to_numeric(dfp['Clustering_Coefficient'], errors='coerce')
         series.index = dfp['Node']
@@ -248,7 +264,7 @@ def process_betweenness(countries, net_trillions):
     # 1) Load baseline files (2010-2020) for Betweenness Centrality
     baseline_dfs = {}
     for year in range(2010, 2021):
-        bf = f"dfz_s_{year}_bc.parquet"
+        bf = f"Code_and_dataset/dfz_s_{year}_bc.parquet"
         df = pd.read_parquet(bf)
         # Identify column
         if 'betweenness' in df.columns:
@@ -266,7 +282,7 @@ def process_betweenness(countries, net_trillions):
 
     # 2) Load policy files
     policy_series = {}
-    for policy, pf in [('bc', 'dfz_s_bc_bc.parquet'), ('eu', 'dfz_s_eu_bc.parquet'), ('gl', 'dfz_s_gl_bc.parquet')]:
+    for policy, pf in [('bc', 'Code_and_dataset/dfz_s_bc_bc.parquet'), ('eu', 'Code_and_dataset/dfz_s_eu_bc.parquet'), ('gl', 'Code_and_dataset/dfz_s_gl_bc.parquet')]:
         dfp = pd.read_parquet(pf)
         if 'betweenness' in dfp.columns:
             series = pd.to_numeric(dfp['betweenness'], errors='coerce')
@@ -309,7 +325,7 @@ def process_hub_authority(countries, net_trillions):
     hub_baseline_dfs = {}
     auth_baseline_dfs = {}
     for year in range(2010, 2021):
-        bf = f"hub_aut_{year}.parquet"
+        bf = f"Code_and_dataset/hub_aut_{year}.parquet"
         df = pd.read_parquet(bf)
         if {'node', 'hub_score', 'authority_score'}.issubset(df.columns):
             hub_series = pd.to_numeric(df['hub_score'], errors='coerce')
@@ -327,7 +343,7 @@ def process_hub_authority(countries, net_trillions):
     # 2) Load policy files
     policy_hub = {}
     policy_auth = {}
-    for policy, pf in [('bc', 'hub_aut_bc.parquet'), ('eu', 'hub_aut_eu.parquet'), ('gl', 'hub_aut_gl.parquet')]:
+    for policy, pf in [('bc', 'Code_and_dataset/hub_aut_bc.parquet'), ('eu', 'Code_and_dataset/hub_aut_eu.parquet'), ('gl', 'Code_and_dataset/hub_aut_gl.parquet')]:
         dfp = pd.read_parquet(pf)
         hub_series = pd.to_numeric(dfp['hub_score'], errors='coerce')
         auth_series = pd.to_numeric(dfp['authority_score'], errors='coerce')
@@ -362,7 +378,7 @@ def process_hub_authority(countries, net_trillions):
     create_and_save_table_plot('Hub Score', weighted_hub_baseline, weighted_hub_bc, weighted_hub_eu, weighted_hub_gl, 'hub_tables.png')
 
 
-def write_text_report_all(countries, net_trillions, output_filename="all_countries_report.txt"):
+def write_text_report_all(countries, net_trillions, output_filename="results/all_countries_report.txt"):
     """
     Generate one consolidated text report listing each country and its metrics
     under Baseline 2020, BC, EU, and GL scenarios.
@@ -370,7 +386,7 @@ def write_text_report_all(countries, net_trillions, output_filename="all_countri
     # --- 1) Clustering Coefficient ---
     clustering_baseline_dfs = {}
     for year in range(2010, 2021):
-        df = pd.read_parquet(f"clus_{year}.parquet")
+        df = pd.read_parquet(f"Code_and_dataset/clus_{year}.parquet")
         if {'Node', 'Clustering_Coefficient'}.issubset(df.columns):
             s = pd.to_numeric(df['Clustering_Coefficient'], errors='coerce')
             s.index = df['Node']
@@ -381,7 +397,7 @@ def write_text_report_all(countries, net_trillions, output_filename="all_countri
     for policy, fname in [('BC','clus_bc.parquet'),
                           ('EU','clus_eu.parquet'),
                           ('GL','clus_gl.parquet')]:
-        dfp = pd.read_parquet(fname)
+        dfp = pd.read_parquet(f"Code_and_dataset/{fname}")
         s = pd.to_numeric(dfp['Clustering_Coefficient'], errors='coerce')
         s.index = dfp['Node']
         policy_clust[policy] = s
@@ -394,7 +410,7 @@ def write_text_report_all(countries, net_trillions, output_filename="all_countri
     # --- 2) Betweenness Centrality ---
     bet_baseline_dfs = {}
     for year in range(2010, 2021):
-        df = pd.read_parquet(f"dfz_s_{year}_bc.parquet")
+        df = pd.read_parquet(f"Code_and_dataset/dfz_s_{year}_bc.parquet")
         if 'betweenness' in df.columns:
             s = pd.to_numeric(df['betweenness'], errors='coerce'); s.index = df.index
         else:
@@ -411,7 +427,7 @@ def write_text_report_all(countries, net_trillions, output_filename="all_countri
     for policy, fname in [('BC','dfz_s_bc_bc.parquet'),
                           ('EU','dfz_s_eu_bc.parquet'),
                           ('GL','dfz_s_gl_bc.parquet')]:
-        dfp = pd.read_parquet(fname)
+        dfp = pd.read_parquet(f"Code_and_dataset/{fname}")
         if 'betweenness' in dfp.columns:
             s = pd.to_numeric(dfp['betweenness'], errors='coerce'); s.index = dfp.index
         else:
@@ -431,7 +447,7 @@ def write_text_report_all(countries, net_trillions, output_filename="all_countri
     # --- 3) Hub & Authority Scores ---
     hub_baseline_dfs = {}; auth_baseline_dfs = {}
     for year in range(2010, 2021):
-        df = pd.read_parquet(f"hub_aut_{year}.parquet")
+        df = pd.read_parquet(f"Code_and_dataset/hub_aut_{year}.parquet")
         if {'node','hub_score','authority_score'}.issubset(df.columns):
             h = pd.to_numeric(df['hub_score'], errors='coerce');      h.index = df['node']
             a = pd.to_numeric(df['authority_score'], errors='coerce'); a.index = df['node']
@@ -445,7 +461,7 @@ def write_text_report_all(countries, net_trillions, output_filename="all_countri
     for policy, fname in [('BC','hub_aut_bc.parquet'),
                           ('EU','hub_aut_eu.parquet'),
                           ('GL','hub_aut_gl.parquet')]:
-        dfp = pd.read_parquet(fname)
+        dfp = pd.read_parquet(f"Code_and_dataset/{fname}")
         h = pd.to_numeric(dfp['hub_score'], errors='coerce');      h.index = dfp['node']
         a = pd.to_numeric(dfp['authority_score'], errors='coerce'); a.index = dfp['node']
         policy_hub[policy]  = h
@@ -463,12 +479,20 @@ def write_text_report_all(countries, net_trillions, output_filename="all_countri
     # Write file with all unique sectors present in data
     all_nodes = list(base_clust.index) + list(base_bet.index) + list(base_hub.index) + list(base_auth.index)
     sectors = {node.split('_',1)[1] for node in all_nodes if "_" in node}
-    with open("all_sectors.txt", "w") as sf:
+    with open("results/all_sectors.txt", "w") as sf:
         for sector in sorted(sectors):
             sf.write(f"{sector}\n")
 
     # --- 4) Write single report ---
     with open(output_filename, "w") as f:
+        # Write report header
+        f.write("Country Sector Analysis Report\n")
+        f.write("Generated by CountrySectorAnalysis.py\n\n")
+        f.write(
+            "This report lists, for each country, the values of four network metrics under Baseline 2020 and three policy scenarios (BC, EU, GL).\n"
+            "For each metric: the first number is the value; for policy columns, values in parentheses are rank changes vs. Baseline.\n"
+            "Following the overview, top sectors by metric variation are detailed with percentage changes and rank shifts.\n\n"
+        )
         for country in countries:
             f.write(f"Country: {country}\n")
             f.write(f"  Clustering Coefficient: Baseline={c_base.get(country,float('nan')):.4g}, BC={c_bc.get(country,float('nan')):.4g}, EU={c_eu.get(country,float('nan')):.4g}, GL={c_gl.get(country,float('nan')):.4g}\n")
@@ -565,7 +589,7 @@ if __name__ == '__main__':
         "CZE","NOR","FIN","DNK","ROU","IRL","PRT","GRC","HUN","SVK","LUX","BGR",
         "HRV","SVN","LTU","LVA","EST","CYP","MLT"
     ]
-    net_trillions = load_net_trillions('./dfz_2019.parquet')
+    net_trillions = load_net_trillions('Code_and_dataset/dfz_2019.parquet')
     process_clustering(countries, net_trillions)
     process_betweenness(countries, net_trillions)
     process_hub_authority(countries, net_trillions)

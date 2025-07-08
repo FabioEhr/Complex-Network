@@ -1,12 +1,19 @@
+import os
+import sys
+import matplotlib.pyplot as plt
+# Add project root to module search path so Code_and_dataset can be imported
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# Ensure results directory exists
+os.makedirs('results', exist_ok=True)
 import glob
 import pandas as pd
 import numpy as np
 import geopandas as gpd
-from World_map import plot_world_map
+from Code_and_dataset.World_map import plot_world_map
 
 def main():
     # 1) LOAD BASELINE FILES (2010–2020) FOR hub_score AND authority_score
-    baseline_files = [f"hub_aut_{year}.parquet" for year in range(2010, 2021)]
+    baseline_files = [f"Dataset/hub_aut_{year}.parquet" for year in range(2010, 2021)]
     baseline_hub_dfs = {}
     baseline_auth_dfs = {}
 
@@ -93,9 +100,9 @@ def main():
 
     # 5) LOAD POLICY FILES: bc, eu, gl
     policy_files = {
-        "bc": "hub_aut_bc.parquet",
-        "eu": "hub_aut_eu.parquet",
-        "gl": "hub_aut_gl.parquet"
+        "bc": "Dataset/hub_aut_bc.parquet",
+        "eu": "Dataset/hub_aut_eu.parquet",
+        "gl": "Dataset/hub_aut_gl.parquet"
     }
 
     results_hub = {}
@@ -138,7 +145,7 @@ def main():
             print(f"Error reading {pf}: {e}")
 
     # 6) COMPUTE NET INFLOWS PER NODE (USE dfz_2018.parquet AS BEFORE)
-    df_net = pd.read_parquet('./dfz_2018.parquet')
+    df_net = pd.read_parquet('Dataset/dfz_2018.parquet')
     inflows = df_net.sum(axis=0) - pd.Series(df_net.values.diagonal(), index=df_net.index)
     outflows = df_net.sum(axis=1)
     net =outflows- inflows 
@@ -189,9 +196,15 @@ def main():
     for policy in weighted_avgs_hub:
         df_plot_hub = pd.DataFrame(list(weighted_avgs_hub[policy].items()), columns=['ISO_A3', 'value'])
         plot_world_map(df_plot_hub, '', '', f"Weighted Avg Hub Z-score - Policy '{policy}'")
+        # Save hub map
+        plt.savefig(f"results/WeightedAvg_Hub_Zscore_Policy_{policy}.png", bbox_inches='tight')
+        plt.close()
 
         df_plot_auth = pd.DataFrame(list(weighted_avgs_auth[policy].items()), columns=['ISO_A3', 'value'])
         plot_world_map(df_plot_auth, '', '', f"Weighted Avg Authority Z-score - Policy '{policy}'")
+        # Save authority map
+        plt.savefig(f"results/WeightedAvg_Auth_Zscore_Policy_{policy}.png", bbox_inches='tight')
+        plt.close()
 
 if __name__ == "__main__":
     main()
