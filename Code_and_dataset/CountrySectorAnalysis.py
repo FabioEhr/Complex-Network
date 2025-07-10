@@ -4,6 +4,7 @@ import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 # Ensure results directory exists
 os.makedirs('results', exist_ok=True)
+os.makedirs(os.path.join('results', 'country specific network measurements'), exist_ok=True)
 
 #not working 
 from flask import Flask, request, send_file
@@ -211,7 +212,7 @@ def create_and_save_table_plot(metric_name, weighted_baseline, weighted_bc, weig
     fig.text(0.5, 0.02, legend_text, ha='center', fontsize=10, color='grey')
 
     plt.tight_layout(rect=[0, 0, 1, 0.94])
-    plt.savefig(f"results/{output_filename}", bbox_inches='tight')
+    plt.savefig(os.path.join('results', 'country specific network measurements', output_filename), bbox_inches='tight')
     plt.close(fig)
 
 def process_clustering(countries, net_trillions):
@@ -378,7 +379,7 @@ def process_hub_authority(countries, net_trillions):
     create_and_save_table_plot('Hub Score', weighted_hub_baseline, weighted_hub_bc, weighted_hub_eu, weighted_hub_gl, 'hub_tables.png')
 
 
-def write_text_report_all(countries, net_trillions, output_filename="results/all_countries_report.txt"):
+def write_text_report_all(countries, net_trillions, output_filename=os.path.join('results', 'country specific network measurements', 'all_countries_report.txt')):
     """
     Generate one consolidated text report listing each country and its metrics
     under Baseline 2020, BC, EU, and GL scenarios.
@@ -479,7 +480,7 @@ def write_text_report_all(countries, net_trillions, output_filename="results/all
     # Write file with all unique sectors present in data
     all_nodes = list(base_clust.index) + list(base_bet.index) + list(base_hub.index) + list(base_auth.index)
     sectors = {node.split('_',1)[1] for node in all_nodes if "_" in node}
-    with open("results/all_sectors.txt", "w") as sf:
+    with open(os.path.join('results', 'country specific network measurements', 'all_sectors.txt'), "w") as sf:
         for sector in sorted(sectors):
             sf.write(f"{sector}\n")
 

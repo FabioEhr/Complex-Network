@@ -5,6 +5,7 @@ import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 # Ensure results directory exists
 os.makedirs('results', exist_ok=True)
+os.makedirs(os.path.join('results', 'country specific network measurements'), exist_ok=True)
 
 
 USE_SIMPLE_SUM = True
@@ -32,6 +33,9 @@ def compute_simple_sum(series, countries):
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+# Prevent helper from closing the figure prematurely by disabling show
+_original_show = plt.show
+plt.show = lambda *args, **kwargs: None
 from Code_and_dataset.World_map import plot_world_maps_grid
 
 def compute_weighted_average(series, net_trillions, countries):
@@ -93,13 +97,14 @@ def create_and_save_map_plot(metric_name, baseline_vals, bc_vals, eu_vals, gl_va
     # Blank axis labels – they are removed inside plot_world_maps_grid
     x_lbls = y_lbls = ["", "", "", ""]
 
+    # Generate maps without showing
     plot_world_maps_grid(dfs, x_lbls, y_lbls, titles, nrows=2, ncols=2, figsize=(16, 8))
-
-    # Optionally save the figure created by plot_world_maps_grid (the helper already calls plt.show()).
-    # A simple workaround is to call plt.savefig after the grid is drawn.
+    # Save the current figure explicitly
     import matplotlib.pyplot as _plt
-    _plt.savefig(f"results/{output_filename}", bbox_inches="tight")
-    _plt.close()
+    fig = _plt.gcf()
+    fig.savefig(os.path.join('results', 'country specific network measurements', output_filename), bbox_inches="tight")
+    # Close the figure
+    _plt.close(fig)
 
 def process_clustering(countries, net_trillions):
     # 1) Load baseline files (2010-2020) for Clustering Coefficient

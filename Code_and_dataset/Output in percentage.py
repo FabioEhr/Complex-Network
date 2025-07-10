@@ -4,10 +4,14 @@ import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 # Ensure results directory exists
 os.makedirs('results', exist_ok=True)
+os.makedirs(os.path.join('results', 'country specific network measurements'), exist_ok=True)
 import pandas as pd
 import numpy as np
 from Code_and_dataset.World_map import plot_world_map, plot_world_maps_grid
 import matplotlib.pyplot as plt
+# Disable interactive showing from helper functions
+_original_show = plt.show
+plt.show = lambda *args, **kwargs: None
 from scipy.stats import pearsonr
 
 def main():
@@ -131,7 +135,7 @@ def main():
         figsize=(15, 12)
     )
     # Save the 2×2 world map grid figure
-    plt.savefig('results/NetFlow_Variation_2x2_Maps.png', bbox_inches='tight')
+    plt.savefig(os.path.join('results', 'country specific network measurements', 'NetFlow_Variation_2x2_Maps.png'), bbox_inches='tight')
     plt.close()
 
     # 6) PLOT CORRELATION BETWEEN GLOBAL TAX NET FLOW CHANGE AND CARBON INTENSITY
@@ -185,7 +189,7 @@ def main():
         )
         plt.tight_layout()
         # Save scatter plot of global tax net flow change vs. carbon intensity
-        plt.savefig('results/GlobalTax_vs_CarbonIntensity_Scatter.png', bbox_inches='tight')
+        plt.savefig(os.path.join('results', 'country specific network measurements', 'GlobalTax_vs_CarbonIntensity_Scatter.png'), bbox_inches='tight')
         plt.close()
         # Compute GDP per CO2 (inverse of carbon intensity) for countries present in other maps
         gdp_per_co2 = (1 / ci_2020).rename('value')
@@ -200,7 +204,7 @@ def main():
             'Carbon Efficiency of GDP (2020): PPP-adjusted $ Output per kg CO2e'
         )
         # Save the carbon efficiency map
-        plt.savefig('results/CarbonEfficiency_Map.png', bbox_inches='tight')
+        plt.savefig(os.path.join('results', 'country specific network measurements', 'CarbonEfficiency_Map.png'), bbox_inches='tight')
         plt.close()
     except Exception as e:
         print(f"Error plotting correlation: {e}")

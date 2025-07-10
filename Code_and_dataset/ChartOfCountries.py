@@ -14,6 +14,7 @@ import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 # Ensure results directory exists
 os.makedirs('results', exist_ok=True)
+os.makedirs(os.path.join('results', 'country specific network measurements'), exist_ok=True)
 
 SIMPLE_AVG = True
 ENABLE_PRINTS = False
@@ -128,7 +129,7 @@ def create_and_save_table_plot(metric_name, weighted_baseline, weighted_bc, weig
         # ax.set_title(title, pad=10, fontsize=14)
 
     plt.tight_layout(rect=[0, 0, 1, 0.94])
-    plt.savefig(f"results/{output_filename}", bbox_inches='tight')
+    plt.savefig(os.path.join('results', 'country specific network measurements', output_filename), bbox_inches='tight')
     plt.close(fig)
 
 def process_clustering(countries, net_trillions):
